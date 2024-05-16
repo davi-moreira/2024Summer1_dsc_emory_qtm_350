@@ -1,0 +1,61 @@
+---
+title: "Quarto Python Example "
+author: "Davi Moreira"
+date: "2024-01-18"
+execute: 
+  error: true
+format:
+  html:
+    code-tools: true
+---
+
+## Example of using Python with Quarto
+
+Here you can add your markdown text. Hello Quarto!
+
+## Code
+
+In the code chunk, you just need to change the programming language you want to use inside of the brackets `{}`
+
+
+```{r}
+# R code chunck
+library(ggplot2)
+
+mu <- 0
+sigma <- 1
+x <- seq(mu - 3*sigma, mu + 3*sigma, length.out = 100)
+y <- dnorm(x, mean = mu, sd = sigma)
+data <- data.frame(x, y)
+
+ggplot(data, aes(x, y)) +
+  geom_line() +
+  theme_minimal() +
+  labs(title = "Standard Normal Distribution", x = "X", y = "Density")
+
+
+```
+
+
+
+```{python}
+# Python code chunck
+
+import matplotlib.pyplot as plt
+import numpy as np
+import scipy.stats as stats
+import math
+
+mu = 0
+variance = 1
+sigma = math.sqrt(variance)
+x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+plt.plot(x, stats.norm.pdf(x, mu, sigma))
+plt.show()
+```
+
+
+
+
+
+

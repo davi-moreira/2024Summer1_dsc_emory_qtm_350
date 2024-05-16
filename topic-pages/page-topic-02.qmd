@@ -1,0 +1,107 @@
+---
+title: "Topic 02"
+subtitle: "Computational Literacy, Command Line, and Version Control"
+description: ""
+author: "Davi Moreira"
+date: "2024-01-23"
+resources: "_using-jupyter-notebooks.qmd"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/topic-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+# Slides
+
+-   [Computational Literacy](/slides/slides-topic-02-01.html){target="_blank"}
+
+-   [Command Line](/slides/slides-topic-02-02-aux.html){target="_blank"}
+
+-   [Version Control](/slides/slides-topic-02-03.html){target="_blank"}
+
+# Lecture Material
+
+-   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-02/basics_of_cmd.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/_basics_of_cmd.ipynb){target="_blank"}
+<!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
+
+<!---<a href="
+https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material-topic-02/_basics_of_cmd.ipynb" download> notebook </a>--->
+
+-   Basics of Command Line (slides material):[`.zip`](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/examples.zip){target="_blank"}
+
+-   In-Class Activity - Exploring the Command Line: [html](/lecture_material/material-topic-02/command_line_activity.html){target="_blank"}
+
+# Problem Set
+
+- [Problem Set - Collaboration and Version Control with Git and GitHub](/lecture_material/material-topic-02/problem_set_version_control.html){target="_blank"}
+
+
+# Recommended Readings
+
+-   [The Plain Person's Guide to Plain Text Social Science](http://plain-text.co/){target="_blank"} - Healy, Kieran
+
+    -   Ch. 1: Introduction;
+
+    -   Ch. 2: Keep a Record;
+
+    -   Ch. 3: Write and Edit;
+
+    -   Ch. 4: Reproduce Work.
+
+-   [Pro Git](https://git-scm.com/book/en/v2){target="_blank"} - Chacon & Straub
+
+    -   [Ch. 1: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control){target="_blank"}; Read 1.1 - 1.3
+
+    -   [Ch. 2: Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){target="_blank"}; Only read 2.1 - 2.5
+
+    -   [Ch. 3: Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell){target="_blank"}
+
+
+- [Essential Computer Literacy: 50 min.](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/essential-computer-literacy/index.html#0){target="_blank"}
+
+
+# Additional Resources
+
+-   [Effective Shell](https://effective-shell.com/){target="_blank"}
+
+-   [vim Video](https://missing.csail.mit.edu/2020/editors/){target="_blank"}
+
+-   More on Git/Github in Pro Git:
+    -   [Read 1.4 - 1.7](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line){target="_blank"} for help on installation and commandline
+
+    -   Read [Ch. 6](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration){target="_blank"} for more information regarding Git + Github.
+-   [Ch. 13 Detect Git from RStudio -Happy Git with R](https://happygitwithr.com/rstudio-see-git.html){target="_blank"} - Bryan, Jenny & Jim Hester
+
+- [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
+
+- [Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/)
+
+- [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
+
+- [Introduction to Linux](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/introduction-to-linux/index.html#0){target="_blank"}
+
+

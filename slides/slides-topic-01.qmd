@@ -1,0 +1,221 @@
+---
+title: "<span style = 'font-size: 100%;'> QTM 350: Data Science Computing </span>"
+subtitle: "<span style = 'font-size: 100%;'> Topic 01: Introduction, Syllabus and Set up </span>"
+author: "Professor: Davi Moreira"
+date: "2024-05-15"
+date-format: "MMMM DD, YYYY"
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    width: 1600
+    height: 900
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    #logo: images/quarto.png
+    footer: "Data Science Computing"
+    theme: [simple,custom.scss]
+---
+
+# Welcome to QTM 350 Data Science Computing {background-color="#0E315F"}
+
+## Topic Overview
+
+<br>
+
+-   Introductions
+
+-   Motivation
+
+-   Course Overview and Logistics
+
+-   Set up
+
+-   IDEs
+
+    -   Jupyter
+    -   Quarto
+
+# Introductions
+
+## Instructor
+
+::: columns
+::: {.column width="40%" style="text-align: center; justify-content: center; align-items: center;"}
+```{r  echo=FALSE, out.width = "60%",fig.align="center"}
+knitr::include_graphics("figs/davi_moreira_photo.JPG") 
+```
+
+[davi.moreira\@emory.edu](davi.moreira@emory.edu)
+
+[https://davi- moreira.github.io/](https://davi-%20moreira.github.io/)
+:::
+
+::: {.column width="60%" style="text-align: center; justify-content: center; align-items: center;"}
+-   Visiting Assistant Professor in the QTM Department at Emory University;
+
+<br>
+
+-   My academic work addresses Political Communication, Data Science, Text as Data, Artificial Intelligence, and Comparative Politics.
+
+<br>
+
+-   [M&E Specialist consultant - World Bank (Brazil, Mozambique, Angola, and DRC)](https://blogs.worldbank.org/opendata/improving-how-we-measure-progress-community-biodiversity-conservation-projects-mozambique)
+:::
+:::
+
+## Instructor's Passions
+
+```{r  echo=FALSE, out.width = "20%", fig.align="center"}
+knitr::include_graphics("figs/palmeiras_logo.png") 
+```
+
+```{r  echo=FALSE, out.width = "60%", fig.align="center"}
+knitr::include_graphics("figs/palmeiras_stadium.jpg") 
+```
+
+## Instructor's Passions
+
+```{r  echo=FALSE, out.width = "35%", fig.align="center"}
+knitr::include_graphics("figs/carnaval_olinda.jpg") 
+```
+
+## Students
+
+<br>
+
+-   It is your turn! - 5 minutes
+
+<br>
+
+-   Present yourself to your left/right colleague and tell her/him what are the current two main passions in your life.
+
+# Motivation {background-color="#0E315F"}
+
+# What is Data Science?
+
+# What did Data Science need to emerge?
+
+## 
+
+Large-scale data + algorithms to answer questions
+
+## Rise of the digital information age
+
+```{r  echo=FALSE, out.width = "50%", fig.align="center"}
+knitr::include_graphics("figs/digital.jpeg") 
+```
+
+::: aside
+https://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html
+:::
+
+## Social Media Data
+
+```{r  echo=FALSE, out.width = "20%", fig.align="center"}
+knitr::include_graphics("figs/redes.png") 
+```
+
+## New Data Formats: Image, text, videos..
+
+::: columns
+::: {.column width="50%"}
+```{r  echo=FALSE, out.width = "100%", fig.align="center"}
+knitr::include_graphics("figs/tweets.png") 
+```
+:::
+
+::: {.column width="50%"}
+```{r  echo=FALSE, out.width = "100%",fig.align="center"}
+knitr::include_graphics("figs/imagescnn.png") 
+```
+:::
+:::
+
+## Online Research
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/survey.png") 
+```
+
+## Powerful and Cheap Computer Power
+
+```{r  echo=FALSE, out.width = "80%", fig.align="center"}
+knitr::include_graphics("figs/collab.png") 
+```
+
+## As a consequence:
+
+-   Abundance of data we can use for research and governments can use to make better decisions
+
+    -   Novel research questions
+
+    -   New ways to answer old, long-standing research questions
+
+-   New technologies also have social implications and can generate important policy questions.
+
+    -   Privacy issues
+
+    -   Use of technology by bad actors.
+
+    -   Use of technology by governments to censor/monitor citizens.
+
+    -   etc...
+
+# Course Overview and Logistics
+
+## Logistics
+
+-   **Syllabus**
+
+-   **Schedule**
+
+-   **Office Hours**
+
+-   **Materials**:
+
+    -   <https://davi-moreira.github.io/2024Summer_dsc_emory_qtm_350>
+
+    -   Canvas
+
+# `r fontawesome::fa("laptop-code")` Transiton: Coding!
+
+## Jupyter:
+
+[See Jupyter Notebook in the Class Website]{.red}
+
+## Quarto
+
+[See Quarto Notebook in the Class Website]{.red}
+
+# Summary
+
+## Summary
+
+Some key things to take from this topic:
+
+-   Data Science is about data:
+
+    -   Data collection;
+    -   Data management;
+    -   Data storage;
+    -   Data structure;
+    -   Data analysis;
+    -   Data, Data, Data `...`
+
+-   Data Science is also about...
+
+    -   Collaboration!
+
+-   The schedule is tentative;
+
+-   Jupiter Notebook will be the main tool of the course, but there are other IDEs:
+
+    -   Google Colab
+    -   Quarto
+
+# Thank you!

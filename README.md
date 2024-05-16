@@ -4,7 +4,7 @@
 
 This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as Version Control, Project Collaboration, Data Structures and Algorithms, Database Designs, Database Management, and Cloud Computing. Prospective data scientists, statisticians, and other quantitative professionals will learn how to efficiently utilize database structures and foundational cloud services for data science by completing creative projects.
 
-**Course Website**: <https://davi-moreira.github.io/2024Summer_dsc_emory_qtm_350>
+**Course Website**: <https://davi-moreira.github.io/2024Summer1_dsc_emory_qtm_350>
 
 ## Instructor 
 

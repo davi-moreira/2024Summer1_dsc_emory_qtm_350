@@ -1,0 +1,70 @@
+---
+title: "Topic 01"
+subtitle: "Introduction, Syllabus and Set up"
+description: ""
+author: "Davi Moreira"
+date: "2024-05-15"
+resources: "_intro-to-quarto.qmd; _using-jupyter-notebooks.ipynb"
+#listing:
+  # - id: slides
+  #   contents:
+  #     - ../slides/topic-01/*.qmd
+  #   type: table
+  #   fields: [title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     title: "Topic"
+  #     date: "Date"
+  #   sort: [filename]
+  #   sort-ui: false
+  #   filter-ui: false
+  # - id: assignments
+  #   contents:
+  #     - ../hw/w1-*.qmd
+  #     - ../labs/w1-*.qmd
+  #   type: table
+  #   fields: [categories, title, date]
+  #   date-format: "ddd, MMM DD"
+  #   field-display-names:
+  #     categories: "Assignment"
+  #     title: "Title"
+  #     date: "Due"
+  #   sort: [date]
+  #   sort-ui: false
+  #   filter-ui: false
+tbl-colwidths: [10,50,40]
+---
+
+# Slides
+
+-   [Topic 01: Introduction, Syllabus and Set up](/slides/slides-topic-01.html){target="_blank"}
+
+# Lecture Material:
+
+-   [Instructions for setting up the course](/lecture_material/material-topic-01/course_infrastructure.html){target="_blank"}.
+
+-   Using Jupyter Notebooks: [html](/lecture_material/material-topic-01/using-jupyter-notebooks.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-01/_using-jupyter-notebooks.ipynb){target="_blank"}
+
+<!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
+
+<!---<a href="/lecture_material/material-topic-01/_using-jupyter-notebooks.ipynb" download> notebook </a>--->
+
+<!----   Using Quarto for Python and R [html](/lecture_material/material-topic-01/intro-to-quarto.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-01/_intro-to-quarto.qmd){target="_blank"} --->
+
+<!---<a href="/lecture_material/material-topic-01/_intro-to-quarto.qmd" download> notebook </a>--->
+
+# Additional Resources
+
+-   [Python and Anaconda Installation Guide](/lecture_material/material-topic-01/py_install_guide_en.html){target="_blank"}
+
+-   [Elements of Data Science - The notebooks](https://allendowney.github.io/ElementsOfDataScience/README.html#the-notebooks){target="_blank"}
+
+-   [Jupyter Notebook for Beginners: A tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/){target="_blank"} Pryke, Benjamin - www.dataquest.io
+
+-   Using Python with RStudio and reticulate: [here](https://docs.rstudio.com/tutorials/user/using-python-with-rstudio-and-reticulate/) and [here](https://support.posit.co/hc/en-us/articles/360023654474-Installing-and-Configuring-Python-with-RStudio){target="_blank"}
+
+-   [R & Python: A Love Story](https://rstudio.com/solutions/r-and-python/){target="_blank"} - rstudio.com
+
+-   [RStudio 1.2 Preview: Reticulated Python](https://blog.rstudio.com/2018/10/09/rstudio-1-2-preview-reticulated-python/){target="_blank"}
+
+-   [Using LaTex to write math in markdown](https://docx2latex.com/tutorials/Mathematical-equations-LaTeX.html){target="_blank"} - docx2latex.com

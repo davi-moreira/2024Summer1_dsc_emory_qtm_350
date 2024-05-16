@@ -1,0 +1,10 @@
+---
+title: "My Quarto Document"
+format: html
+---
+
+
+```{python}
+# Your Python code here
+print("Hello, Quarto!")
+```

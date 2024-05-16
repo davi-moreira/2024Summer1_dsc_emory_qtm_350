@@ -1,0 +1,1827 @@
+---
+title: "<span style = 'font-size: 100%;'> QTM 350: Data Science Computing </span>"
+subtitle: "<span style = 'font-size: 100%;'> Topic 02: Computational Literacy, Command Line, and Version Control </span>"
+author: "Professor: Davi Moreira"
+date: "2024-01-23"
+date-format: "MMMM DD, YYYY"
+format:
+  revealjs: 
+    transition: slide
+    background-transition: fade
+    width: 1600
+    height: 900
+    center: true
+    slide-number: true
+    incremental: true
+    chalkboard: 
+      buttons: false
+    preview-links: auto
+    #logo: images/quarto.png
+    footer: "Data Science Computing"
+    theme: [simple, custom.scss]
+---
+
+## Topic Overview
+
+::: columns
+::: {.column width="34%"}
+-   Computational Literacy
+
+    -   Binary and Hexadecimal numbers
+    -   Characters, ASCII, Unicode
+    -   High vrs low level programming languages
+    -   Compiled *vs* interpreted languages
+:::
+
+::: {.column width="33%"}
+-   **Command Line**
+
+    -   **Shell basics**
+    -   **Help!**
+    -   **Navigating your system**
+    -   **Managing your files**
+    -   **Working with text files**
+    -   **Redirects, pipes, and loops**
+    -   **Scripting**
+:::
+
+::: {.column width="33%"}
+-   Version Control
+
+    -   Data Science Workflow
+    -   Reproducibility
+    -   Git and GitHub
+:::
+:::
+
+<br>
+
+::: aside
+::: fragment
+*this lecture draws on materials from Simon Munzert [Intro to Data Science](https://github.com/intro-to-data-science-21/lectures/tree/main).*
+:::
+:::
+
+# Command Line
+
+# What is the command line? What is the shell?
+
+## A computer in a nutshell
+
+::: columns
+::: {.column width="50%" layout-valign="top"}
+![](figs/kernel-and-user-space.png){width="700"}
+
+::: r-stack
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)
+:::
+:::
+
+::: {.column width="50%" layout-valign="center"}
+<!--- --->
+
+::: r-fit-text
+-   The **operating system (OS)** is system software that interfaces with (and manages access to) a computer's hardware. It also provides software resources.
+-   The OS is divided into the kernel and user space.
+-   The **kernel** is the core of the OS. It's responsible for interfacing with hardware (drivers), managing resources etc. Running software in the kernel is *extremely* sensitive! That's why users are kept away from it.
+-   The **user space** provides an interface for users, who can run programs/applications on the machine. Hardware access of programs (e.g., memory usage) is managed by the kernel. Programs in user space are essentially in sandboxes, which sets a limit to how much damage they can do.
+:::
+:::
+:::
+
+## A computer in a nutshell
+
+::: columns
+::: {.column width="50%" layout-valign="top"}
+![](figs/kernel-and-user-space.png){fig-align="center" height="450"}
+
+![](figs/walnut.jpeg){fig-align="center" height="150"}
+
+::: r-stack
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)/[Kkchaudhary11](https://commons.wikimedia.org/w/index.php?curid=49069244)
+:::
+:::
+
+::: {.column width="50%" layout-valign="center"}
+<!---::: r-fit-text --->
+
+-   The **shell** is just a general name for any user space program that allows access to resources in the system, via some kind of interface.
+-   Shells come in many different flavours but are generally provided to aid a human operator in accessing the system. This could be interactively, by **typing at a terminal**, or via **scripts**, which are files that contain a sequence of commands.
+-   Modern computers use **graphical user interfaces (GUIs)** as the standard tool for human-computer interaction.
+-   **Why "kernel" and "shell"?** The kernel is the soft, edible part of a nut or seed, which is surrounded by a shell to protect it. Useful metaphor, no?
+
+<!---:::--->
+:::
+:::
+
+## Interacting with the shell
+
+::: columns
+::: {.column width="50%" layout-valign="top" layout-halign="center"}
+<center>![](figs/diagram3-terminal-and-shell.png){fig-align="center" height="450"}</center>
+
+<br>
+
+<center>![](figs/teletype.jpg){fig-align="right" height="150"} ![](figs/image-ibm3486.jpeg){fig-align="right" height="150"}</center>
+
+::: r-stack
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)/[Rama/Musée Bolo](https://en.wikipedia.org/wiki/Teletype_Model_33#/media/File:Teletype-IMG_7287.jpg)/[ClickRick](https://de.m.wikipedia.org/wiki/Datei:IBM_3486_terminal.jpg)
+:::
+:::
+
+::: {.column width="50%"}
+<!---::: r-fit-text --->
+
+-   Things are still a bit more complicated.
+-   We're not directly interacting with the "shell" but using a **terminal**.
+-   A terminal is just a program that **reads input** from the keyboard, **passes that input** to another program, and **displays the results** on the screen.
+-   A shell program on its own does not do this - it requires a terminal as an interface.
+-   **Why "terminal"?** Back in the old days (even before computer screen existed), terminal machines (hardware!) were used to let humans interface with large machines ("mainframes"). Often many terminals were connected to a single machine.
+-   When you want to work with a computer in a data center (or remotely \~ cloud computing), you'll still do pretty much the same.
+
+<!---:::--->
+:::
+:::
+
+## Interacting with the shell
+
+::: columns
+::: {.column width="50%" align="center"}
+![](figs/diagram3-terminal-and-shell.png){fig-align="center" height="500"}
+
+::: r-stack
+Credit [Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)
+:::
+:::
+
+::: {.column width="50%"}
+-   Terminals are really quite simple - they're just interfaces.
+
+-   The first thing that a terminal program will do is run a shell program - a program that we can use to operate the computer.
+
+-   **Back to the shell:** the shell usually takes input
+
+    ```         
+    (a) interactively from the user via the terminal's **command line**.
+    (b) executes scripts (without command line).
+    ```
+
+-   In interactive mode the shell then returns output
+
+    ```         
+    (a) to the terminal where it is printed/shown.
+    (b) to files or other locations.
+    ```
+
+-   The command line (or command prompt) represents what is shown and entered in the terminal. They can be [customized](https://ohmyz.sh/) (e.g., with color highlighting) to make interaction more convenient.
+:::
+:::
+
+## Shell variants
+
+::: columns
+::: {.column width="60%" layout-halign="center"}
+::: r-stack
+*Left:* Command Prompt, *Right:* Bash ![](figs/command-prompt-screenshot.png){fig-align="center" height="300"} ![](figs/bash-screenshot.png){fig-align="center" height="300"} <br> *Left:* C Shell, *Right:* more shells <br> ![](figs/cshell-screenshot.png){fig-align="center" height="250"} ![](figs/seashells.jpeg){fig-align="center" height="250"} <br> Credit [Read-back spider](https://commons.wikimedia.org/wiki/File:Different_types_of_shells.jpg)/[Dave Kerr](https://effective-shell.com/part-2-core-skills/what-is-a-shell/)
+:::
+:::
+
+::: {.column width="40%"}
+<!---::: r-fit-text --->
+
+-   It is important to note that there are many different shell programs, and they [differ in terms of functionality](https://en.wikipedia.org/wiki/Comparison_of_command_shells).
+-   On most Unix-like systems, the default shell is a program called [**bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)), which stands for "Bourne Again Shell".
+-   Other examples are the [Z Shell](https://en.wikipedia.org/wiki/Z_shell) (or zsh; default on MacOS), [Windows Command Prompt](https://en.wikipedia.org/wiki/Cmd.exe) (cmd.exe, the default CLI on MS Windows), [Windows PowerShell](https://en.wikipedia.org/wiki/PowerShell), [C Shell](https://en.wikipedia.org/wiki/C_shell), and many more.
+-   When a terminal opens, it will immediately start the user's preferred shell program. (This can be [changed](https://effective-shell.com/part-1-transitioning-to-the-shell/getting-started/).)
+
+<!---:::--->
+:::
+:::
+
+
+# Why bother with the shell?
+
+## Why bother with the shell?
+
+::: columns
+::: {.column width="50%" layout-halign="center"}
+<br>
+
+<center>**Why using this...**</center>
+
+<br>
+
+<center>![](figs/zsh-screenshot.png){fig-align="center" height="500"}</center>
+
+<br>
+:::
+
+::: {.column width="50%" align="center"}
+<br>
+
+<center>**... instead of this?**</center>
+
+<br>
+
+<center>
+
+![](figs/windows31-screenshot.png){fig-align="center" height="250"} ![](figs/windows11-screenshot.jpg){fig-align="center" height="250"}
+
+![](figs/macos8-screenshot.png){fig-align="center" height="250"} ![](figs/macos-finder-screenshot.jpeg){fig-align="center" height="250"}
+
+</center>
+
+<br>
+:::
+:::
+
+## Why bother with the shell?
+
+1.  **Speed.** Typing is fast: A skilled shell user can manipulate a system at dazzling speeds just using a keyboard. Typing commands is generally much faster than exploring through user interfaces with a mouse.
+
+2.  **Power.** Both for executing commands and for fixing problems. There are some things you just can't do in an IDE or GUI. It also avoids memory complications associated with certain applications and/or IDEs.
+
+3.  **Reproducibility.** Scripting is reproducible, while clicking is not.
+
+4.  **Portability.** A shell can be used to interface to almost any type of computer, from a mainframe to a Raspberry Pi, in a very similar way. The shell is often the only game in town for high performance computing (interacting with servers and super computers).
+
+5.  **Automation.** Shells are programmable: Working in the shell allows you to program workflows, that is create scripts to automate time-consuming or repetitive processes.
+
+6.  **Become a marketable data scientist.** Modern programming is often polyglot. The shell provides a common interface for tooling. Modern solutions are often built to run in containers on Linux. In this environment shell knowledge has become very valuable. In short, [the shell is having a renaissance](https://effective-shell.com/part-1-transitioning-to-the-shell/the-renaissance-of-the-shell/) in the age of data science.
+
+# The Unix philosophy
+
+## The Unix philosophy
+
+The shell tools that we're going to be using have their roots in the [Unix](https://en.wikipedia.org/wiki/Unix) family of operating systems originally developed at Bells Labs in the 1970s.
+
+Besides paying homage, acknowledging the Unix lineage is important because these tools still embody the "[Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy)":
+
+> **Do One Thing And Do It Well**
+
+. . .
+
+By pairing and chaining well-designed individual components, we can build powerful and much more complex larger systems.
+
+You can see why the Unix philosophy is also referred to as "minimalist and modular".
+
+Again, this philosophy is very clearly expressed in the design and functionality of the Unix shell.
+
+## Things to use the shell for
+
+-   Version control with Git
+
+-   Renaming and moving files *en masse*
+
+-   Finding things on your computer
+
+-   Combining and manipulating PDFs
+
+-   Installing and updating software
+
+-   Scheduling tasks
+
+-   Monitoring system resources
+
+-   Connecting to cloud environments
+
+-   Running analyses ("jobs") on super computers
+
+-   etc.
+
+# Shell basics
+
+## Shell: First look
+
+Let's open up our shell.
+
+A convenient way to do this is through [RStudio's built-in Terminal](https://support.rstudio.com/hc/en-us/articles/115010737148-Using-the-RStudio-Terminal).
+
+Hitting `Shift`+`Alt`+`T` (or `Shift`+`⌥`+`R` on a Mac) will cause a "Terminal" tab to open up next to the "Console" tab.
+
+Your system default shell is loaded. To find out what that is, type:
+
+```{bash}
+echo $SHELL
+```
+
+<br>
+
+```{python, echo = F}
+!echo $SHELL
+```
+
+<br>
+
+It's Z bash in my case.
+
+. . .
+
+Of course, it's always possible to open up the Shell directly if you prefer. It's your turn!
+
+-   [Linux](https://www.wikihow.com/Open-a-Terminal-Window-in-Ubuntu)
+
+-   [Mac](https://www.techwalla.com/articles/how-to-open-terminal-on-a-macbook)
+
+-   [Windows](https://www.howtogeek.com/265900/everything-you-can-do-with-windows-10s-new-bash-shell/)
+
+## Shell: First look
+
+You should see something like:
+
+``` bash
+ username@hostname:~$
+```
+
+This is shell-speak for: "Who am I and where am I?" <!-- - Type in `$ whoami` without the leading dollar sign to confirm. -->
+
+-   `username` denotes a specific user (one of potentially many on this computer).
+
+-   `@hostname` denotes the name of the computer or server.
+
+-   `:~` denotes the directory path (where `~` signifies the user's home directory).
+
+-   `$` (or maybe `%`) denotes the start of the command prompt.
+
+    -   (For a special "superuser" called root, the dollar sign will change to a `#`).
+
+## Useful keyboard shortcuts
+
+-   `Tab` completion.
+
+-   Use the `↑` (and `↓`) keys to scroll through previous commands.
+
+-   `Ctrl`+`→` (and `Ctrl`+`←`) to skip whole words at a time.
+
+-   `Ctrl`+`a` moves the cursor to the beginning of the line.
+
+-   `Ctrl`+`e` moves the cursor to the end of the line.
+
+-   `Ctrl`+`k` deletes everything to the right of the cursor.
+
+-   `Ctrl`+`u` deletes everything to the left of the cursor.
+
+-   `Ctrl`+`Shift`+`c` to copy and `Ctrl`+`Shift`+`v` to paste (or just `⌘`+ `c/v` on a Mac).
+
+-   `Ctrl`+`l` clears your terminal.
+
+# Syntax
+
+## Syntax
+
+::: columns
+::: {.column width="50%" align="center"}
+<br> All Bash commands have the same basic syntax:
+
+<center>**command option(s) argument(s)**</center>
+
+**Examples:** <br>
+
+``` bash
+$ ls -lh ~/Documents/
+```
+
+<br>
+
+``` bash
+$ sort -u myfile.txt
+```
+:::
+
+::: {.column width="50%" align="center"}
+::: fragment
+**Commands** <br>
+
+-   You don't always need options or arguments.
+
+-   For example:
+
+    -   `$ ls ~/Documents/` and `$ ls -lh` are both valid commands that will yield output.
+
+<br>
+
+-   However, you always need a command.
+:::
+:::
+:::
+
+## Syntax
+
+::: columns
+::: {.column width="50%" align="center"}
+<br> All Bash commands have the same basic syntax:
+
+<center>command **option(s)** argument(s)</center>
+
+**Examples:** <br>
+
+``` bash
+$ ls `-lh` ~/Documents/
+```
+
+<br>
+
+``` bash
+$ sort `-u` myfile.txt
+```
+:::
+
+::: {.column style="width: 40%; font-size: 70%;"}
+<!---::: r-fit-text--->
+
+**Options** (also called **Flags**)
+
+-   Start with a dash.
+
+-   Usually one letter.
+
+-   Multiple options can be chained under a single dash.
+
+    ``` bash
+    $ ls -l -a -h /var/log ## This works
+    $ ls -lah /var/log ## So does this
+    ```
+
+-   An exception is with (rarer) options requiring two dashes.
+
+    ``` bash
+    $ ls --group-directories-first --human-readable /var/log
+    ```
+
+-   `l`: Use a long listing format. This option shows detailed information about the files and directories.
+
+-   `h`: With `-l`, print sizes in human-readable format (e.g., KB, MB).
+
+-   `u`: Unique, sort will write only one of two lines that compare equal. It filters out the duplicate entries in the output.
+
+-   Think it's difficult to memorize what the individual letters stand for? You're totally right.
+
+<!---:::--->
+:::
+:::
+
+## Syntax
+
+::: columns
+::: {.column width="50%" align="center"}
+<br> All Bash commands have the same basic syntax:
+
+<center>command option(s) **argument(s)**</center>
+
+**Examples:** <br>
+
+``` bash
+$ ls -lh `~/Documents/`
+```
+
+<br>
+
+``` bash
+$ sort -u `myfile.txt`
+```
+:::
+
+::: {.column width="50%" align="center"}
+**Arguments** <br>
+
+-   Tell the command *what* to operate on.
+
+-   Totally depends on the command what legit inputs are.
+
+-   Can be a file, path, a set of files and folders, a string, and more
+
+-   Sometimes more than just one argument is needed:
+
+    ``` bash
+    $ mv figs/cat.JPG best-figs/cat.jpeg
+    ```
+:::
+:::
+
+# Help!
+
+## Multiple ways to get help
+
+::: columns
+::: {.column width="50%" align="center"}
+-   The `man` tool can be used to look at the manual page for a topic.
+
+-   The `man` pages are grouped into sections, we can see them with `man man`.
+
+-   The `tldr` tool shows a very short description of a tool, which covers the most common use cases only.
+
+-   The [`cht.sh`](https://cht.sh/) website can be used directly from the shell to get help on tools or even ask specific questions. (Or install `cheat`.)
+
+-   For more info on how to get help, see [here](https://effective-shell.com/part-1-transitioning-to-the-shell/getting-help/).
+
+-   Actually, typing `man bash` and reading/skimming the whole thing might be a good start to learn basic command line speak.
+:::
+
+::: {.column width="50%" align="center"}
+![](figs/beatles-help.jpeg){fig-align="center" height="500"}
+:::
+:::
+
+## Getting help with man
+
+<br>
+
+The `man` command ("manual pages") is your friend if you need help.
+
+```{bash}
+man ls
+```
+
+<br>
+
+```{python}
+!man ls
+```
+
+## Getting help with man
+
+::: columns
+::: {.column style="width: 50%; font-size: 70%;"}
+<br> Manual pages are shown in the shell *pager*. Here are the essentials to navigate through contents presented in the pager:
+
+-   `d` - Scroll down half a page
+
+-   `u` - Scroll up half a page
+
+-   `j` / `k` - Scroll down or up a line. You can also use the arrow keys for this
+
+-   `q` - Quit
+
+-   `/pattern` - Search for text provided as "pattern"
+
+-   `n` - When searching, find the next occurrence
+
+-   `N` - When searching, find the previous occurrence
+
+-   These and other `man` tricks are detailed in the help pages (hit "h" when you're in the pager for an overview).
+:::
+
+::: {.column width="50%" align="center"}
+![](figs/rtfm-bayeux.png){fig-align="center" height="450"}
+
+<center>RTFM</center>
+
+<center>**Always check the documentation!**</center>
+:::
+:::
+
+## Help practice!
+
+<br>
+
+-   In your Terminal, access the `man` and explore the document. I want you to share with a colleague your first impression and five commands you found interesting.
+
+-   Please present your own (first impression + five commands) and colleague (first impression and five commands) views in the lecture quiz!
+
+## Help: cheat, tldr, cheat.sh
+
+There are various other utilities which provide more readable summaries/cheatsheets of various commands. Those include
+
+-   [`cheat`](https://github.com/cheat/cheat)
+-   [`cheat.sh`](https://cheat.sh/)
+-   [`tldr`](https://tldr.sh/)
+
+. . .
+
+The first two need to be installed first. `cheat.sh` sheets are accessible via:
+
+```{bash}
+curl cheat.sh/ls  
+```
+
+```         
+# List files one per line:
+ls -1
+
+# List all files, including hidden files:
+ls -a
+
+# List all files, with trailing `/` added to directory names:
+ls -F
+
+# Long format list with size displayed using human readable units (KB, MB, GB):
+ls -lh
+```
+
+# Navigating your file system
+
+## Navigating your file system
+
+::: columns
+::: {.column style="width: 50%; font-size: 70%;"}
+<br>
+
+-   We're all so used to a graphical user interface that switching to the shell can take some time to get used to.
+
+-   Modern operating systems increasingly abstract away from underlying file systems (think about iOS, Android).
+
+-   For data science operations it is key that you're able to efficiently navigate your system to get information on files and folders.
+
+-   Some questions that will pop up:
+
+    -   What is my home directory?
+    -   In which directory am I currently operating?
+    -   Where is my stuff?
+    -   Where do I want to put my stuff?
+    -   How do I navigate from here to there?
+:::
+
+::: {.column width="50%" align="center"}
+![](figs/that-way-giphy.gif){fig-align="center" height="450"}
+:::
+:::
+
+## Navigation
+
+<br>
+
+Key navigation commands are:
+
+-   `pwd` to print (the current) working directory.
+
+-   `cd` to change directory.
+
+. . .
+
+```{bash nav1}
+pwd
+```
+
+<br>
+
+```{python}
+!pwd
+```
+
+## Navigation
+
+<br>
+
+You can use absolute paths, but it's better to use relative paths and invoke special symbols for a user's home folder (`~`), current directory (`.`), and parent directory (`..`) as needed.
+
+<br>
+
+```{bash nav2}
+cd slides-topic-02-02-examples ## Move into the "slides-topic-02-02-examples" sub-directory of this lecture directory.
+cd ../.. ## Now go back up two directories.
+pwd
+```
+
+<br>
+
+<center>Terminal!</center>
+
+## Navigation
+
+::: columns
+::: {.column style="width: 50%; font-size: 70%;"}
+<br> Beware of directory names that contain spaces. Say you have a directory called "My Documents". (I'm looking at you, Windows.)
+
+-   Why won't `$ cd My Documents` work?
+
+-   Bash syntax is super pedantic about spaces and ordering. Here it thinks that "My" and "Documents" are separate arguments.
+
+-   How to deal with it:
+
+    -   Use quotation marks: `$ cd "My Documents"`.
+    -   Use Tab completion to automatically "escape" the space: `$ cd My\ Documents`.
+    -   Don't use spaces in file and folder names. Just don't.
+    -   I've developed the habit to name files and folders
+        -   always lowercase and
+        -   using dashes or snake_case, as in `assignment-05` or `assignment_05`. These are useful conventions!
+:::
+
+::: {.column width="50%" align="center"}
+::: fragment
+![](figs/expanding-brain.jpg){fig-align="center" height="700"}
+:::
+:::
+:::
+
+## Listing files and their properties
+
+::: columns
+::: {.column width="30%" align="center"}
+We're about to go into more depth about the `ls` (list) command. It shows the contents of the current (or given) directory:
+
+```{bash}
+ls
+```
+
+<br>
+
+```{python}
+!ls
+```
+:::
+
+::: {.column width="10%" align="center"}
+:::
+
+::: {.column width="60%" align="center"}
+::: fragment
+Now we list the contents of the `slides-topic-02-02-examples/` sub-directory with the `-lh` option ("long format", "human readable file size unit suffixes"; again, check out `man ls` for the details):
+
+```{bash}
+ls -lh slides-topic-02-02-examples
+```
+
+<br>
+
+```{python}
+!ls -lh slides-topic-02-02-examples
+```
+:::
+:::
+:::
+
+## Listing files and their properties
+
+::: columns
+::: {.column style="width: 50%; font-size: 80%;"}
+Now we list the contents of the `slides-topic-02-02-examples/` sub-directory with the `-lh` option ("long format", "human readable file size unit suffixes"; again, check out `man ls` for the details):
+
+```{bash}
+ls -lh slides-topic-02-02-examples
+```
+
+<br>
+
+```{python}
+!ls -lh slides-topic-02-02-examples
+```
+:::
+
+::: {.column style="width: 50%; font-size: 80%;"}
+::: fragment
+What does this all mean? Let's focus on the top line.
+
+``` bash
+drwxrwxr-x@ 3 dcorde3  206888963    96B Nov 27 09:51 ABC
+```
+
+-   The first column denotes the object type:
+
+    -   `d` (directory or folder), `l` (link), or `-` (file)
+
+-   Next, we see the permissions associated with the object's three possible user types: 1) [owner]{style="color: #e41a1c;"}, 2) [the owner's group]{style="color: #377eb8;"}, and 3) [all other users]{style="color: #4daf4a;"}.
+
+    -   Permissions reflect `r` (read), `w` (write), or `x` (execute) access.
+    -   <b>`-`</b> denotes missing permissions for a class of operations.
+
+-   The number of [hard links](https://linuxaria.com/howto/counting-and-listing-hard-links-on-linux) to the object.
+
+-   We also see the identity of the object's [owner]{style="color: #e41a1c;"} and their [group]{style="color: #377eb8;"}.
+
+-   Finally, we see some descriptive elements about the object:
+
+    -   Size, date and time of creation, and the object name.
+:::
+:::
+:::
+
+## Summary
+
+::: columns
+::: {.column style="width: 100%; font-size: 70%;"}
+-   The `pwd` (print working directory) command shows the current working directory.
+-   The `ls` (list) command shows the contents of the current directory or a given directory.
+-   The `ls -l` command shows the contents of the current directory as list.
+-   The `cd` (change directory) changes the current working directory.
+-   You can run `cd` at any time to quickly go to your home directory.
+-   You can use the `cd -` command to go back to the last location.
+-   Absolute paths are paths which specify the exact location of a file or folder.
+-   Relative paths are paths which are relative to the current directory.
+-   The `.` special folder means ‘this folder’.
+-   The `..` special folder means ‘the parent folder’.
+-   The `~` special folder is the ‘home directory’.
+-   The `$PWD` environment variable holds the current working directory.
+-   The `$HOME` environment variable holds the user's home directory.
+-   The `tree` command can show the files and folders in a given directory. (Install first on a Mac.)
+-   The `file` command can be used to ask the shell what it thinks a file is.
+
+::: fragment
+<center>For a more detailed overview, click [here](https://effective-shell.com/part-1-transitioning-to-the-shell/navigating-your-system/).</center>
+:::
+:::
+:::
+
+# Managing your files
+
+## Managing your files
+
+::: columns
+::: {.column width="50%" align="center"}
+-   The obvious next step after navigating the file system is managing files.
+
+-   There's a lot you can do with files, including downloading, unzipping, copying, moving, renaming and deleting.
+
+-   Again, doing this in a GUI is intuitive but usually scales badly.
+
+-   We'll learn how to do these operations at scale using the shell.
+
+-   Be careful when handling files in the shell though! Don't expect friendly reminders such as "Do you really want to delete this folder of pictures from your anniversary?"
+:::
+
+::: {.column width="50%"}
+![](figs/organize.gif){fig-align="center" height="500"}
+:::
+:::
+
+## Create: touch and mkdir
+
+One of the most common shell tasks is object creation (files, directories, etc.).
+
+We use `mkdir` to create directories. E.g., to create a new "testing" directory we do:
+
+```{bash mkdir}
+mkdir testing
+```
+
+<br>
+
+```{python}
+!mkdir testing
+```
+
+. . .
+
+We use `touch` to create (empty) files. If the file(s) already exist, `touch` changes a file's "Access", "Modify" and "Change" timestamps to the current time and date. To add some files to our new directory, we do:
+
+```{bash touch}
+touch testing/test1.txt testing/test2.txt testing/test3.txt
+```
+
+<br>
+
+```{python}
+!touch testing/test1.txt testing/test2.txt testing/test3.txt
+```
+
+. . .
+
+Check that it worked:
+
+```{bash}
+ls testing
+```
+
+<br>
+
+```{python}
+!ls testing
+```
+
+## Remove: rm and rmdir
+
+Let's delete the objects that we just created. Start with one of the .txt files, by using `rm`. - We could delete all the files at the same time, but you'll see why I want to keep some.
+
+```{bash rm1}
+rm testing/test1.txt
+```
+
+<br>
+
+```{python}
+!rm testing/test1.txt
+```
+
+. . .
+
+The equivalent command for directories is `rmdir`.
+
+```{bash rmdir}
+rmdir testing
+```
+
+<br>
+
+```{python}
+!rmdir testing
+```
+
+. . .
+
+Uh oh... It won't let us delete the directory while it still has files inside of it. The solution is to use the `rm` command again with the "recursive" (`-r` or `-R`) and "force" (`-f`) options. - Excluding the `-f` option is safer, but will trigger a confirmation prompt for every file, which I'd rather avoid here.
+
+```{bash rm2}
+rm -rf testing ## Success
+```
+
+<br>
+
+```{python}
+!rm -rf testing ## Success
+```
+
+## Copy: cp
+
+::: columns
+::: {.column style="width: 100%; font-size: 70%;"}
+The syntax for copying is `$ cp object path/copyname`.
+
+-   If you don't provide a new name for the copied object, it will just take the old name.
+
+-   However, if there is already an object with the same name in the target destination, then you'll have to use `-f` to force an overwrite.
+
+::: fragment
+```{bash cp}
+## Create new "copies" sub-directory
+mkdir slides-topic-02-02-examples/copies
+
+## Now copy across a file (with a new name)
+cp slides-topic-02-02-examples/reps.txt slides-topic-02-02-examples/copies/reps-copy.txt
+
+## Show that we were successful
+ls slides-topic-02-02-examples/copies
+```
+
+<center>Terminal!</center>
+:::
+
+::: fragment
+You can use `cp` to copy directories, although you'll need the `-r` flag if you want to recursively copy over everything inside of it too:
+
+```{bash}
+cp -r slides-topic-02-02-examples/meals slides-topic-02-02-examples/copies
+```
+
+```{bash}
+rm -rf slides-topic-02-02-examples/copies/meals
+```
+
+<center>Terminal!</center>
+:::
+:::
+:::
+
+## Move (and rename): mv
+
+The syntax for moving is `$ mv object path/newobjectname`
+
+```{bash mv1}
+ ## Move the abc.txt file and show that it worked
+mv slides-topic-02-02-examples/ABC/abc.txt examples
+ls slides-topic-02-02-examples/ABC ## empty
+```
+
+<br>
+
+```{bash mv2}
+## Move it back again
+mv slides-topic-02-02-examples/abc.txt slides-topic-02-02-examples/ABC
+ls slides-topic-02-02-examples/ABC ## not empty
+```
+
+<center>Terminal!</center>
+
+. . .
+
+Note that "moving" an object within the same directory, but with specifying `newobjectname`, is effectively the same as renaming it.
+
+```{bash mv3}
+ ## Rename reps-copy to reps2 by "moving" it with a new name
+mv slides-topic-02-02-examples/copies/reps-copy.txt slides-topic-02-02-examples/copies/reps2.txt
+ls slides-topic-02-02-examples/copies
+```
+
+<center>Terminal!</center>
+
+## Rename *en masse* : zmv
+
+A more convenient way to do renaming in `zsh` is with `zmv`. It has to be installed and autoloaded first:
+
+```{bash}
+autoload -U zmv
+```
+
+<center>Terminal!</center>
+
+. . .
+
+The syntax is `zmv <options> <old-files-pattern> <new-files-pattern>`
+
+For example, say we want to change the file type (i.e. extension) of a set of files in the `slides-topic-02-02-examples/meals` directory, we do:
+
+```{bash}
+cd slides-topic-02-02-examples/meals
+zmv -n -W  "*.csv" "*.txt"
+```
+
+<center>Terminal!</center>
+
+<!---
+```bash
+mv -- friday.csv friday.txt
+mv -- monday.csv monday.txt
+mv -- saturday.csv saturday.txt
+mv -- sunday.csv sunday.txt
+mv -- thursday.csv thursday.txt
+mv -- tuesday.csv tuesday.txt
+mv -- wednesday.csv wednesday.txt
+```
+--->
+
+<br>
+
+A very useful flag is `-n` which does not execute the command but prints the command that would be executed. Use this if you are unsure about your patterns. The `-W` flag ensures that the wildcard `*` is recycled in the second pattern.
+
+## Rename *en masse* : zmv
+
+`zmv` really shines in conjunction with regular expressions and wildcards (more on the next slide). This works especially well for dealing with a whole list of files or folders.
+
+As another example, let's change *all* of the file names in the `slides-topic-02-02-examples/meals` directory.
+
+```{bash}
+zmv -n '(**/)(*).csv' '$1$2-tacos.csv'
+```
+
+<center>Terminal!</center>
+
+<!---```bash
+mv -- friday.csv friday-tacos.csv
+mv -- monday.csv monday-tacos.csv
+mv -- saturday.csv saturday-tacos.csv
+mv -- sunday.csv sunday-tacos.csv
+mv -- thursday.csv thursday-tacos.csv
+mv -- tuesday.csv tuesday-tacos.csv
+mv -- wednesday.csv wednesday-tacos.csv
+--->
+
+. . .
+
+Notice that the patterns are now bit more complicated. The first is surrounded by single quotes, `(**/)` which defines a group that we can refer to later. It allows us to search in both the given directory and sub-directories (which we don't have in this case). The second, `(*)` is also grouped. Both are referred to in the replacement pattern with `$1` and `$2`.
+
+Want to learn more about `zmv`? Check out [this](https://filipe.kiss.ink/zmv-zsh-rename/).
+
+## Wildcards
+
+[Wildcards](http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm) are special characters that can be used as a replacement for other characters. The two most important ones are:
+
+1.  Replace any number of characters with `*`.
+
+    -   Convenient when you want to copy, move, or delete a whole class of files.
+
+. . .
+
+```{bash asterisk}
+cp slides-topic-02-02-examples/*.sh slides-topic-02-02-examples/copies ## Copy any file with an .sh extension to "copies"
+rm slides-topic-02-02-examples/copies/* ## Delete everything in the "copies" directory
+```
+
+<center>Terminal!</center>
+
+. . .
+
+2.  Replace a single character with `?`
+
+    -   Convenient when you want to discriminate between similarly named files.
+
+. . .
+
+```{bash qmark}
+ls slides-topic-02-02-examples/meals/??nday.csv
+ls slides-topic-02-02-examples/meals/?onday.csv
+```
+
+<center>Terminal!</center>
+
+## Find
+
+The last command to mention is `find`.
+
+This can be used to locate files and directories based on a variety of criteria; from pattern matching to object properties.
+
+```{bash find1}
+find examples -iname "monday.csv" ## will automatically do recursive, -iname makes search case-insensitive
+```
+
+<br>
+
+```{bash find2}
+find . -iname "*.txt" ## must use "." to indicate pwd
+```
+
+<br>
+
+```{bash find3}
+find . -size +2000k ## find files larger than 2000 KB
+```
+
+<center>Terminal!</center>
+
+## Summary
+
+::: columns
+::: {.column style="width: 100%; font-size: 70%;"}
+-   The `rm` (remove) command can delete a file (they are gone forever, no recycle bin!).
+-   The `rm` command won't delete a folder which has files in it, unless you tell it to by adding the `-r` (recursive) flag.
+-   The `cp` (copy) command can copy a file.
+-   The `cp` can also be given wildcards like `*` to copy many files.
+-   The `mv` (move) command can move or rename a file.
+-   The `zmv` command enables convenient renaming.
+-   The `mkdir` command can create a folder - it can even create a whole tree of folders if you pass the `-p` (create parent directories) flag.
+-   The `find` command lets you find files based on specified criteria.
+-   The `cat` command (concatenated) can be used to write the contents of a file to the screen.
+-   We can pass multiple files to commands like `cat` if we use wildcards, such as `quotes/*`.
+-   The `wget` (web get) command can download a file from the web. (Install first on a Mac.)
+-   The `zip`/`unzip` commands can zip/unzip a file/folder for us.
+
+::: fragment
+For a more detailed overview, click [here](https://effective-shell.com/part-1-transitioning-to-the-shell/managing-your-files/).
+:::
+:::
+:::
+
+# Working with text files
+
+## Working with text files
+
+::: columns
+::: {.column width="50%" align="center"}
+-   Data scientists spend a lot of time working with text, including scripts, Markdown documents, and delimited text files like CSVs.
+
+-   You will have the opportunity to learn more on the statistical analysis of text using NLP technique over the course of your studies.
+
+-   While `Python` and `R` are strong environments for text wrangling and analysis, it still makes sense to spend a few slides showing off some Bash shell capabilities for working with text files.
+
+-   We'll only scratch the surface, but hopefully you'll get an idea of how powerful the shell is in the text domain.
+:::
+
+::: {.column width="50%" align="center"}
+![](figs/bookshelf.gif){fig-align="center" height="600"}
+:::
+:::
+
+## Counting text: wc
+
+<br>
+
+You can use the `wc` command to count:
+
+1.  The lines of text
+2.  The number of words
+3.  The number of characters
+
+. . .
+
+Let's demonstrate with a text file containing all of Shakespeare's Sonnets.<sup>1</sup>
+
+```{bash wc}
+wc slides-topic-02-02-examples/sonnets.txt
+```
+
+<center>Terminal!</center>
+
+The character count is actually higher than we'd get if we count by hand, because `wc` counts the invisible newline character "\n".
+
+<center>[Project Gutenberg](http://www.gutenberg.org/cache/epub/1041/pg1041.txt).</center>
+
+# Reading text
+
+## Read everything: cat
+
+<br>
+
+The simplest way to read in text is with the `cat` ("concatenate") command. Note that `cat` will read in *all* of the text. You can scroll back up in your shell window, but this can still be a pain.
+
+Again, let's demonstrate using Shakespeare's Sonnets. (This will overflow the slide.)
+
+We also use the `-n` flag to show line numbers:
+
+<br>
+
+. . .
+
+```{bash cat}
+cat -n slides-topic-02-02-examples/sonnets.txt
+```
+
+<center>Terminal!</center>
+
+## Scroll: more and less
+
+<br>
+
+The `more` and `less` commands provide extra functionality over `cat`. For example, they allow you to move through long text one page at a time. (While they look similar, `less` is more than `more`, [more or less](https://unix.stackexchange.com/questions/604/isnt-less-just-more)...)
+
+```{bash more}
+
+more slides-topic-02-02-examples/sonnets.txt
+
+```
+
+<center>Terminal!</center>
+
+<br>
+
+-   You can move forward and back using the `f` and `b` keys, and quit by hitting `q`.
+
+## Preview: head and tail
+
+<br>
+
+The `head` and `tail` commands let you limit yourself to a preview of the text, down to a specified number of rows. (The default is 10 rows if you don't specify a number with the `-n` flag.)
+
+<br>
+
+```{bash head}
+head -n 3 slides-topic-02-02-examples/sonnets.txt ## First 3 rows
+# head slides-topic-02-02-examples/sonnets.txt ## First 10 rows (default)
+```
+
+<center>Terminal!</center>
+
+## Preview: head and tail
+
+<br>
+
+`tail` works very similarly to `head`, but starting from the bottom. For example, we can see the very last row of a file as follows:
+
+<br>
+
+```{bash tail1}
+tail -n 1 slides-topic-02-02-examples/sonnets.txt ## Last row
+```
+
+<center>Terminal!</center>
+
+. . .
+
+By using the `-n +N` option, we can specify that we want to preview all lines starting from row N *and after*, as in:
+
+<br>
+
+```{bash tail2}
+tail -n +3024 slides-topic-02-02-examples/sonnets.txt ## Show everything from line 3024
+```
+
+<center>Terminal!</center>
+
+## Find patterns: grep
+
+::: columns
+::: {.column style="width: 45%; font-size: 70%;"}
+To find patterns in text, we can use regular expression-type matching with `grep`.
+
+For example, say we want to find the famous opening line to Shakespeare's [Sonnet 18](https://en.wikipedia.org/wiki/Sonnet_18).
+
+(We're going to include the `-n` ("number") flag to get the line that it occurs on.)
+
+```{bash grep1}
+grep -n "Shall I compare thee" slides-topic-02-02-examples/sonnets.txt
+```
+
+```{python}
+!grep -n "Shall I compare thee" slides-topic-02-02-examples/sonnets.txt
+```
+:::
+
+::: {.column style="width: 5%; font-size: 70%;"}
+:::
+
+::: {.column style="width: 45%; font-size: 70%;"}
+By default, `grep` returns all matching patterns.
+
+Check out what happens when we do the following:
+
+```{bash}
+grep -n "winter" slides-topic-02-02-examples/sonnets.txt
+```
+
+```{python}
+!grep -n "winter" slides-topic-02-02-examples/sonnets.txt
+```
+:::
+:::
+
+## Find patterns: grep
+
+<br>
+
+Note that `grep` can be used to identify patterns in a group of files (e.g. within a directory) too.
+
+-   This is particularly useful if you are trying to identify a file that contains, say, a function name.
+
+. . .
+
+Here's a simple example: Which days will I eat pasta this week?
+
+-   I'm using the `r` (recursive) and `l` (just list the files; don't print the output) flags.
+
+. . .
+
+```{bash grep2}
+grep -rl "pasta" slides-topic-02-02-examples/meals
+```
+
+```{python}
+!grep -rl "pasta" slides-topic-02-02-examples/meals
+```
+
+Take a look at the `grep` man or cheat file for other useful examples and flags (e.g. `-i` for ignore case).
+
+## Manipulate text: sed
+
+There are two main commands for manipulating text in the shell, namely `sed` and `awk`. Both of these are very powerful and flexible. We'll briefly look into `sed` for now. (Mac users, note that the MacOS `sed` works a bit differently; see [here](https://unix.stackexchange.com/questions/13711/differences-between-sed-on-mac-osx-and-other-standard-sed).)
+
+`sed` is the *stream editor* command. It takes input from a stream - which in many cases will simply be a file. It then performs operations on the text as it is read, and returns the output.
+
+. . .
+
+::: columns
+::: {.column style="width: 50%; font-size: 70%;"}
+<br>
+
+**Example 1.** Replace one text pattern with another.
+
+```{bash nursery}
+cat slides-topic-02-02-examples/nursery.txt
+```
+
+
+```{bash sed1a}
+sed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt
+cat slides-topic-02-02-examples/nursery.txt
+```
+
+
+<!---`
+``{bash}
+## Change it back for when we want to re-knit the file.
+sed 's/Bill/Jack/g' slides-topic-02-02-examples/nursery.txt
+```
+
+```{python}
+## Change it back for when we want to re-knit the file.
+!sed 's/Bill/Jack/g' slides-topic-02-02-examples/nursery.txt
+```
+--->
+
+:::
+
+::: {.column style="width: 50%; font-size: 70%;"}
+Let's look at the expression `s/Jack/Bill/g` in detail:
+
+-   The `s` indicates that we are going to run the substitute function, which is used to replace text.
+-   The `/` indicates the start of the pattern we are searching for - `Bill` in this case.
+-   The second `/` indicates the start of the replacement we will make when the pattern is found.
+-   The final `/` indicates the end of the replacement - we can also optionally put flags after this slash. Here, `g` ensures global replacement (not just replacement of the first match).
+:::
+:::
+
+<!---
+## Manipulate text: sed 
+
+<br>
+
+**Example 2.** Find and count the 10 most commonly used words in Shakespeare's Sonnets.
+
+The command below uses, among other things:
+
+- `\s`, the whitespace metacharacter
+- `\n`, the newline metacharacter
+- `|`, the pipe operator (more on that later)
+--->
+<!---```{bash sed2}
+sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
+
+```
+
+<br>
+
+<!---```{python}
+!sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
+```--->
+
+## Summary
+
+::: columns
+::: {.column style="width: 100%; font-size: 70%;"}
+-   `head` will show the first ten lines of a file.
+-   `head -n 30` will show the first thirty lines of a file, using the -n flag to specify the number of lines.
+-   `tail` will show the final ten lines of a file.
+-   `tail -n 3` uses the -n flag to specify three lines only.
+-   `tr 'a' 'b'` is the translate characters command, which turns one set of characters into another.
+-   `cut` can be used to extract parts of a line of text.
+-   `cut -d',' -f 3` shows how the `-d` or delimiter flag is used to specify the delimiter to cut on and how the `-f` or field flag specifies which of the fields the text has been cut into is printed.
+-   `cut -c 2-4` uses the `-c` or characters flag to specify that we are extracting a subset of characters in the line, in this case characters two to four.
+-   `rev` reverses text - by reversing, cutting and then re-reversing you can quickly extract text from the end of a line.
+-   `sort` sorts the incoming text alphabetically. The `-r` flag for `sort` reverses the sort order.
+-   The `uniq` command removes duplicate lines - but only when they are next to each other, so you'll often use it in combination with `sort`.
+-   Your pager, for example the less program can be useful when inspecting the output of your text transformation commands.
+
+::: fragment
+For a more detailed overview, click [here](https://effective-shell.com/part-3-manipulating-text/).
+:::
+:::
+:::
+
+## Also, make sure to master regular expressions!
+
+::: columns
+::: {.column width="50%" align="center"}
+<br>
+
+**Good starting points are:**
+
+-   [This chapter](https://effective-shell.com/part-3-manipulating-text/regex-essentials/) discussing regex in the context of the shell
+
+-   [Regular Expression in Python](https://docs.python.org/3/howto/regex.html)
+
+-   [This base R regex intro](https://stat.ethz.ch/R-manual/R-devel/library/base/html/regex.html)
+
+
+:::
+
+::: {.column width="50%" align="center"}
+![](figs/evil-laugh.gif){fig-align="center" height="500"}
+:::
+:::
+
+<!-- ############################################ -->
+
+# Redirects, pipes, and loops
+
+## Redirects, pipes, and loops
+
+::: columns
+::: {.column width="50%" align="center"}
+<br>
+
+-   You have learned about pipes (`%>%` or `|>`) in R already.
+-   Understanding the concept of pipelines in the shell, as well as how input and output work for command line programs is critical to be able to use the shell effectively.
+-   Think again of the Unix philosophy of "doing one thing, but doing it well" and combining multiple of these modules.
+-   Also, often you'll want to dump output in a file as part of your workflow.
+-   Let's learn how all this works.
+:::
+
+::: {.column width="50%" align="center"}
+![](figs/pipe-giphy.gif){fig-align="center" height="500"}
+:::
+:::
+
+## Redirect: \>
+
+<br>
+
+You can send output from the shell to a file using the redirect operator `>`.
+
+For example, let's print a message to the shell using the `echo` command.
+
+```{bash}
+echo "At first, I was afraid, I was petrified"
+```
+
+```{python}
+!echo "At first, I was afraid, I was petrified"
+```
+
+<br>
+
+. . .
+
+If you wanted to save this output to a file, you need simply redirect it to the filename of choice.
+
+```{bash}
+echo "At first, I was afraid, I was petrified" > survive.txt
+find survive.txt ## Show that it now exists
+```
+
+```{python}
+!echo "At first, I was afraid, I was petrified" > survive.txt
+!find survive.txt ## Show that it now exists
+```
+
+## Redirect: \>
+
+<br>
+
+If you want to *append* text to an existing file, then you should use `>>`.
+
+-   Using `>` will try to overwrite the existing file contents.
+
+. . .
+
+```{bash}
+echo "'Kept thinking I could never live without you by my side" >> survive.txt
+cat survive.txt
+```
+
+<br>
+
+```{python}
+!echo "'Kept thinking I could never live without you by my side" >> survive.txt
+!cat survive.txt
+```
+
+
+
+<br>
+
+An example use case is when adding rules to your .gitignore, e.g. `$ echo "*.csv" >>  .gitignore`.
+
+## Pipes: \|
+
+The pipe operator `|` is one of the coolest features in Bash.
+
+-   It allows us to chain (i.e. "pipe") together a sequence of simple operations and thereby implement a more complex operation.
+
+. . .
+
+::: columns
+::: {.column style="width: 40%; font-size: 70%;"}
+**Here's a simple example:**
+
+```{bash pipe1}
+cat -n slides-topic-02-02-examples/sonnets.txt 2>/dev/null | head -n100 | tail -n10
+```
+
+```{python}
+!cat -n slides-topic-02-02-examples/sonnets.txt  2>/dev/null | head -n100 | tail -n10
+```
+:::
+
+::: {.column style="width: 30%; font-size: 50%;"}
+-   This command sequence:
+
+    -   It reads the file `sonnets.txt`, numbering each line of the text.
+    -   Any errors that might occur during this process are ignored (not printed to the terminal).
+    -   It then takes only the first 100 lines of the numbered text.
+    -   From those 100 lines, it then takes only the last 10 lines.
+    -   The final output displayed in the terminal will be lines 91 to 100 of the `sonnets.txt` file, along with their corresponding line numbers.
+
+1.  `cat -n slides-topic-02-02-examples/sonnets.txt`
+    -   `cat` is used to concatenate and display files.
+    -   The `-n` option of `cat` numbers all output lines starting with line 1.
+    -   `slides-topic-02-02-examples/sonnets.txt` is the file path to the text file being read. This file presumably contains sonnets or other text.
+:::
+
+::: {.column style="width: 30%; font-size: 50%;"}
+2.  `2>/dev/null`
+    -   `2>` is used to redirect the standard error (stderr) output stream.
+    -   `/dev/null` is a special file that discards all data written to it.
+    -   This redirection sends all error messages from `cat` (like file not found, no read permission, etc.) to `/dev/null`, effectively silencing any errors that `cat` might produce.
+3.  `| head -n100`
+    -   The pipe `|` passes the output of the previous command (`cat -n`) to the next command as input.
+    -   `head` is used to output the first part of files.
+    -   The `-n100` option tells `head` to print the first 100 lines of its input.
+4.  `| tail -n10`
+    -   Another pipe `|` passes the output of `head -n100` to the next command as input.
+    -   `tail` outputs the last part of files.
+    -   The `-n10` option tells `tail` to print the last 10 lines of its input.
+:::
+:::
+
+## Iteration with *for* loops
+
+<br>
+
+Sometimes you want to loop an operation over certain parameters. *for* loops in Bash/Z shell work similarly to other programming languages that you are probably familiar with.
+
+<br>
+
+**The basic syntax is:**
+
+``` bash
+for i in LIST
+do 
+  OPERATION $i ## the $ sign indicates a variable in bash
+done
+```
+
+. . .
+
+We can also condense things into a single line by using `;`.
+
+``` bash
+for i in LIST; do OPERATION $i; done
+```
+
+Note: Using `;` isn't limited to *for loops*. Semicolons are a standard way to denote line endings in Bash/Z shell.
+
+## Example 1: Print a sequence of numbers
+
+To help make things concrete, here's a simple *for* loop in action.
+
+```{bash for1a}
+for i in 1 2 3 4 5; do echo $i; done
+```
+
+```{python}
+!for i in 1 2 3 4 5; do echo $i; done
+```
+
+. . .
+
+FWIW (For What It's Worth), we can use bash's brace expansion (`{1..n}`) to save us from having to write out a long sequence of numbers.
+
+```{bash for1b}
+for i in {1..5}; do echo $i; done
+```
+
+## Example 2: Combine CSVs
+
+Here's a more realistic *for* loop use-case: Combining (i.e. concatenating) multiple CSVs.
+
+Say we want to combine all the "daily" files in the `/meals` directory into a single CSV, which I'll call `mealplan.csv`. Here's one attempt that incorporates various bash commands and tricks that we've learned so far. The basic idea is:
+
+1.  Create a new (empty) CSV
+
+2.  Then, loop over the relevant input files, appending their contents to our new CSV
+
+. . .
+
+```{bash}
+## create an empty CSV
+touch slides-topic-02-02-examples/meals/mealplan.csv
+## loop over the input files and append their contents to our new CSV
+for i in $(ls slides-topic-02-02-examples/meals/*day.csv)
+  do 
+   cat $i >> slides-topic-02-02-examples/meals/mealplan.csv
+done
+```
+
+<center>Terminal!</center>
+
+. . .
+
+<center>Did it work?</center>
+
+## Example 2: Combine CSVs
+
+<br>
+
+```{bash for2b}
+cat slides-topic-02-02-examples/meals/mealplan.csv
+```
+
+<center>Terminal!</center>
+
+
+
+. . .
+
+<br>
+
+Hmmm. Sort of, but we need to get rid of the repeating header.
+
+. . .
+
+<br>
+
+Can you think of a way? (*Hint:* `tail` and `head`...)
+
+## Example 2: Combine CSVs
+
+<br>
+
+Let's try again. First delete the old file so we can start afresh.
+
+```{bash for2c}
+rm -f slides-topic-02-02-examples/meals/mealplan.csv ## delete old file
+```
+
+<center>Terminal!</center>
+
+. . .
+
+Here's our adapted gameplan:
+
+-   First, create the new file by grabbing the header (i.e. top line) from any of the input files and redirecting it. No need for `touch` this time.
+
+-   Next, loop over all the input files as before, but this time only append everything *after* the top line.
+
+. . .
+
+```{bash}
+## create a new CSV by redirecting the top line of any file
+head -1 slides-topic-02-02-examples/meals/monday.csv > slides-topic-02-02-examples/meals/mealplan.csv
+## loop over the input files, appending everything after the top line
+for i in $(ls slides-topic-02-02-examples/meals/*day.csv)
+ do 
+   tail -n +2 $i >> slides-topic-02-02-examples/meals/mealplan.csv
+done
+```
+
+<center>Terminal!</center>
+
+## Example 2: Combine CSVs
+
+<br>
+
+It worked!
+
+```{bash for2e}
+cat slides-topic-02-02-examples/meals/mealplan.csv
+```
+
+<center>Terminal!</center>
+
+. . .
+
+<br>
+
+We still have to sort the correct week order, but that's an easy job in `R` or `Python`.
+
+-   The explicit benefit of doing the concatenating in the shell is that it can be *much* more efficient, since all the files don't simultaneously have to be held in memory (i.e RAM).
+
+-   This doesn't matter here, but can make a dramatic difference once we start working with lots of files (or even a few really big ones).
+
+
+# Scripting
+
+## Scripting
+
+::: columns
+::: {.column style="width: 50%; font-size: 80%;"}
+<br>
+
+Writing code **interactively** in the shell makes a lot of sense when you are exploring data, file structures, etc.
+
+However, it's also possible (and often desirable) to **write reproducible shell scripts** that combine a sequence of commands.
+
+These scripts are demarcated by their `.sh` file extension.
+
+Let's look at the contents of a short shell script, `hello.sh`, that is included in the examples folder:
+
+```{bash hello}
+cat slides-topic-02-02-examples/hello.sh
+```
+
+<br> What does this script do?
+:::
+
+::: {.column width="50%" align="center"}
+![](figs/goldberg-machine-giphy.gif){fig-align="center" height="500"}
+:::
+:::
+
+## Hello World!
+
+<br>
+
+``` bash
+#!/bin/sh
+echo "\nHello World!\n"
+```
+
+-   `#!/bin/sh` is a [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)), indicating which program to run the command with (here: any Bash-compatible shell). However, it is typically ignored (note that it begins with the hash comment character.)
+
+-   `echo "\nHello World!\n"` is the actual command that we want to run.
+
+. . .
+
+To run this simple script, you can just type in the file name and press enter.
+
+```{bash hello_run}
+slides-topic-02-02-examples/hello.sh
+# bash slides-topic-02-02-examples/hello.sh ## Also works
+```
+
+```{python}
+!slides-topic-02-02-examples/hello.sh
+# bash slides-topic-02-02-examples/hello.sh ## Also works
+```
+
+
+<!-- ############################################ -->
+
+# Next steps
+
+## Things we didn't cover here
+
+I hope that I've given you a sense of how the shell works and how powerful it is. My main goal has been to "demystify" the shell, so that you aren't intimidated when we use shell commands later on.
+
+We didn't cover many things:
+
+-   User roles and file permissions, environment variables, SSH, memory management (e.g. [top](https://ss64.com/bash/top.html) and [htop](https://hisham.hm/htop/)), GNU parallel, etc.
+
+-   Automation; see [here](https://stat545.com/automation-overview.html), [here](https://books.ropensci.org/drake/index.html), and [here](https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf) are great places to start learning about automation on your own.
+
+## Additional material
+
+If you want to dig deeper, check out
+
+-   [The Unix Shell](http://swcarpentry.github.io/shell-novice/) (Software Carpentery)
+
+-   [The Unix Workbench](https://seankross.com/the-unix-workbench/) (Sean Kross)
+
+-   [Data Science at the Command Line](https://www.datascienceatthecommandline.com/) (Jeroen Janssens)
+
+-   [Effective Shell](https://effective-shell.com/) (Dave Kerr)
+
+-   [Efficient Way To Process Large Text/Log Files Using Awk With Python](https://techblogs.42gears.com/efficient-way-to-process-large-text-log-files-usin-wpython/)
+
+-   [Using AWK and R to parse 25tb](https://livefreeordichotomize.com/posts/2019-06-04-using-awk-and-r-to-parse-25tb/) (Nick Strayer)
+
+-   [`./jq`](https://jqlang.github.io/jq/)
+
+-   [`awk`](https://en.wikipedia.org/wiki/AWK)
+
+# Thank you!
