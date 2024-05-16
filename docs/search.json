@@ -208,5 +208,135 @@
     "crumbs": [
       "Syllabus"
     ]
+  },
+  {
+    "objectID": "topic-pages/page-topic-01.html",
+    "href": "topic-pages/page-topic-01.html",
+    "title": "Topic 01",
+    "section": "",
+    "text": "Slides\n\nTopic 01: Introduction, Syllabus and Set up\n\n\n\nLecture Material:\n\nInstructions for setting up the course.\nUsing Jupyter Notebooks: html, notebook\n\n\n\n\n\n\n\nAdditional Resources\n\nPython and Anaconda Installation Guide\nElements of Data Science - The notebooks\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nUsing LaTex to write math in markdown - docx2latex.com"
+  },
+  {
+    "objectID": "topics-pages/page-topic-01.html",
+    "href": "topics-pages/page-topic-01.html",
+    "title": "Topic 01",
+    "section": "",
+    "text": "Slides\n\nTopic 01: Introduction, Syllabus and Set up\n\n\n\nLecture Material:\n\nInstructions for setting up the course.\nUsing Jupyter Notebooks: html, notebook\n\n\n\n\n\n\n\nAdditional Resources\n\nPython and Anaconda Installation Guide\nElements of Data Science - The notebooks\nJupyter Notebook for Beginners: A tutorial Pryke, Benjamin - www.dataquest.io\nUsing Python with RStudio and reticulate: here and here\nR & Python: A Love Story - rstudio.com\nRStudio 1.2 Preview: Reticulated Python\nUsing LaTex to write math in markdown - docx2latex.com",
+    "crumbs": [
+      "Materials",
+      "Topic 1: Intro"
+    ]
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#topic-overview",
+    "href": "slides/slides-topic-01.html#topic-overview",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\n\nIntroductions\nMotivation\nCourse Overview and Logistics\nSet up\nIDEs\n\nJupyter\nQuarto"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#instructor",
+    "href": "slides/slides-topic-01.html#instructor",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Instructor",
+    "text": "Instructor\n\n\n\n\n\n\n\n\n\n\n\ndavi.moreira@emory.edu\nhttps://davi- moreira.github.io/\n\n\nVisiting Assistant Professor in the QTM Department at Emory University;\n\n\n\nMy academic work addresses Political Communication, Data Science, Text as Data, Artificial Intelligence, and Comparative Politics.\n\n\n\nM&E Specialist consultant - World Bank (Brazil, Mozambique, Angola, and DRC)"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#instructors-passions",
+    "href": "slides/slides-topic-01.html#instructors-passions",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Instructor’s Passions",
+    "text": "Instructor’s Passions"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#instructors-passions-1",
+    "href": "slides/slides-topic-01.html#instructors-passions-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Instructor’s Passions",
+    "text": "Instructor’s Passions"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#students",
+    "href": "slides/slides-topic-01.html#students",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Students",
+    "text": "Students\n\n\nIt is your turn! - 5 minutes\n\n\n\nPresent yourself to your left/right colleague and tell her/him what are the current two main passions in your life."
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#section",
+    "href": "slides/slides-topic-01.html#section",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "",
+    "text": "Large-scale data + algorithms to answer questions"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#rise-of-the-digital-information-age",
+    "href": "slides/slides-topic-01.html#rise-of-the-digital-information-age",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Rise of the digital information age",
+    "text": "Rise of the digital information age\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#social-media-data",
+    "href": "slides/slides-topic-01.html#social-media-data",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Social Media Data",
+    "text": "Social Media Data"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#new-data-formats-image-text-videos..",
+    "href": "slides/slides-topic-01.html#new-data-formats-image-text-videos..",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "New Data Formats: Image, text, videos..",
+    "text": "New Data Formats: Image, text, videos.."
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#online-research",
+    "href": "slides/slides-topic-01.html#online-research",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Online Research",
+    "text": "Online Research"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#powerful-and-cheap-computer-power",
+    "href": "slides/slides-topic-01.html#powerful-and-cheap-computer-power",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Powerful and Cheap Computer Power",
+    "text": "Powerful and Cheap Computer Power"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#as-a-consequence",
+    "href": "slides/slides-topic-01.html#as-a-consequence",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "As a consequence:",
+    "text": "As a consequence:\n\nAbundance of data we can use for research and governments can use to make better decisions\n\nNovel research questions\nNew ways to answer old, long-standing research questions\n\nNew technologies also have social implications and can generate important policy questions.\n\nPrivacy issues\nUse of technology by bad actors.\nUse of technology by governments to censor/monitor citizens.\netc…"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#logistics",
+    "href": "slides/slides-topic-01.html#logistics",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Logistics",
+    "text": "Logistics\n\nSyllabus\nSchedule\nOffice Hours\nMaterials:\n\nhttps://davi-moreira.github.io/2024Summer_dsc_emory_qtm_350\nCanvas"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#jupyter",
+    "href": "slides/slides-topic-01.html#jupyter",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Jupyter:",
+    "text": "Jupyter:\nSee Jupyter Notebook in the Class Website"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#quarto",
+    "href": "slides/slides-topic-01.html#quarto",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Quarto",
+    "text": "Quarto\nSee Quarto Notebook in the Class Website"
+  },
+  {
+    "objectID": "slides/slides-topic-01.html#summary-1",
+    "href": "slides/slides-topic-01.html#summary-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\nSome key things to take from this topic:\n\nData Science is about data:\n\nData collection;\nData management;\nData storage;\nData structure;\nData analysis;\nData, Data, Data ...\n\nData Science is also about…\n\nCollaboration!\n\nThe schedule is tentative;\nJupiter Notebook will be the main tool of the course, but there are other IDEs:\n\nGoogle Colab\nQuarto"
   }
 ]
