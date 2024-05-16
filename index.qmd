@@ -3,6 +3,8 @@ title: "QTM 350: Data Science Computing"
 subtitle: "Quantitative Theory and Methods Department, Emory University"
 ---
 
+<!--- # IMPORTANT REFERENCE: https://www.youtube.com/watch?v=uimdXPZc40I&list=PLkrJrLs7xfbXcEKhTCKRSr2VXH4yiBeXo&index=4 --->
+
 ## Course Description
 
 This course equips students with computing skills and knowledge for data science applications. Students will gain knowledge foundations and hands-on experience with technologies such as the Command Line, Version Control, Project Collaboration, Data Structures and Algorithms. Prospective data scientists, statisticians, and other quantitative professionals will learn computational foundations to efficiently utilize data, data structures, and algorithms for data science.
