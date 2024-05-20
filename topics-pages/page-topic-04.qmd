@@ -1,11 +1,10 @@
 ---
 title: "Topic 04"
-subtitle: "Algorithms and Data Structures"
+subtitle: "Version Control"
 description: ""
 author: "Davi Moreira"
-date-modified: "last-modified"
-date: "2024-04-11"
-date-format: "MMM D, YYYY"
+date: "2024-05-15"
+#resources: "_using-jupyter-notebooks.qmd"
 #listing:
   # - id: slides
   #   contents:
@@ -36,90 +35,64 @@ date-format: "MMM D, YYYY"
 tbl-colwidths: [10,50,40]
 ---
 
+# Slides
+
+-   [Version Control](/slides/slides-topic-04.html){target="_blank"}
+
+<!---
+
+-   [Computational Literacy](/slides/slides-topic-02-01.html){target="_blank"}
+
+-   [Command Line](/slides/slides-topic-02-02-aux.html){target="_blank"}
+
+--->
+
+<!---
+
 # Lecture Material
 
--   Time Complexity, Big O, Space Complexity: [html](/lecture_material/material-topic-04/01-py-complexity-big-O.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_01-py-complexity-big-O.ipynb){target="_blank"}
 
-    -   In-Class Activity - Time Complexity, Big O, Space Complexity - Practice: [html](/lecture_material/material-topic-04/01-py-complexity-big-O-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_01-py-complexity-big-O-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Time Complexity, Big O, Space Complexity - Solutions: [html](/lecture_material/material-topic-04/01-py-complexity-big-O-practice-solutions.html){target="_blank"}
-
--   Searching, sorting, hash tables: [html](/lecture_material/material-topic-04/02-py-searching-sorting-hash.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_02-py-searching-sorting-hash.ipynb){target="_blank"}
-
-    -   In-Class Activity - Searching, sorting, hash tables - Practice: [html](/lecture_material/material-topic-04/02-py-searching-sorting-hash-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_02-py-searching-sorting-hash-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Searching, sorting, hash tables - Practice - Solutions: [html](/lecture_material/material-topic-04/02-py-searching-sorting-hash-practice-solutions.html){target="_blank"}
+-   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-02/basics_of_cmd.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/_basics_of_cmd.ipynb){target="_blank"} <!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
 
 
--   Recursive Algorithms: [html](/lecture_material/material-topic-04/03-py-recursive-algorithms.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_03-py-recursive-algorithms.ipynb){target="_blank"}
-    -   Image Folder: [img.zip](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/img.zip ){target="_blank"}
-    
-    -   In-Class Activity - Recursive Algorithms - Practice: [html](/lecture_material/material-topic-04/03-py-recursive-algorithms-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_03-py-recursive-algorithms-practice.ipynb){target="_blank"}
-    
-    -   In-Class Activity - Recursive Algorithms - Practice - Solutions: [html](/lecture_material/material-topic-04/03-py-recursive-algorithms-practice-solutions.html){target="_blank"}
 
+```{=html}
+<!---<a href="
+https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material-topic-02/_basics_of_cmd.ipynb" download> notebook </a>--->
+```
 
--   Recursive Data Structures: [html](/lecture_material/material-topic-04/04-py-recursive-data-structures.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_04-py-recursive-data-structures.ipynb){target="_blank"}
+<!---
 
-    -   In-Class Activity - Recursive Data Structures - Practice: [html](/lecture_material/material-topic-04/04-py-recursive-data-structures-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_04-py-recursive-data-structures-practice.ipynb){target="_blank"}
+-   Basics of Command Line (slides material):[`.zip`](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/examples.zip){target="_blank"}
 
-    -   In-Class Activity - Recursive Data Structures - Practice - Solutions: [html](/lecture_material/material-topic-04/04-py-recursive-data-structures-practice-solutions.html){target="_blank"}
+-   In-Class Activity - Exploring the Command Line: [html](/lecture_material/material-topic-02/command_line_activity.html){target="_blank"}
 
--   Graphs: [html](/lecture_material/material-topic-04/05-py-graphs.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_05-py-graphs.ipynb){target="_blank"}
-
-    -   In-Class Activity - Graphs - Practice: [html](/lecture_material/material-topic-04/05-py-graphs-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-04/_05-py-graphs-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Graphs - Practice - Solutions: [html](/lecture_material/material-topic-04/05-py-graphs-practice-solutions.html){target="_blank"}
-
+--->
 
 # Problem Set
 
-- **In groups (up to 3 members), conclude Recursive Data Structures and Graphs In-Class Activity** (links and notebooks above).
-
-- **Extra Credit Opportunity:** Within the `Graphs In-Class Activity`, there are optional exercises available. Should you choose to complete and submit these exercises successfully, up to 3% will be added to your final grade as a recognition of your additional effort. This is an excellent opportunity to enhance your understanding and improve your overall grade!
-
-# Recommended Readings/Videos
-
-<!---- [](){target="_blank"}--->
-
--   [Introduction to Big O Notation and Time Complexity (video)](https://www.youtube.com/watch?v=D6xkbGLQesk){target="_blank"}
-
--   [Binary search video - watch until 31:00.](https://www.youtube.com/watch?v=y62zj9ozPOM&t=1314s){target="_blank"}
-
--   [Graph traversals video](https://www.youtube.com/watch?v=bIA8HEEUxZI){target="_blank"}
-
--   [brilliant.org on Graph Theory](https://brilliant.org/wiki/graph-theory/){target="_blank"}
-
--   [brilliant.org on Traversals](https://brilliant.org/wiki/traversals/){target="_blank"}
-
--   [brilliant.org on BSTs](https://brilliant.org/wiki/binary-search-trees/){target="_blank"}
-
--   [Data Structures and Algorithms in Python](https://www.amazon.com/Structures-Algorithms-Python-Michael-Goodrich/dp/1118290275){target="_blank"}
-
--   [Algorithms](https://highered.mheducation.com/sites/0073523402/index.html){target="_blank"}
-
--   [Introduction to Algorithms](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/){target="_blank"}
-
--   [Algorithm Design](https://www.amazon.com/Algorithm-Design-Jon-Kleinberg/dp/0321295358){target="_blank"}
+-   [Problem Set - Collaboration and Version Control with Git and GitHub](/lecture_material/material-topic-04/problem_set_version_control.html){target="_blank"}
 
 # Additional Resources
 
--   [P vs. NP and the Computational Complexity Zoo (video)](https://www.youtube.com/watch?v=YX40hbAHx3s){target="_blank"}
+-   [Pro Git](https://git-scm.com/book/en/v2){target="_blank"} - Chacon & Straub
 
--   [Lecture Slides for Algorithm Design](https://www.cs.princeton.edu/~wayne/kleinberg-tardos/){target="_blank"}
+<!---
+    -   [Ch. 1: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control){target="_blank"}; Read 1.1 - 1.3
 
--   [Visualizing Algorithms](https://bost.ocks.org/mike/algorithms/){target="_blank"}
+    -   [Ch. 2: Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){target="_blank"}; Only read 2.1 - 2.5
 
--   [Professor Mike Gelbart (videos)](https://www.youtube.com/playlist?list=PLWmXHcz_53Q02OsWy9IduQiSGUSnVGFhm){target="_blank"}
+    -   [Ch. 3: Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell){target="_blank"}
 
--   [Professor Scott Aaronson Blog](https://scottaaronson.blog/){target="_blank"}
+-   More on Git/Github in Pro Git:
 
--   [Python: Recursion - Exercises, Practice, Solution](https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion.php){target="_blank"}
+    -   [Read 1.4 - 1.7](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line){target="_blank"} for help on installation and commandline
 
--   [StackOverflow post on generators](https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do-in-python/231855#231855){target="_blank"}
+    -   Read [Ch. 6](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration){target="_blank"} for more information regarding Git + Github.
 
--   [Linear programming and discrete optimization with Python using PuLP](https://towardsdatascience.com/linear-programming-and-discrete-optimization-with-python-using-pulp-449f3c5f6e99){target="_blank"}
+-   [Ch. 13 Detect Git from RStudio -Happy Git with R](https://happygitwithr.com/rstudio-see-git.html){target="_blank"} - Bryan, Jenny & Jim Hester
 
--   [Dynamic programming](https://web.mit.edu/15.053/www/AMP-Chapter-11.pdf){target="_blank"}
+--->
 
--   [500 Data Structures and Algorithms practice problems and their solutions](https://kingrayhan.medium.com/500-data-structures-and-algorithms-practice-problems-and-their-solutions-b45a83d803f0){target="_blank"}
+-   [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
+

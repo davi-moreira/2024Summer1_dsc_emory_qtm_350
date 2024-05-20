@@ -1,11 +1,10 @@
 ---
 title: "Topic 03"
-subtitle: "Python essentials"
+subtitle: "Command Line"
 description: ""
 author: "Davi Moreira"
-date-modified: "last-modified"
-date: "2024-02-18"
-date-format: "MMM D, YYYY"
+date: "2024-05-15"
+#resources: "_using-jupyter-notebooks.qmd"
 #listing:
   # - id: slides
   #   contents:
@@ -36,107 +35,88 @@ date-format: "MMM D, YYYY"
 tbl-colwidths: [10,50,40]
 ---
 
-<!---# Slides
+# Slides
 
--   [Topic 01:Introduction, Set up, IDEs, Command line](/slides/topic-02.html)
+-   [Command Line](/slides/slides-topic-03.html){target="_blank"}
 
+```{=html}
+<!---
+
+-   [Computational Literacy](/slides/slides-topic-02-01.html){target="_blank"}
+-   [Version Control](/slides/slides-topic-02-03.html){target="_blank"}
+--->
+```
+# Lecture Material
+
+-   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-03/basics_of_cmd.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_basics_of_cmd.ipynb){target="_blank"}
+
+<!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
+
+```{=html}
+<!---<a href="
+https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material-topic-02/_basics_of_cmd.ipynb" download> notebook </a>--->
+```
+
+-   Basics of Command Line (slides material):[`.zip`](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/examples.zip){target="_blank"}
+
+-   In-Class Activity - Exploring the Command Line: [html](/lecture_material/material-topic-03/command_line_activity.html){target="_blank"}
+
+<!----
+# Problem Set
+
+-   [Problem Set - Collaboration and Version Control with Git and GitHub](/lecture_material/material-topic-02/problem_set_version_control.html){target="_blank"}
 --->
 
 
-# Lecture Material
-
--   Python Basics: [html](/lecture_material/material-topic-03/01-py-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics.ipynb){target="_blank"}
-
-    -   In-Class Activity - Python Basics: [html](/lecture_material/material-topic-03/01-py-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_01-py-basics-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Python Basics- Solution: [html](/lecture_material/material-topic-03/01-py-basics-practice-solutions.html){target="_blank"}
-    
--   Loops & Functions: [html](/lecture_material/material-topic-03/02-py-loops-functions.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_02-py-loops-functions.ipynb){target="_blank"}
-
-    -   In-Class Activity - Loops & Functions: [html](/lecture_material/material-topic-03/02-py-loops-functions-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_02-py-loops-functions-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Loops & Functions - Solutions: [html](/lecture_material/material-topic-03/02-py-loops-functions-practice-solutions.html){target="_blank"}
-
--   Unit Tests & Classes: [html](/lecture_material/material-topic-03/03-py-tests-classes.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_03-py-tests-classes.ipynb){target="_blank"}
-
-    -   In-Class Activity - Unit Tests & Classes - Solutions: [html](/lecture_material/material-topic-03/03-py-tests-classes-practice-solutions.html){target="_blank"}
-
--   Style Guides, Scripts, Imports: [html](/lecture_material/material-topic-03/04-py-style-scripts-imports.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_04-py-style-scripts-imports.ipynb){target="_blank"}
-
-    -   Additional Script File - Style Guides, Scripts, Imports: [wallet.py](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/wallet.py ){target="_blank"}
-
-    -   Data Folder - Style Guides, Scripts, Imports: [data.zip](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/data.zip ){target="_blank"}
-    
-    -   In-Class Activity - Style Guides, Scripts, Imports: [html](/lecture_material/material-topic-03/04-py-style-scripts-imports-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_04-py-style-scripts-imports-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Style Guides, Scripts, Imports - Solutions: [html](/lecture_material/material-topic-03/04-py-style-scripts-imports-practice-solutions.html){target="_blank"}
-
--   Introduction to Numpy: [html](/lecture_material/material-topic-03/05-py-numpy.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_05-py-numpy.ipynb){target="_blank"}
-
--   Numpy: [html](/lecture_material/material-topic-03/06-py-numpy-addendum.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_06-py-numpy-addendum.ipynb){target="_blank"}
-
-    -   In-Class Activity - Numpy: [html](/lecture_material/material-topic-03/06-py-numpy-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_06-py-numpy-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Numpy - Solutions: [html](/lecture_material/material-topic-03/06-py-numpy-practice-solutions.html){target="_blank"}
-
-
--   Pandas: [html](/lecture_material/material-topic-03/07-py-pandas.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_07-py-pandas.ipynb){target="_blank"}
-
-    -   In-Class Activity - Pandas: [html](/lecture_material/material-topic-03/07-py-pandas-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_07-py-pandas-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Pandas - Solutions: [html](/lecture_material/material-topic-03/07-py-pandas-practice-solutions.html){target="_blank"}
-
--   Data Wrangling: [html](/lecture_material/material-topic-03/08-py-wrangling-basics.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_08-py-wrangling-basics.ipynb){target="_blank"}
-
-    -   In-Class Activity - Data Wrangling: [html](/lecture_material/material-topic-03/08-py-wrangling-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_08-py-wrangling-basics-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Data Wrangling - Solutions: [html](/lecture_material/material-topic-03/08-py-wrangling-basics-practice-solutions.html){target="_blank"}
-
-
--   Advanced Data Wrangling: [html](/lecture_material/material-topic-03/09-py-wrangling-advanced.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_09-py-wrangling-advanced.ipynb){target="_blank"}
-
-    -   In-Class Activity - Advanced Data Wrangling: [html](/lecture_material/material-topic-03/09-py-wrangling-advanced-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-03/_09-py-wrangling-advanced-practice.ipynb){target="_blank"}
-
-    -   In-Class Activity - Advanced Data Wrangling - Solutions: [html](/lecture_material/material-topic-03/09-py-wrangling-advanced-practice-solutions.html){target="_blank"}
-
-# Problem Set
-
-- **GradeScope Questions** about [Array programming with NumPy paper](https://www.nature.com/articles/s41586-020-2649-2){target="_blank"} (Check the Course Canvas page) 
-- **Advanced Data Wrangling In-Class Activity** (link and notebook above).
+<!---
 
 # Recommended Readings
 
--   [Python Programming for Data Science](https://www.tomasbeuzen.com/python-programming-for-data-science/README.html){target="_blank"}
+-   [The Plain Person's Guide to Plain Text Social Science](http://plain-text.co/){target="_blank"} - Healy, Kieran
 
--   [Python Data Science Handbook (PDSH)](https://github.com/jakevdp/PythonDataScienceHandbook){target="_blank"}
+    -   Ch. 1: Introduction;
+
+    -   Ch. 2: Keep a Record;
+
+    -   Ch. 3: Write and Edit;
+
+    -   Ch. 4: Reproduce Work.
+
+-   [Pro Git](https://git-scm.com/book/en/v2){target="_blank"} - Chacon & Straub
+
+    -   [Ch. 1: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control){target="_blank"}; Read 1.1 - 1.3
+
+    -   [Ch. 2: Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository){target="_blank"}; Only read 2.1 - 2.5
+
+    -   [Ch. 3: Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell){target="_blank"}
+
+-   [Essential Computer Literacy: 50 min.](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/essential-computer-literacy/index.html#0){target="_blank"}
+
+--->
 
 # Additional Resources
 
--   [Python documentation](https://docs.python.org/3/index.html){target="_blank"}
+-   [Effective Shell](https://effective-shell.com/){target="_blank"}
 
--   [Think Python: How to Think Like a Computer Scientist](https://greenteapress.com/wp/think-python/){target="_blank"}
+-   [Data Science at the Command Line](https://jeroenjanssens.com/dsatcl/)
 
--   [A Whirlwind Tour of Python (WTP)](https://jakevdp.github.io/WhirlwindTourOfPython/index.html){target="_blank"}
+-   [The Art of Command Line](https://github.com/jlevy/the-art-of-command-line)
 
--   [Python for Data Analysis](https://wesmckinney.com/book/){target="_blank"}
+-   [Introduction to Linux](https://codelabs-jacobson.s3.us-east-2.amazonaws.com/introduction-to-linux/index.html#0){target="_blank"}
 
-- [Array programming with NumPy paper](https://www.nature.com/articles/s41586-020-2649-2){target="_blank"}
+-   [vim Video](https://missing.csail.mit.edu/2020/editors/){target="_blank"}
 
-- [Pandas Tutor](https://pandastutor.com/index.html)
+<!---
 
-- [Learning Data Science](https://www.oreilly.com/library/view/learning-data-science/9781098112998/)
+-   More on Git/Github in Pro Git:
 
--   [Kaggle Learn Python Tutorials](https://www.kaggle.com/learn/python){target="_blank"}
+    -   [Read 1.4 - 1.7](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line){target="_blank"} for help on installation and commandline
 
-- [Research Software Engineering with Python](https://merely-useful.tech/py-rse/index.html)
+    -   Read [Ch. 6](https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration){target="_blank"} for more information regarding Git + Github.
 
-- [Introduction to Cultural Analytics & Python](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
+-   [Ch. 13 Detect Git from RStudio -Happy Git with R](https://happygitwithr.com/rstudio-see-git.html){target="_blank"} - Bryan, Jenny & Jim Hester
 
-- [Python for Data Science](https://aeturrell.github.io/python4DS/welcome.html) 
+-   [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
 
-- [Coding for Economists](https://aeturrell.github.io/coding-for-economists/intro.htm) 
-
-
-
-
+--->
 

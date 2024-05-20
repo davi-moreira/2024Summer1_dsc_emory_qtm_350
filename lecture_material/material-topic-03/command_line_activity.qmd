@@ -1,0 +1,43 @@
+---
+title: "Topic 3: In-Class Activity - Exploring the Command Line"
+execute: 
+  error: true
+format:
+  html:
+    code-tools: true
+editor_options: 
+  chunk_output_type: console
+---
+
+### In-Class Activity: Exploring the Command Line
+
+**Objective**: The goal of this activity is to put into practice the shell commands learned in class, including file navigation, file manipulation, and simple scripting.
+
+**Instructions**:
+
+1.  **Shell Basics**:
+    -   Open your terminal or command line interface.
+    -   Identify which shell you are using with the command `echo $SHELL`.
+    -   Use `man` or `--help` to look up the manual for the `ls` command.
+2.  **Help!**:
+    -   For each of the following commands, use `--help` or `man` to find out what they do: `cd`, `mkdir`, `rm`.
+3.  **Navigating Your System**:
+    -   Navigate to your home directory using `cd`.
+    -   List all the files and directories in your home directory with a detailed view using `ls -l`.
+    -   Create a new directory called `ds_activities`.
+4.  **Managing Your Files**:
+    -   Inside `ds_activities`, create a new file called `my_script.sh`.
+    -   Copy any text file from your system into this directory and rename it to `sample.txt`.
+5.  **Working with Text Files**:
+    -   Use `cat` to display the contents of `sample.txt`.
+    -   Use `head` and `tail` to display the first and last 10 lines of `sample.txt`.
+6.  **Redirects, Pipes, and Loops**:
+    -   Redirect the output of `ls -l` to a file named `directory_list.txt`.
+    -   Use a pipe to sort `directory_list.txt` alphabetically and display the results with `less`.
+7.  **Scripting**:
+    -   Edit `my_script.sh` to include a `bash` script that prints "Hello, Data Science!" to the terminal.
+    -   Make `my_script.sh` executable with `chmod` and run it.
+
+**Submission**: - Compress the `ds_activities` directory with all created files into a `.zip` file and submit it through Gradescope. - Name the zip file `FirstName_LastName_ds_activities.zip`.
+
+**Note**: Remember to replace `FirstName` and `LastName` with your actual last and first names.

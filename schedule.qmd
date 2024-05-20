@@ -26,11 +26,11 @@ editor: visual
 | Week    | Topic                                              | Title                          | Date    |
 |:------------|:-----------------------------|:----------------|:------------|
 | Week 01 | [Topic 01](./topics-pages/page-topic-01.qmd)       | Introduction and Set up        | May 21  |
-| Week 01 | [Topic 02 - TBP](./topics-pages/page-topic-01.qmd) | Computational Literacy         | May 23  |
-| Week 02 | [Topic 03 - TBP](./topics-pages/page-topic-03.qmd) | Command Line                   | May 28  |
-| Week 02 | [Topic 03 - TBP](./topics-pages/page-topic-02.qmd) | Command Line                   | May 30  |
-| Week 03 | [Topic 04 - TBP](./topics-pages/page-topic-02.qmd) | Version Control                | June 4  |
-| Week 03 | [Topic 04 - TBP](./topics-pages/page-topic-02.qmd) | Version Control                | June 6  |
+| Week 01 | [Topic 02](./topics-pages/page-topic-02.qmd) | Computational Literacy         | May 23  |
+| Week 02 | [Topic 03](./topics-pages/page-topic-03.qmd) | Command Line                   | May 28  |
+| Week 02 | [Topic 03](./topics-pages/page-topic-03.qmd) | Command Line                   | May 30  |
+| Week 03 | [Topic 04](./topics-pages/page-topic-04.qmd) | Version Control                | June 4  |
+| Week 03 | [Topic 04](./topics-pages/page-topic-04.qmd) | Version Control                | June 6  |
 | Week 04 | [Topic 05 - TBP](./topics-pages/page-topic-02.qmd) | Python essentials              | June 11 |
 | Week 04 | [Topic 05 - TBP](./topics-pages/page-topic-02.qmd) | Python essentials              | June 13 |
 | Week 05 | [Topic 06 - TBP](./topics-pages/page-topic-02.qmd) | Algorithms and Data Structures | June 18 |

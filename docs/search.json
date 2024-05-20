@@ -44,7 +44,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Week\nTopic\nTitle\nDate\n\n\n\n\nWeek 01\nTopic 01\nIntroduction and Set up\nMay 21\n\n\nWeek 01\nTopic 02 - TBP\nComputational Literacy\nMay 23\n\n\nWeek 02\nTopic 03 - TBP\nCommand Line\nMay 28\n\n\nWeek 02\nTopic 03 - TBP\nCommand Line\nMay 30\n\n\nWeek 03\nTopic 04 - TBP\nVersion Control\nJune 4\n\n\nWeek 03\nTopic 04 - TBP\nVersion Control\nJune 6\n\n\nWeek 04\nTopic 05 - TBP\nPython essentials\nJune 11\n\n\nWeek 04\nTopic 05 - TBP\nPython essentials\nJune 13\n\n\nWeek 05\nTopic 06 - TBP\nAlgorithms and Data Structures\nJune 18\n\n\nWeek 05\nTopic 06 - TBP\nAlgorithms and Data Structures\nJune 20\n\n\nWeek 06\nTopic 06 - TBP\nAlgorithms and Data Structures\nJune 25",
+    "text": "Week\nTopic\nTitle\nDate\n\n\n\n\nWeek 01\nTopic 01\nIntroduction and Set up\nMay 21\n\n\nWeek 01\nTopic 02\nComputational Literacy\nMay 23\n\n\nWeek 02\nTopic 03\nCommand Line\nMay 28\n\n\nWeek 02\nTopic 03\nCommand Line\nMay 30\n\n\nWeek 03\nTopic 04\nVersion Control\nJune 4\n\n\nWeek 03\nTopic 04\nVersion Control\nJune 6\n\n\nWeek 04\nTopic 05 - TBP\nPython essentials\nJune 11\n\n\nWeek 04\nTopic 05 - TBP\nPython essentials\nJune 13\n\n\nWeek 05\nTopic 06 - TBP\nAlgorithms and Data Structures\nJune 18\n\n\nWeek 05\nTopic 06 - TBP\nAlgorithms and Data Structures\nJune 20\n\n\nWeek 06\nTopic 06 - TBP\nAlgorithms and Data Structures\nJune 25",
     "crumbs": [
       "Schedule"
     ]
@@ -338,5 +338,1270 @@
     "title": " QTM 350: Data Science Computing ",
     "section": "Summary",
     "text": "Summary\nSome key things to take from this topic:\n\nData Science is about data:\n\nData collection;\nData management;\nData storage;\nData structure;\nData analysis;\nData, Data, Data ...\n\nData Science is also about…\n\nCollaboration!\n\nThe schedule is tentative;\nJupiter Notebook will be the main tool of the course, but there are other IDEs:\n\nGoogle Colab\nQuarto"
+  },
+  {
+    "objectID": "lecture_material/material-topic-03/command_line_activity.html",
+    "href": "lecture_material/material-topic-03/command_line_activity.html",
+    "title": "Topic 3: In-Class Activity - Exploring the Command Line",
+    "section": "",
+    "text": "In-Class Activity: Exploring the Command Line\nObjective: The goal of this activity is to put into practice the shell commands learned in class, including file navigation, file manipulation, and simple scripting.\nInstructions:\n\nShell Basics:\n\nOpen your terminal or command line interface.\nIdentify which shell you are using with the command echo $SHELL.\nUse man or --help to look up the manual for the ls command.\n\nHelp!:\n\nFor each of the following commands, use --help or man to find out what they do: cd, mkdir, rm.\n\nNavigating Your System:\n\nNavigate to your home directory using cd.\nList all the files and directories in your home directory with a detailed view using ls -l.\nCreate a new directory called ds_activities.\n\nManaging Your Files:\n\nInside ds_activities, create a new file called my_script.sh.\nCopy any text file from your system into this directory and rename it to sample.txt.\n\nWorking with Text Files:\n\nUse cat to display the contents of sample.txt.\nUse head and tail to display the first and last 10 lines of sample.txt.\n\nRedirects, Pipes, and Loops:\n\nRedirect the output of ls -l to a file named directory_list.txt.\nUse a pipe to sort directory_list.txt alphabetically and display the results with less.\n\nScripting:\n\nEdit my_script.sh to include a bash script that prints “Hello, Data Science!” to the terminal.\nMake my_script.sh executable with chmod and run it.\n\n\nSubmission: - Compress the ds_activities directory with all created files into a .zip file and submit it through Gradescope. - Name the zip file FirstName_LastName_ds_activities.zip.\nNote: Remember to replace FirstName and LastName with your actual last and first names."
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/intro-to-quarto-class.html",
+    "href": "lecture_material/material-topic-01/intro-to-quarto-class.html",
+    "title": "Topic 1: Introduction to Quarto for Python",
+    "section": "",
+    "text": "The document offers a short guide on utilizing Quarto effectively for data science projects with R and Python.[1]"
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/intro-to-quarto-class.html#quick-tutorial-for-rstudio",
+    "href": "lecture_material/material-topic-01/intro-to-quarto-class.html#quick-tutorial-for-rstudio",
+    "title": "Topic 1: Introduction to Quarto for Python",
+    "section": "Quick tutorial for RStudio",
+    "text": "Quick tutorial for RStudio\nThis is what RStudio looks like when you open it for the first time.\n\n\n\n\n\n\n\n\n\nTop left pane (input/script)\nThis is your code editor. Here you enter code in any file type (.py, .r, .qmd) you are working on. If not working with notebooks, this is just gonna be a plain text file but with a extension that run the commands.\nFor example, enter 2 + 2 in your script and run a line of code by pressing command + enter (Mac) or Ctrl + enter (PC). This is a huge advantage of Rstudio over Jupyter. You can run your code line by line, instead of running the entire cell.\nBottom left pane (output/console)\nThis is the console. It is pretty much like when you open Python/R from the Command line.\nIn the console, the prompt &gt; looks like a greater than symbol. If your prompt begins to look like a + symbol by mistake, simply click in your console and press the esc key on your keyboard as many times as necessary to return to the prompt.\nRstudio uses + when code is broken up across multiple lines and is still expecting more code. A line of code does not usually end until Rstudio finds an appropriate stop parameter or punctuation that completes some code such as a closed round parenthesis ), square bracket ], curly brace }, or quotation mark '.\nIf the output in your console gets too messy, you can clear it by pressing control + l on both Mac and PC. This will not erase any saved data - it will simply make your console easier to read.\nTop right pane (global environment)\nThis is your environment pane. All objects you create will be displayed here.\nBottom right pane (files, plots, packages, and help)\nHere you find useful tabs for navigating your file system, displaying plots, installing packages, and viewing help pages. Press the control key and a number (1 through 9) on your keyboard to shortcut between these panes and tabs."
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/intro-to-quarto.html",
+    "href": "lecture_material/material-topic-01/intro-to-quarto.html",
+    "title": "Topic 1: Introduction to Quarto for Python",
+    "section": "",
+    "text": "The document offers a short guide on utilizing Quarto effectively for data science projects with R and Python.[1]"
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "href": "lecture_material/material-topic-01/intro-to-quarto.html#quick-tutorial-for-rstudio",
+    "title": "Topic 1: Introduction to Quarto for Python",
+    "section": "Quick tutorial for RStudio",
+    "text": "Quick tutorial for RStudio\nThis is what RStudio looks like when you open it for the first time.\n\n\n\n\n\n\n\n\n\nTop left pane (input/script)\nThis is your code editor. Here you enter code in any file type (.py, .r, .qmd) you are working on. If not working with notebooks, this is just gonna be a plain text file but with a extension that run the commands.\nFor example, enter 2 + 2 in your script and run a line of code by pressing command + enter (Mac) or Ctrl + enter (PC). This is a huge advantage of Rstudio over Jupyter. You can run your code line by line, instead of running the entire cell.\nBottom left pane (output/console)\nThis is the console. It is pretty much like when you open Python/R from the Command line.\nIn the console, the prompt &gt; looks like a greater than symbol. If your prompt begins to look like a + symbol by mistake, simply click in your console and press the esc key on your keyboard as many times as necessary to return to the prompt.\nRstudio uses + when code is broken up across multiple lines and is still expecting more code. A line of code does not usually end until Rstudio finds an appropriate stop parameter or punctuation that completes some code such as a closed round parenthesis ), square bracket ], curly brace }, or quotation mark '.\nIf the output in your console gets too messy, you can clear it by pressing control + l on both Mac and PC. This will not erase any saved data - it will simply make your console easier to read.\nTop right pane (global environment)\nThis is your environment pane. All objects you create will be displayed here.\nBottom right pane (files, plots, packages, and help)\nHere you find useful tabs for navigating your file system, displaying plots, installing packages, and viewing help pages. Press the control key and a number (1 through 9) on your keyboard to shortcut between these panes and tabs."
+  },
+  {
+    "objectID": "topics-pages/page-topic-04.html",
+    "href": "topics-pages/page-topic-04.html",
+    "title": "Topic 04",
+    "section": "",
+    "text": "Slides\n\nVersion Control\n\n\n\n\n\n\n\nProblem Set\n\nProblem Set - Collaboration and Version Control with Git and GitHub\n\n\n\nAdditional Resources\n\nPro Git - Chacon & Straub\n\n\n\nVisualizing Git",
+    "crumbs": [
+      "Materials",
+      "Topic 4: Version Control"
+    ]
+  },
+  {
+    "objectID": "topics-pages/page-topic-03.html",
+    "href": "topics-pages/page-topic-03.html",
+    "title": "Topic 03",
+    "section": "",
+    "text": "Slides\n\nCommand Line\n\n\n\n\nLecture Material\n\nBasics of Command Line (very short piece): html, notebook\n\n\n\n\nBasics of Command Line (slides material):.zip\nIn-Class Activity - Exploring the Command Line: html\n\n\n\n\n\nAdditional Resources\n\nEffective Shell\nData Science at the Command Line\nThe Art of Command Line\nIntroduction to Linux\nvim Video",
+    "crumbs": [
+      "Materials",
+      "Topic 3: Command Line"
+    ]
+  },
+  {
+    "objectID": "topics-pages/page-topic-02.html",
+    "href": "topics-pages/page-topic-02.html",
+    "title": "Topic 02",
+    "section": "",
+    "text": "Slides\n\nComputational Literacy\n\n\n\n\n\nRecommended Readings\n\nEssential Computer Literacy: 50 min.\nThe Plain Person’s Guide to Plain Text Social Science - Healy, Kieran",
+    "crumbs": [
+      "Materials",
+      "Topic 2: Computational Literacy"
+    ]
+  },
+  {
+    "objectID": "topics-pages/page-topic-06.html",
+    "href": "topics-pages/page-topic-06.html",
+    "title": "Topic 04",
+    "section": "",
+    "text": "Lecture Material\n\nTime Complexity, Big O, Space Complexity: html, notebook\n\nIn-Class Activity - Time Complexity, Big O, Space Complexity - Practice: html, notebook\nIn-Class Activity - Time Complexity, Big O, Space Complexity - Solutions: html\n\nSearching, sorting, hash tables: html, notebook\n\nIn-Class Activity - Searching, sorting, hash tables - Practice: html, notebook\nIn-Class Activity - Searching, sorting, hash tables - Practice - Solutions: html\n\nRecursive Algorithms: html, notebook\n\nImage Folder: img.zip\nIn-Class Activity - Recursive Algorithms - Practice: html, notebook\nIn-Class Activity - Recursive Algorithms - Practice - Solutions: html\n\nRecursive Data Structures: html, notebook\n\nIn-Class Activity - Recursive Data Structures - Practice: html, notebook\nIn-Class Activity - Recursive Data Structures - Practice - Solutions: html\n\nGraphs: html, notebook\n\nIn-Class Activity - Graphs - Practice: html, notebook\nIn-Class Activity - Graphs - Practice - Solutions: html\n\n\n\n\nProblem Set\n\nIn groups (up to 3 members), conclude Recursive Data Structures and Graphs In-Class Activity (links and notebooks above).\nExtra Credit Opportunity: Within the Graphs In-Class Activity, there are optional exercises available. Should you choose to complete and submit these exercises successfully, up to 3% will be added to your final grade as a recognition of your additional effort. This is an excellent opportunity to enhance your understanding and improve your overall grade!\n\n\n\nRecommended Readings/Videos\n\n\nIntroduction to Big O Notation and Time Complexity (video)\nBinary search video - watch until 31:00.\nGraph traversals video\nbrilliant.org on Graph Theory\nbrilliant.org on Traversals\nbrilliant.org on BSTs\nData Structures and Algorithms in Python\nAlgorithms\nIntroduction to Algorithms\nAlgorithm Design\n\n\n\nAdditional Resources\n\nP vs. NP and the Computational Complexity Zoo (video)\nLecture Slides for Algorithm Design\nVisualizing Algorithms\nProfessor Mike Gelbart (videos)\nProfessor Scott Aaronson Blog\nPython: Recursion - Exercises, Practice, Solution\nStackOverflow post on generators\nLinear programming and discrete optimization with Python using PuLP\nDynamic programming\n500 Data Structures and Algorithms practice problems and their solutions"
+  },
+  {
+    "objectID": "topics-pages/page-topic-05.html",
+    "href": "topics-pages/page-topic-05.html",
+    "title": "Topic 03",
+    "section": "",
+    "text": "Lecture Material\n\nPython Basics: html, notebook\n\nIn-Class Activity - Python Basics: html, notebook\nIn-Class Activity - Python Basics- Solution: html\n\nLoops & Functions: html, notebook\n\nIn-Class Activity - Loops & Functions: html, notebook\nIn-Class Activity - Loops & Functions - Solutions: html\n\nUnit Tests & Classes: html, notebook\n\nIn-Class Activity - Unit Tests & Classes - Solutions: html\n\nStyle Guides, Scripts, Imports: html, notebook\n\nAdditional Script File - Style Guides, Scripts, Imports: wallet.py\nData Folder - Style Guides, Scripts, Imports: data.zip\nIn-Class Activity - Style Guides, Scripts, Imports: html, notebook\nIn-Class Activity - Style Guides, Scripts, Imports - Solutions: html\n\nIntroduction to Numpy: html, notebook\nNumpy: html, notebook\n\nIn-Class Activity - Numpy: html, notebook\nIn-Class Activity - Numpy - Solutions: html\n\nPandas: html, notebook\n\nIn-Class Activity - Pandas: html, notebook\nIn-Class Activity - Pandas - Solutions: html\n\nData Wrangling: html, notebook\n\nIn-Class Activity - Data Wrangling: html, notebook\nIn-Class Activity - Data Wrangling - Solutions: html\n\nAdvanced Data Wrangling: html, notebook\n\nIn-Class Activity - Advanced Data Wrangling: html, notebook\nIn-Class Activity - Advanced Data Wrangling - Solutions: html\n\n\n\n\nProblem Set\n\nGradeScope Questions about Array programming with NumPy paper (Check the Course Canvas page)\nAdvanced Data Wrangling In-Class Activity (link and notebook above).\n\n\n\nRecommended Readings\n\nPython Programming for Data Science\nPython Data Science Handbook (PDSH)\n\n\n\nAdditional Resources\n\nPython documentation\nThink Python: How to Think Like a Computer Scientist\nA Whirlwind Tour of Python (WTP)\nPython for Data Analysis\nArray programming with NumPy paper\nPandas Tutor\nLearning Data Science\nKaggle Learn Python Tutorials\nResearch Software Engineering with Python\nIntroduction to Cultural Analytics & Python\nPython for Data Science\nCoding for Economists"
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/course_infrastructure.html",
+    "href": "lecture_material/material-topic-01/course_infrastructure.html",
+    "title": "Topic 1: Course Set Up",
+    "section": "",
+    "text": "The document offers a guide about the course infrastructure.[1]"
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/course_infrastructure.html#commandline",
+    "href": "lecture_material/material-topic-01/course_infrastructure.html#commandline",
+    "title": "Topic 1: Course Set Up",
+    "section": "CommandLine",
+    "text": "CommandLine\nAt times, we’ll use a unix-based commandline. The commandline will feature into our discussion on using git and also running Python programs. If you use a Mac or a Linux operating system, then a functioning commandline comes with your operating system. For Apple machines, this is the Terminal.\nFor Windows (specifically Windows 10), you can enable Linux Bash shell. The following offers a tutorial on how to do this.\nIf you’re using a version of Windows that pre-dates version 10, then Git Bash offers a program will allow you to use git commands from your windows machine.\nWe will cover some concepts of working with the commandline. You can get a full notebook with a intro to commandline in the materials for Topic 2"
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/course_infrastructure.html#python3",
+    "href": "lecture_material/material-topic-01/course_infrastructure.html#python3",
+    "title": "Topic 1: Course Set Up",
+    "section": "Python3",
+    "text": "Python3\nWe’ll use Python3 throughout this course. Below are instructions for downloading Python3 using commandline packages manager (Homebrew for mac, Chocolatey for windows).\n\nInstalling Python3 using Homebrew on a Mac (Apple)\nInstalling Python3 using Chocolatey on a PC (Windows)\n\nAn alternative way to install Python3 is to download an Anaconda distribution. I will use pip rather than conda in the instruction for downloading Python modules. These are simply two ways of downloading and managing open-source software packages. Choose which ever works best for you\nMost computers already have python3 installed. You can check if that is your case through your commandline:\npython3 --version\nOn some versions of Windows, you may need to use py instead of python3:\npy --version\nIn either case, the output of this command should be something like Python 3.8.5"
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/course_infrastructure.html#jupyter-notebooks",
+    "href": "lecture_material/material-topic-01/course_infrastructure.html#jupyter-notebooks",
+    "title": "Topic 1: Course Set Up",
+    "section": "Jupyter Notebooks",
+    "text": "Jupyter Notebooks\nOnce you have Python3 on your computer, you can install a Jupyter Notebook. If you downloaded Python3 using Anaconda, then Jupyter Notebook comes with the distribution and requires no further installation on your part. If you are not using Anaconda, you can install Jupyter notebook running the following code using your commandline.\n# on your command line\npip install jupyter\nYou can then activate a Jupyter Notebook from the commandline by typing:\n# on your command line\njupyter notebook\n\nWorkflow to work with Juyter Notebooks using the commandline.\n\nOpen the terminal\nNavigate (using cd) to the folder you want to be the root of your jupyter notebook\nOpen the notebook (jupyter notebook)\n\nIt looks like this if I were to open a notebook in the folder I have for this course\n# open terminal\ncd qtm_350\njupyter notebook\n\n\nWorkflow with Anaconda.\nIf you installed Python using Anaconda distribution system (here: https://www.anaconda.com/products/individual). You can open Jupyter through a point-and-click system.\nIn the lecture notes, you can also find a Introduction to Jupyter notebook."
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "href": "lecture_material/material-topic-01/course_infrastructure.html#rstudio-reticulatequarto",
+    "title": "Topic 1: Course Set Up",
+    "section": "Rstudio + Reticulate|Quarto",
+    "text": "Rstudio + Reticulate|Quarto\nIn your classes that are focused on using R, RStudio will be your main IDE. However, RStudio is not just for R. It can handle a number of different languages. We can use Python in RStudio using the reticulate package.\nCheck the intro to quarto notebook on how to use Python in Rstudio. Let’s cover some of the installation steps here:\nTo install RStudio, download from the following link. reticulate is a R package that allows one run a Python REPL in the R console. In addition, it allows one to read in and use Python code, and pass data between R and Python. The following provides instructions on installing reticulate.\nWith reticulate, you can use Rstudio as a IDE for Python. Another option is to use Quarto (the next-generation version of R Markdown) as an unified framework to generate notebooks with text + code. If you are an R Markdown user, you will see how Quarto is just an extension of the capabilities that were previously provided by R Markdown. Now, instead of .rmd files, we have .qmd files. Quarto is already installed with RStudio."
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/course_infrastructure.html#git",
+    "href": "lecture_material/material-topic-01/course_infrastructure.html#git",
+    "title": "Topic 1: Course Set Up",
+    "section": "Git",
+    "text": "Git\nGit/GitHub instructions to check before the next session:\n\nInstall Git if it’s not installed already\nCreate a GitHub account if you don’t have one already (any email and free subscription is fine)\n\n1. This document was originally developed by Professor Tiago Ventura and adapted to our courses purposes."
+  },
+  {
+    "objectID": "lecture_material/material-topic-01/example_py.html",
+    "href": "lecture_material/material-topic-01/example_py.html",
+    "title": "My Quarto Document",
+    "section": "",
+    "text": "# Your Python code here\nprint(\"Hello, Quarto!\")"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#topic-overview",
+    "href": "slides/slides-topic-02.html#topic-overview",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\nComputational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\n\n\n\n\n\n\nthis lecture draws on materials from Professor Jacobson Essential Computer Literacy: 50 min.."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#what-is-a-computer-1",
+    "href": "slides/slides-topic-02.html#what-is-a-computer-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is a Computer?",
+    "text": "What is a Computer?\n\n\nHistorically, a computer was a person who makes calculations, especially with a calculating machine.\n\n\n\nTo do calculations we use numbers. How to represent them?"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#representing-numbers",
+    "href": "slides/slides-topic-02.html#representing-numbers",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Representing numbers",
+    "text": "Representing numbers\n\nSimplest ways to physically represent numbers for arithmetic:\n\nCounting fingers\nMarked stones, or marked bones\nIncan Rope counting, called Quipu\nThe Abacus"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#introduction-to-binary",
+    "href": "slides/slides-topic-02.html#introduction-to-binary",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Introduction to Binary",
+    "text": "Introduction to Binary\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIn modern digital computers, transistors act as switches, with 1 for high voltage level and 0 for low voltage level.\nComputers use binary because transistors are easy to fabricate in silicon and can be densely packed on a chip."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#what-is-binary",
+    "href": "slides/slides-topic-02.html#what-is-binary",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Binary?",
+    "text": "What is Binary?\n\nA binary number is written using only the digits 0 and 1.\nA single binary digit is a bit, e.g., 101 has three bits.\nAn 8-bit group is called a byte.\nBinary numbers grow as follows:\n\n0 represents zero\n1 represents one\n10 represents two\n100 represents four\n1000 represents eight, and so on…"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#binary-for-decimal-3",
+    "href": "slides/slides-topic-02.html#binary-for-decimal-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Binary for Decimal 3",
+    "text": "Binary for Decimal 3\n\n\nQuestion: What binary number represents 3?\n\n\n101\n\n\n11\n\n\n111\n\n\n010"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#binary-number-for-decimal-3",
+    "href": "slides/slides-topic-02.html#binary-number-for-decimal-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Binary Number for Decimal 3",
+    "text": "Binary Number for Decimal 3\n\nQuestion: What binary number represents 3?\n\n\n101\n\n\n11\n\n\n111\n\n\n010\n\nAnswer: b. 11\n\nIn binary, the number 3 is represented as 11, which equates to \\((1 \\times 2^1) + (1 \\times 2^0)\\)."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#practice-exercise",
+    "href": "slides/slides-topic-02.html#practice-exercise",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise:",
+    "text": "Practice Exercise:\n\nWhat binary number represents 5?\nWhat binary number represents 7?\nWhat binary number represents 9?\nWhat binary number represents 11?"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#machine-code",
+    "href": "slides/slides-topic-02.html#machine-code",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Machine Code",
+    "text": "Machine Code\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMachine code or binary code is binary instructions that a CPU reads and executes, such as: 10001000 01010111 11000101 11110001 10100001 00010110.\nEarly programming was done directly in machine code!"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#distinct-numbers-in-a-byte",
+    "href": "slides/slides-topic-02.html#distinct-numbers-in-a-byte",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Distinct Numbers in a Byte",
+    "text": "Distinct Numbers in a Byte\n\nQuestion: How many distinct numbers are represented by a byte?\n\n\n\\(2^{8}-1\\)\n\n\n\\(2^8\\)\n\n\n\\(2\\)\n\n\n\\(2^7\\)"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#distinct-numbers-in-a-byte-1",
+    "href": "slides/slides-topic-02.html#distinct-numbers-in-a-byte-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Distinct Numbers in a Byte",
+    "text": "Distinct Numbers in a Byte\n\nQuestion: How many distinct numbers are represented by a byte?\n\n\n\\(2^{8}-1\\)\n\n\n\\(2^8\\)\n\n\n\\(2\\)\n\n\n\\(2^7\\)\n\nAnswer: B) \\(2^8\\)\n\nA byte consists of 8 bits.\nEach bit has two possible values (0 or 1).\nTherefore, a byte can represent \\(2^8\\) or 256 distinct numbers, ranging from 0 to 255."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#characters-and-glyphs",
+    "href": "slides/slides-topic-02.html#characters-and-glyphs",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Characters and Glyphs",
+    "text": "Characters and Glyphs\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA character is the smallest component of text, like A, B, or /.\nA glyph is the graphical representation of a character.\nIn programming, the display of glyphs is typically handled by GUI (Graphical User Interface) toolkits or font renderers."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#ascii---the-basics",
+    "href": "slides/slides-topic-02.html#ascii---the-basics",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII - The Basics",
+    "text": "ASCII - The Basics\n\n\nASCII stands for American Standard Code for Information Interchange.\nStandardized in 1968, it defines numeric codes for characters, ranging from 0 to 127.\nEach character is assigned a unique numeric code value."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#ascii-codes",
+    "href": "slides/slides-topic-02.html#ascii-codes",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII Codes",
+    "text": "ASCII Codes\n\n\nASCII defined numeric codes for various characters, with the numeric values running from 0 to 127. For example, the lowercase letter ‘a’ is assigned 97 as its code value.\nUppercase ‘A’ is represented by the code value 65.\nThe code value 0 is the ‘NUL’ character, also known as the null byte."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#ascii-character-range",
+    "href": "slides/slides-topic-02.html#ascii-character-range",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII Character Range",
+    "text": "ASCII Character Range\n\n\nControl characters: Codes 0 through 31 and 127 are unprintable.\nSpacing character: Code 32 is a nonprinting space.\nGraphic characters: Codes 33 through 126 are printable."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#ascii-limitations",
+    "href": "slides/slides-topic-02.html#ascii-limitations",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII Limitations",
+    "text": "ASCII Limitations\n\n\nASCII only includes unaccented characters.\nLanguages requiring accented characters cannot be represented.\nEven English needs characters like ‘é’ for words such as ‘café’."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#practice-exercise-1",
+    "href": "slides/slides-topic-02.html#practice-exercise-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\n\nWrite the characters of your name using ASCII codes.\n\nCheck this table!"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#practice-exercise-2",
+    "href": "slides/slides-topic-02.html#practice-exercise-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\nHere we have an online translator!\n\n‘DAVI’ using ASCII codes.\n\n\n\nCharacter\nASCII Code\n\n\n\n\nD\n68\n\n\nA\n65\n\n\nV\n86\n\n\nI\n73\n\n\n\nNote: If ASCII does not support characters in your name, Unicode will provide a solution."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#hexadecimal-and-unicode",
+    "href": "slides/slides-topic-02.html#hexadecimal-and-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hexadecimal and Unicode",
+    "text": "Hexadecimal and Unicode\n\n\nASCII uses 7 bits, limiting its range.\nTo represent a broader range of characters, more bits are needed.\nHexadecimal, or hex, is used in Unicode to represent these characters efficiently."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#what-is-hexadecimal",
+    "href": "slides/slides-topic-02.html#what-is-hexadecimal",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Hexadecimal?",
+    "text": "What is Hexadecimal?\n\n\nHexadecimal is a base-16 number system.\nHex digits include: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\nIn programming, hex is encountered more often than binary for compactness."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#hex-to-binary-mapping",
+    "href": "slides/slides-topic-02.html#hex-to-binary-mapping",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hex to Binary Mapping",
+    "text": "Hex to Binary Mapping\n\n\nEach hex digit corresponds to 4 binary bits:\n\n0000 = 0\n0001 = 1\n0010 = 2\n…\n1110 = E\n1111 = F\n\nOne hex digit represents 4 bits, making it a shorthand for binary.\nThis is due to the fact that four binary digits can represent sixteen possible values (\\(2^4\\)), which aligns with the sixteen possible values of a single hex digit (0 to F)."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#binary-to-hex-conversion",
+    "href": "slides/slides-topic-02.html#binary-to-hex-conversion",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Binary to Hex Conversion",
+    "text": "Binary to Hex Conversion\n\n\nConvert binary to hex by grouping into blocks of four bits.\nExample: Binary 1001 1110 0000 1010 converts to Hex 9E0A."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#practice-exercise-3",
+    "href": "slides/slides-topic-02.html#practice-exercise-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\n\nConvert the decimal number 13 to binary.\nConvert the decimal number 13 to hexadecimal."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#practice-exercise-4",
+    "href": "slides/slides-topic-02.html#practice-exercise-4",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Practice Exercise",
+    "text": "Practice Exercise\nNow, convert the decimal number 27 to binary and then to hexadecimal."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#hexadecimal-in-file-formats",
+    "href": "slides/slides-topic-02.html#hexadecimal-in-file-formats",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hexadecimal in File Formats",
+    "text": "Hexadecimal in File Formats\n\n\nFiles in hex format are often referred to as “binary” files.\nThis terminology is due to the direct conversion between hex and binary.\nThe conversion is unambiguous, making it a practical shorthand."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#hexadecimal-in-html",
+    "href": "slides/slides-topic-02.html#hexadecimal-in-html",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hexadecimal in HTML",
+    "text": "Hexadecimal in HTML\n\nHTML uses hexadecimal to represent colors.\nSix-digit hex numbers specify colors:\n\nFFFFFF = White\n000000 = Black\n\nEach pair of digits represents a color component (RGB).\nEach color channel typically has a range from 0 to 255 (in 8-bit systems), which gives a total of 256 intensity levels for each primary color.\nWhen you combine the three channels, you get a possible color palette of \\(256^3\\) or about 16.7 million colors.\nFor example, an RGB value of 255, 0, 0 corresponds to bright red because the red channel is at full intensity, and the green and blue channels are off."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#encountering-unicode",
+    "href": "slides/slides-topic-02.html#encountering-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Encountering Unicode",
+    "text": "Encountering Unicode\n\n\nEncountering a UnicodeDecodeError in Python indicates a character encoding issue.\nThis often arises when dealing with characters not represented in the ASCII set."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#what-is-unicode",
+    "href": "slides/slides-topic-02.html#what-is-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Unicode?",
+    "text": "What is Unicode?\n\n\nUnicode is a standard that maps characters to code points.\nA code point is an integer, usually represented in hexadecimal.\nA Unicode string is a series of code points.\nEncoding is the rule set for converting code points to bytes."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#ascii-and-unicode",
+    "href": "slides/slides-topic-02.html#ascii-and-unicode",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "ASCII and Unicode",
+    "text": "ASCII and Unicode\n\n\nUnicode code points \\(&lt;\\) 128 directly map to ASCII bytes.\nCode points \\(&gt;=\\) 128 cannot be encoded in ASCII.\nPython will raise a UnicodeEncodeError for these cases.\nUnicode code charts: Unicode Charts"
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#utf-8-encoding",
+    "href": "slides/slides-topic-02.html#utf-8-encoding",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "UTF-8 Encoding",
+    "text": "UTF-8 Encoding\n\n\nUTF-8 stands for Unicode Transformation Format 8-bit.\nIt is a variable-width encoding representing every Unicode character.\nPython uses UTF-8 by default for source code."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#example",
+    "href": "slides/slides-topic-02.html#example",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Example",
+    "text": "Example\n\nTo write “DAVI” in Unicode (UTF-8) using hexadecimal code points, you would use the Unicode code points for each character.\nIn UTF-8, the characters in the standard ASCII set, which includes uppercase English letters, are represented by the same values as in ASCII. The code points for ‘D’, ‘A’, ‘V’, and ‘I’ are as follows:\n\n“D”: “\\u0044”\n“A”: “\\u0041”\n“V”: “\\u0056”\n“I”: “\\u0049”\n\n“DAVI” in Unicode (UTF-8) using these escape sequences would be represented as “\\u0044\\u0041\\u0056\\u0049”."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#zuses-computers",
+    "href": "slides/slides-topic-02.html#zuses-computers",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Zuse’s Computers",
+    "text": "Zuse’s Computers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nZuse’s computers, including Z1, Z2, Z3, and Z4, were designed to read binary instructions from punch tape.\nThe logic of these machines was based on binary switching mechanisms (0-1 principle).\nExample: Z4 had 512 bytes of memory."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#what-is-assembly-language",
+    "href": "slides/slides-topic-02.html#what-is-assembly-language",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Assembly Language?",
+    "text": "What is Assembly Language?\n\n\nAssembly language allows writing machine code in human-readable text.\nEarly assembly programming involved writing code on paper, which was then transcribed to punch cards."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#first-assemblers",
+    "href": "slides/slides-topic-02.html#first-assemblers",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "First Assemblers",
+    "text": "First Assemblers\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe first assemblers were human!\nProgrammers wrote assembly code, which secretaries transcribed to binary for machine processing."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#high-and-low-level-languages",
+    "href": "slides/slides-topic-02.html#high-and-low-level-languages",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "High and Low-Level Languages",
+    "text": "High and Low-Level Languages\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHigh-Level Languages: Abstract from hardware details, portable across different systems.\nLow-Level Languages: Closer to machine code, require consideration of hardware specifics."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#compiled-vs-interpreted-languages",
+    "href": "slides/slides-topic-02.html#compiled-vs-interpreted-languages",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Compiled vs Interpreted Languages",
+    "text": "Compiled vs Interpreted Languages\n\n\nCompiled Languages: Convert code to binary instructions before execution (e.g., C++, Fortran, Go).\nInterpreted Languages: Run inside a program that interprets and executes commands immediately (e.g., R, Python)."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#performance-and-flexibility",
+    "href": "slides/slides-topic-02.html#performance-and-flexibility",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Performance and Flexibility",
+    "text": "Performance and Flexibility\n\n\nCompiled languages are generally faster but require a compilation step.\nInterpreted languages are more flexible but can be slower, though this can be mitigated (e.g., Python with C++ libraries)."
+  },
+  {
+    "objectID": "slides/slides-topic-02.html#summary-1",
+    "href": "slides/slides-topic-02.html#summary-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\n\n\nComputational Literacy: Binary and hexadecimal numbers, characters (ASCII, Unicode), and distinction between high vs low-level programming languages.\nEarly Computing: Konrad Zuse’s pioneering work with programmable digital computers and the use of binary arithmetic.\nAssembly Language: The initial approach to programming using human-readable instructions for machine code.\nCalculators: The evolution from Leibniz’s four-species calculating machine to modern electronic computing.\nSilicon Microchip Computers: The 1970s revolution with transistors, integrated circuits, and the emergence of Von Neumann architecture.\nModern Programming Languages: The spectrum from low-level assembly languages to high-level languages like Python; distinction between compiled and interpreted languages."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#topic-overview",
+    "href": "slides/slides-topic-03.html#topic-overview",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\n\n\nComputational Literacy\n\nBinary and Hexadecimal numbers\nCharacters, ASCII, Unicode\nHigh vrs low level programming languages\nCompiled vs interpreted languages\n\n\n\n\nCommand Line\n\nShell basics\nHelp!\nNavigating your system\nManaging your files\nWorking with text files\nRedirects, pipes, and loops\nScripting\n\n\n\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub\n\n\n\n\n\n\n\n\nthis lecture draws on materials from Simon Munzert Intro to Data Science."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#a-computer-in-a-nutshell",
+    "href": "slides/slides-topic-03.html#a-computer-in-a-nutshell",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "A computer in a nutshell",
+    "text": "A computer in a nutshell\n\n\n\n\nCredit Dave Kerr\n\n\n\n\n\nThe operating system (OS) is system software that interfaces with (and manages access to) a computer’s hardware. It also provides software resources.\nThe OS is divided into the kernel and user space.\nThe kernel is the core of the OS. It’s responsible for interfacing with hardware (drivers), managing resources etc. Running software in the kernel is extremely sensitive! That’s why users are kept away from it.\nThe user space provides an interface for users, who can run programs/applications on the machine. Hardware access of programs (e.g., memory usage) is managed by the kernel. Programs in user space are essentially in sandboxes, which sets a limit to how much damage they can do."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#a-computer-in-a-nutshell-1",
+    "href": "slides/slides-topic-03.html#a-computer-in-a-nutshell-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "A computer in a nutshell",
+    "text": "A computer in a nutshell\n\n\n\n\n\n\n\n\n\n\n\n\n\nCredit Dave Kerr/Kkchaudhary11\n\n\n\n\nThe shell is just a general name for any user space program that allows access to resources in the system, via some kind of interface.\nShells come in many different flavours but are generally provided to aid a human operator in accessing the system. This could be interactively, by typing at a terminal, or via scripts, which are files that contain a sequence of commands.\nModern computers use graphical user interfaces (GUIs) as the standard tool for human-computer interaction.\nWhy “kernel” and “shell”? The kernel is the soft, edible part of a nut or seed, which is surrounded by a shell to protect it. Useful metaphor, no?"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#interacting-with-the-shell",
+    "href": "slides/slides-topic-03.html#interacting-with-the-shell",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Interacting with the shell",
+    "text": "Interacting with the shell\n\n\n\n\n\n\n\n \n\n\nCredit Dave Kerr/Rama/Musée Bolo/ClickRick\n\n\n\n\nThings are still a bit more complicated.\nWe’re not directly interacting with the “shell” but using a terminal.\nA terminal is just a program that reads input from the keyboard, passes that input to another program, and displays the results on the screen.\nA shell program on its own does not do this - it requires a terminal as an interface.\nWhy “terminal”? Back in the old days (even before computer screen existed), terminal machines (hardware!) were used to let humans interface with large machines (“mainframes”). Often many terminals were connected to a single machine.\nWhen you want to work with a computer in a data center (or remotely ~ cloud computing), you’ll still do pretty much the same."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#interacting-with-the-shell-1",
+    "href": "slides/slides-topic-03.html#interacting-with-the-shell-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Interacting with the shell",
+    "text": "Interacting with the shell\n\n\n\n\n\n\n\n\nCredit Dave Kerr\n\n\n\nTerminals are really quite simple - they’re just interfaces.\nThe first thing that a terminal program will do is run a shell program - a program that we can use to operate the computer.\nBack to the shell: the shell usually takes input\n(a) interactively from the user via the terminal's **command line**.\n(b) executes scripts (without command line).\nIn interactive mode the shell then returns output\n(a) to the terminal where it is printed/shown.\n(b) to files or other locations.\nThe command line (or command prompt) represents what is shown and entered in the terminal. They can be customized (e.g., with color highlighting) to make interaction more convenient."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#shell-variants",
+    "href": "slides/slides-topic-03.html#shell-variants",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Shell variants",
+    "text": "Shell variants\n\n\n\nLeft: Command Prompt, Right: Bash    Left: C Shell, Right: more shells     Credit Read-back spider/Dave Kerr\n\n\n\n\nIt is important to note that there are many different shell programs, and they differ in terms of functionality.\nOn most Unix-like systems, the default shell is a program called bash, which stands for “Bourne Again Shell”.\nOther examples are the Z Shell (or zsh; default on MacOS), Windows Command Prompt (cmd.exe, the default CLI on MS Windows), Windows PowerShell, C Shell, and many more.\nWhen a terminal opens, it will immediately start the user’s preferred shell program. (This can be changed.)"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#why-bother-with-the-shell-1",
+    "href": "slides/slides-topic-03.html#why-bother-with-the-shell-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Why bother with the shell?",
+    "text": "Why bother with the shell?\n\n\n\n\nWhy using this…\n\n\n\n\n\n\n\n\n\n… instead of this?"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#why-bother-with-the-shell-2",
+    "href": "slides/slides-topic-03.html#why-bother-with-the-shell-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Why bother with the shell?",
+    "text": "Why bother with the shell?\n\nSpeed. Typing is fast: A skilled shell user can manipulate a system at dazzling speeds just using a keyboard. Typing commands is generally much faster than exploring through user interfaces with a mouse.\nPower. Both for executing commands and for fixing problems. There are some things you just can’t do in an IDE or GUI. It also avoids memory complications associated with certain applications and/or IDEs.\nReproducibility. Scripting is reproducible, while clicking is not.\nPortability. A shell can be used to interface to almost any type of computer, from a mainframe to a Raspberry Pi, in a very similar way. The shell is often the only game in town for high performance computing (interacting with servers and super computers).\nAutomation. Shells are programmable: Working in the shell allows you to program workflows, that is create scripts to automate time-consuming or repetitive processes.\nBecome a marketable data scientist. Modern programming is often polyglot. The shell provides a common interface for tooling. Modern solutions are often built to run in containers on Linux. In this environment shell knowledge has become very valuable. In short, the shell is having a renaissance in the age of data science."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#the-unix-philosophy-1",
+    "href": "slides/slides-topic-03.html#the-unix-philosophy-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Unix philosophy",
+    "text": "The Unix philosophy\nThe shell tools that we’re going to be using have their roots in the Unix family of operating systems originally developed at Bells Labs in the 1970s.\nBesides paying homage, acknowledging the Unix lineage is important because these tools still embody the “Unix philosophy”:\n\nDo One Thing And Do It Well\n\n\nBy pairing and chaining well-designed individual components, we can build powerful and much more complex larger systems.\nYou can see why the Unix philosophy is also referred to as “minimalist and modular”.\nAgain, this philosophy is very clearly expressed in the design and functionality of the Unix shell."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#things-to-use-the-shell-for",
+    "href": "slides/slides-topic-03.html#things-to-use-the-shell-for",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Things to use the shell for",
+    "text": "Things to use the shell for\n\nVersion control with Git\nRenaming and moving files en masse\nFinding things on your computer\nCombining and manipulating PDFs\nInstalling and updating software\nScheduling tasks\nMonitoring system resources\nConnecting to cloud environments\nRunning analyses (“jobs”) on super computers\netc."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#shell-first-look",
+    "href": "slides/slides-topic-03.html#shell-first-look",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Shell: First look",
+    "text": "Shell: First look\nLet’s open up our shell.\nA convenient way to do this is through RStudio’s built-in Terminal.\nHitting Shift+Alt+T (or Shift+⌥+R on a Mac) will cause a “Terminal” tab to open up next to the “Console” tab.\nYour system default shell is loaded. To find out what that is, type:\necho $SHELL\n\n\n\n/bin/zsh\n\n\n\nIt’s Z bash in my case.\n\nOf course, it’s always possible to open up the Shell directly if you prefer. It’s your turn!\n\nLinux\nMac\nWindows"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#shell-first-look-1",
+    "href": "slides/slides-topic-03.html#shell-first-look-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Shell: First look",
+    "text": "Shell: First look\nYou should see something like:\n username@hostname:~$\nThis is shell-speak for: “Who am I and where am I?” \n\nusername denotes a specific user (one of potentially many on this computer).\n@hostname denotes the name of the computer or server.\n:~ denotes the directory path (where ~ signifies the user’s home directory).\n$ (or maybe %) denotes the start of the command prompt.\n\n(For a special “superuser” called root, the dollar sign will change to a #)."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#useful-keyboard-shortcuts",
+    "href": "slides/slides-topic-03.html#useful-keyboard-shortcuts",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Useful keyboard shortcuts",
+    "text": "Useful keyboard shortcuts\n\nTab completion.\nUse the ↑ (and ↓) keys to scroll through previous commands.\nCtrl+→ (and Ctrl+←) to skip whole words at a time.\nCtrl+a moves the cursor to the beginning of the line.\nCtrl+e moves the cursor to the end of the line.\nCtrl+k deletes everything to the right of the cursor.\nCtrl+u deletes everything to the left of the cursor.\nCtrl+Shift+c to copy and Ctrl+Shift+v to paste (or just ⌘+ c/v on a Mac).\nCtrl+l clears your terminal."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#syntax-1",
+    "href": "slides/slides-topic-03.html#syntax-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Syntax",
+    "text": "Syntax\n\n\n All Bash commands have the same basic syntax:\n\ncommand option(s) argument(s)\n\nExamples: \n$ ls -lh ~/Documents/\n\n$ sort -u myfile.txt\n\n\nCommands \n\nYou don’t always need options or arguments.\nFor example:\n\n$ ls ~/Documents/ and $ ls -lh are both valid commands that will yield output.\n\n\n\n\nHowever, you always need a command."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#syntax-2",
+    "href": "slides/slides-topic-03.html#syntax-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Syntax",
+    "text": "Syntax\n\n\n All Bash commands have the same basic syntax:\n\ncommand option(s) argument(s)\n\nExamples: \n$ ls `-lh` ~/Documents/\n\n$ sort `-u` myfile.txt\n\n\nOptions (also called Flags)\n\nStart with a dash.\nUsually one letter.\nMultiple options can be chained under a single dash.\n$ ls -l -a -h /var/log ## This works\n$ ls -lah /var/log ## So does this\nAn exception is with (rarer) options requiring two dashes.\n$ ls --group-directories-first --human-readable /var/log\nl: Use a long listing format. This option shows detailed information about the files and directories.\nh: With -l, print sizes in human-readable format (e.g., KB, MB).\nu: Unique, sort will write only one of two lines that compare equal. It filters out the duplicate entries in the output.\nThink it’s difficult to memorize what the individual letters stand for? You’re totally right."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#syntax-3",
+    "href": "slides/slides-topic-03.html#syntax-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Syntax",
+    "text": "Syntax\n\n\n All Bash commands have the same basic syntax:\n\ncommand option(s) argument(s)\n\nExamples: \n$ ls -lh `~/Documents/`\n\n$ sort -u `myfile.txt`\n\nArguments \n\nTell the command what to operate on.\nTotally depends on the command what legit inputs are.\nCan be a file, path, a set of files and folders, a string, and more\nSometimes more than just one argument is needed:\n$ mv figs/cat.JPG best-figs/cat.jpeg"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#multiple-ways-to-get-help",
+    "href": "slides/slides-topic-03.html#multiple-ways-to-get-help",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Multiple ways to get help",
+    "text": "Multiple ways to get help\n\n\n\nThe man tool can be used to look at the manual page for a topic.\nThe man pages are grouped into sections, we can see them with man man.\nThe tldr tool shows a very short description of a tool, which covers the most common use cases only.\nThe cht.sh website can be used directly from the shell to get help on tools or even ask specific questions. (Or install cheat.)\nFor more info on how to get help, see here.\nActually, typing man bash and reading/skimming the whole thing might be a good start to learn basic command line speak."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#getting-help-with-man",
+    "href": "slides/slides-topic-03.html#getting-help-with-man",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Getting help with man",
+    "text": "Getting help with man\n\nThe man command (“manual pages”) is your friend if you need help.\nman ls\n\n\n\nLS(1)                       General Commands Manual                      LS(1)\n\nN\bNA\bAM\bME\bE\n     l\bls\bs – list directory contents\n\nS\bSY\bYN\bNO\bOP\bPS\bSI\bIS\bS\n     l\bls\bs [-\b-@\b@A\bAB\bBC\bCF\bFG\bGH\bHI\bIL\bLO\bOP\bPR\bRS\bST\bTU\bUW\bWa\bab\bbc\bcd\bde\bef\bfg\bgh\bhi\bik\bkl\blm\bmn\bno\bop\bpq\bqr\brs\bst\btu\buv\bvw\bwx\bxy\by1\b1%\b%,\b,] [-\b--\b-c\bco\bol\blo\bor\br=_\bw_\bh_\be_\bn]\n        [-\b-D\bD _\bf_\bo_\br_\bm_\ba_\bt] [_\bf_\bi_\bl_\be _\b._\b._\b.]\n\nD\bDE\bES\bSC\bCR\bRI\bIP\bPT\bTI\bIO\bON\bN\n     For each operand that names a _\bf_\bi_\bl_\be of a type other than directory, l\bls\bs\n     displays its name as well as any requested, associated information.  For\n     each operand that names a _\bf_\bi_\bl_\be of type directory, l\bls\bs displays the names\n     of files contained within that directory, as well as any requested,\n     associated information.\n\n     If no operands are given, the contents of the current directory are\n     displayed.  If more than one operand is given, non-directory operands are\n     displayed first; directory and non-directory operands are sorted\n     separately and in lexicographical order.\n\n     The following options are available:\n\n     -\b-@\b@      Display extended attribute keys and sizes in long (-\b-l\bl) output.\n\n     -\b-A\bA      Include directory entries whose names begin with a dot (‘_\b.’)\n             except for _\b. and _\b._\b..  Automatically set for the super-user unless\n             -\b-I\bI is specified.\n\n     -\b-B\bB      Force printing of non-printable characters (as defined by\n             ctype(3) and current locale settings) in file names as \\_\bx_\bx_\bx,\n             where _\bx_\bx_\bx is the numeric value of the character in octal.  This\n             option is not defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-C\bC      Force multi-column output; this is the default when output is to\n             a terminal.\n\n     -\b-D\bD _\bf_\bo_\br_\bm_\ba_\bt\n             When printing in the long (-\b-l\bl) format, use _\bf_\bo_\br_\bm_\ba_\bt to format the\n             date and time output.  The argument _\bf_\bo_\br_\bm_\ba_\bt is a string used by\n             strftime(3).  Depending on the choice of format string, this may\n             result in a different number of columns in the output.  This\n             option overrides the -\b-T\bT option.  This option is not defined in\n             IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-F\bF      Display a slash (‘/’) immediately after each pathname that is a\n             directory, an asterisk (‘*’) after each that is executable, an at\n             sign (‘@’) after each symbolic link, an equals sign (‘=’) after\n             each socket, a percent sign (‘%’) after each whiteout, and a\n             vertical bar (‘|’) after each that is a FIFO.\n\n     -\b-G\bG      Enable colorized output.  This option is equivalent to defining\n             CLICOLOR or COLORTERM in the environment and setting\n             -\b--\b-c\bco\bol\blo\bor\br=_\ba_\bu_\bt_\bo.  (See below.)  This functionality can be compiled\n             out by removing the definition of COLORLS.  This option is not\n             defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-H\bH      Symbolic links on the command line are followed.  This option is\n             assumed if none of the -\b-F\bF, -\b-d\bd, or -\b-l\bl options are specified.\n\n     -\b-I\bI      Prevent -\b-A\bA from being automatically set for the super-user.  This\n             option is not defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-L\bL      Follow all symbolic links to final target and list the file or\n             directory the link references rather than the link itself.  This\n             option cancels the -\b-P\bP option.\n\n     -\b-O\bO      Include the file flags in a long (-\b-l\bl) output.  This option is\n             incompatible with IEEE Std 1003.1-2008 (“POSIX.1”).  See\n             chflags(1) for a list of file flags and their meanings.\n\n     -\b-P\bP      If argument is a symbolic link, list the link itself rather than\n             the object the link references.  This option cancels the -\b-H\bH and\n             -\b-L\bL options.\n\n     -\b-R\bR      Recursively list subdirectories encountered.\n\n     -\b-S\bS      Sort by size (largest file first) before sorting the operands in\n             lexicographical order.\n\n     -\b-T\bT      When printing in the long (-\b-l\bl) format, display complete time\n             information for the file, including month, day, hour, minute,\n             second, and year.  The -\b-D\bD option gives even more control over the\n             output format.  This option is not defined in IEEE Std\n             1003.1-2008 (“POSIX.1”).\n\n     -\b-U\bU      Use time when file was created for sorting or printing.  This\n             option is not defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-W\bW      Display whiteouts when scanning directories.  This option is not\n             defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-a\ba      Include directory entries whose names begin with a dot (‘_\b.’).\n\n     -\b-b\bb      As -\b-B\bB, but use C escape codes whenever possible.  This option is\n             not defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-c\bc      Use time when file status was last changed for sorting or\n             printing.\n\n     -\b--\b-c\bco\bol\blo\bor\br=_\bw_\bh_\be_\bn\n             Output colored escape sequences based on _\bw_\bh_\be_\bn, which may be set\n             to either a\bal\blw\bwa\bay\bys\bs, a\bau\but\bto\bo, or n\bne\bev\bve\ber\br.\n\n             a\bal\blw\bwa\bay\bys\bs will make l\bls\bs always output color.  If TERM is unset or set\n             to an invalid terminal, then l\bls\bs will fall back to explicit ANSI\n             escape sequences without the help of termcap(5).  a\bal\blw\bwa\bay\bys\bs is the\n             default if -\b--\b-c\bco\bol\blo\bor\br is specified without an argument.\n\n             a\bau\but\bto\bo will make l\bls\bs output escape sequences based on termcap(5),\n             but only if stdout is a tty and either the -\b-G\bG flag is specified\n             or the COLORTERM environment variable is set and not empty.\n\n             n\bne\bev\bve\ber\br will disable color regardless of environment variables.\n             n\bne\bev\bve\ber\br is the default when neither -\b--\b-c\bco\bol\blo\bor\br nor -\b-G\bG is specified.\n\n             For compatibility with GNU coreutils, l\bls\bs supports y\bye\bes\bs or f\bfo\bor\brc\bce\be as\n             equivalent to a\bal\blw\bwa\bay\bys\bs, n\bno\bo or n\bno\bon\bne\be as equivalent to n\bne\bev\bve\ber\br, and t\btt\bty\by\n             or i\bif\bf-\b-t\btt\bty\by as equivalent to a\bau\but\bto\bo.\n\n     -\b-d\bd      Directories are listed as plain files (not searched recursively).\n\n     -\b-e\be      Print the Access Control List (ACL) associated with the file, if\n             present, in long (-\b-l\bl) output.\n\n     -\b-f\bf      Output is not sorted.  This option turns on -\b-a\ba.  It also negates\n             the effect of the -\b-r\br, -\b-S\bS and -\b-t\bt options.  As allowed by IEEE Std\n             1003.1-2008 (“POSIX.1”), this option has no effect on the -\b-d\bd, -\b-l\bl,\n             -\b-R\bR and -\b-s\bs options.\n\n     -\b-g\bg      This option has no effect.  It is only available for\n             compatibility with 4.3BSD, where it was used to display the group\n             name in the long (-\b-l\bl) format output.  This option is incompatible\n             with IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-h\bh      When used with the -\b-l\bl option, use unit suffixes: Byte, Kilobyte,\n             Megabyte, Gigabyte, Terabyte and Petabyte in order to reduce the\n             number of digits to four or fewer using base 2 for sizes.  This\n             option is not defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-i\bi      For each file, print the file's file serial number (inode\n             number).\n\n     -\b-k\bk      This has the same effect as setting environment variable\n             BLOCKSIZE to 1024, except that it also nullifies any -\b-h\bh options\n             to its left.\n\n     -\b-l\bl      (The lowercase letter “ell”.) List files in the long format, as\n             described in the _\bT_\bh_\be _\bL_\bo_\bn_\bg _\bF_\bo_\br_\bm_\ba_\bt subsection below.\n\n     -\b-m\bm      Stream output format; list files across the page, separated by\n             commas.\n\n     -\b-n\bn      Display user and group IDs numerically rather than converting to\n             a user or group name in a long (-\b-l\bl) output.  This option turns on\n             the -\b-l\bl option.\n\n     -\b-o\bo      List in long format, but omit the group id.\n\n     -\b-p\bp      Write a slash (‘/’) after each filename if that file is a\n             directory.\n\n     -\b-q\bq      Force printing of non-graphic characters in file names as the\n             character ‘?’; this is the default when output is to a terminal.\n\n     -\b-r\br      Reverse the order of the sort.\n\n     -\b-s\bs      Display the number of blocks used in the file system by each\n             file.  Block sizes and directory totals are handled as described\n             in _\bT_\bh_\be _\bL_\bo_\bn_\bg _\bF_\bo_\br_\bm_\ba_\bt subsection below, except (if the long format\n             is not also requested) the directory totals are not output when\n             the output is in a single column, even if multi-column output is\n             requested.  (-\b-l\bl) format, display complete time information for\n             the file, including month, day, hour, minute, second, and year.\n             The -\b-D\bD option gives even more control over the output format.\n             This option is not defined in IEEE Std 1003.1-2008 (“POSIX.1”).\n\n     -\b-t\bt      Sort by descending time modified (most recently modified first).\n             If two files have the same modification timestamp, sort their\n             names in ascending lexicographical order.  The -\b-r\br option reverses\n             both of these sort orders.\n\n             Note that these sort orders are contradictory: the time sequence\n             is in descending order, the lexicographical sort is in ascending\n             order.  This behavior is mandated by IEEE Std 1003.2 (“POSIX.2”).\n             This feature can cause problems listing files stored with\n             sequential names on FAT file systems, such as from digital\n             cameras, where it is possible to have more than one image with\n             the same timestamp.  In such a case, the photos cannot be listed\n             in the sequence in which they were taken.  To ensure the same\n             sort order for time and for lexicographical sorting, set the\n             environment variable LS_SAMESORT or use the -\b-y\by option.  This\n             causes l\bls\bs to reverse the lexicographical sort order when sorting\n             files with the same modification timestamp.\n\n     -\b-u\bu      Use time of last access, instead of time of last modification of\n             the file for sorting (-\b-t\bt) or long printing (-\b-l\bl).\n\n     -\b-v\bv      Force unedited printing of non-graphic characters; this is the\n             default when output is not to a terminal.\n\n     -\b-w\bw      Force raw printing of non-printable characters.  This is the\n             default when output is not to a terminal.  This option is not\n             defined in IEEE Std 1003.1-2001 (“POSIX.1”).\n\n     -\b-x\bx      The same as -\b-C\bC, except that the multi-column output is produced\n             with entries sorted across, rather than down, the columns.\n\n     -\b-y\by      When the -\b-t\bt option is set, sort the alphabetical output in the\n             same order as the time output.  This has the same effect as\n             setting LS_SAMESORT.  See the description of the -\b-t\bt option for\n             more details.  This option is not defined in IEEE Std 1003.1-2001\n             (“POSIX.1”).\n\n     -\b-%\b%      Distinguish dataless files and directories with a '%' character\n             in long (-\b-l\bl) output, and don't materialize dataless directories\n             when listing them.\n\n     -\b-1\b1      (The numeric digit “one”.) Force output to be one entry per line.\n             This is the default when output is not to a terminal.\n\n     -\b-,      (Comma) When the -\b-l\bl option is set, print file sizes grouped and\n             separated by thousands using the non-monetary separator returned\n             by localeconv(3), typically a comma or period.  If no locale is\n             set, or the locale does not have a non-monetary separator, this\n             option has no effect.  This option is not defined in IEEE Std\n             1003.1-2001 (“POSIX.1”).\n\n     The -\b-1\b1, -\b-C\bC, -\b-x\bx, and -\b-l\bl options all override each other; the last one\n     specified determines the format used.\n\n     The -\b-c\bc, -\b-u\bu, and -\b-U\bU options all override each other; the last one\n     specified determines the file time used.\n\n     The -\b-S\bS and -\b-t\bt options override each other; the last one specified\n     determines the sort order used.\n\n     The -\b-B\bB, -\b-b\bb, -\b-w\bw, and -\b-q\bq options all override each other; the last one\n     specified determines the format used for non-printable characters.\n\n     The -\b-H\bH, -\b-L\bL and -\b-P\bP options all override each other (either partially or\n     fully); they are applied in the order specified.\n\n     By default, l\bls\bs lists one entry per line to standard output; the\n     exceptions are to terminals or when the -\b-C\bC or -\b-x\bx options are specified.\n\n     File information is displayed with one or more ⟨blank⟩s separating the\n     information associated with the -\b-i\bi, -\b-s\bs, and -\b-l\bl options.\n\n   T\bTh\bhe\be L\bLo\bon\bng\bg F\bFo\bor\brm\bma\bat\bt\n     If the -\b-l\bl option is given, the following information is displayed for\n     each file: file mode, number of links, owner name, group name, number of\n     bytes in the file, abbreviated month, day-of-month file was last\n     modified, hour file last modified, minute file last modified, and the\n     pathname.  If the file or directory has extended attributes, the\n     permissions field printed by the -\b-l\bl option is followed by a '@'\n     character.  Otherwise, if the file or directory has extended security\n     information (such as an access control list), the permissions field\n     printed by the -\b-l\bl option is followed by a '+' character.  If the -\b-%\b%\n     option is given, a '%' character follows the permissions field for\n     dataless files and directories, possibly replacing the '@' or '+'\n     character.\n\n     If the modification time of the file is more than 6 months in the past or\n     future, and the -\b-D\bD or -\b-T\bT are not specified, then the year of the last\n     modification is displayed in place of the hour and minute fields.\n\n     If the owner or group names are not a known user or group name, or the -\b-n\bn\n     option is given, the numeric ID's are displayed.\n\n     If the file is a character special or block special file, the device\n     number for the file is displayed in the size field.  If the file is a\n     symbolic link the pathname of the linked-to file is preceded by “-&gt;”.\n\n     The listing of a directory's contents is preceded by a labeled total\n     number of blocks used in the file system by the files which are listed as\n     the directory's contents (which may or may not include _\b. and _\b._\b. and other\n     files which start with a dot, depending on other options).\n\n     The default block size is 512 bytes.  The block size may be set with\n     option -\b-k\bk or environment variable BLOCKSIZE.  Numbers of blocks in the\n     output will have been rounded up so the numbers of bytes is at least as\n     many as used by the corresponding file system blocks (which might have a\n     different size).\n\n     The file mode printed under the -\b-l\bl option consists of the entry type and\n     the permissions.  The entry type character describes the type of file, as\n     follows:\n\n           -\b-     Regular file.\n           b\bb     Block special file.\n           c\bc     Character special file.\n           d\bd     Directory.\n           l\bl     Symbolic link.\n           p\bp     FIFO.\n           s\bs     Socket.\n           w\bw     Whiteout.\n\n     The next three fields are three characters each: owner permissions, group\n     permissions, and other permissions.  Each field has three character\n     positions:\n\n           1.   If r\br, the file is readable; if -\b-, it is not readable.\n\n           2.   If w\bw, the file is writable; if -\b-, it is not writable.\n\n           3.   The first of the following that applies:\n\n                      S\bS     If in the owner permissions, the file is not\n                            executable and set-user-ID mode is set.  If in the\n                            group permissions, the file is not executable and\n                            set-group-ID mode is set.\n\n                      s\bs     If in the owner permissions, the file is\n                            executable and set-user-ID mode is set.  If in the\n                            group permissions, the file is executable and\n                            setgroup-ID mode is set.\n\n                      x\bx     The file is executable or the directory is\n                            searchable.\n\n                      -\b-     The file is neither readable, writable,\n                            executable, nor set-user-ID nor set-group-ID mode,\n                            nor sticky.  (See below.)\n\n                These next two apply only to the third character in the last\n                group (other permissions).\n\n                      T\bT     The sticky bit is set (mode 1000), but not execute\n                            or search permission.  (See chmod(1) or\n                            sticky(7).)\n\n                      t\bt     The sticky bit is set (mode 1000), and is\n                            searchable or executable.  (See chmod(1) or\n                            sticky(7).)\n\n     The next field contains a plus (‘+’) character if the file has an ACL, or\n     a space (‘ ’) if it does not.  The l\bls\bs utility does not show the actual\n     ACL unless the -\b-e\be option is used in conjunction with the -\b-l\bl option.\n\nE\bEN\bNV\bVI\bIR\bRO\bON\bNM\bME\bEN\bNT\bT\n     The following environment variables affect the execution of l\bls\bs:\n\n     BLOCKSIZE           If this is set, its value, rounded up to 512 or down\n                         to a multiple of 512, will be used as the block size\n                         in bytes by the -\b-l\bl and -\b-s\bs options.  See _\bT_\bh_\be _\bL_\bo_\bn_\bg\n                         _\bF_\bo_\br_\bm_\ba_\bt subsection for more information.\n\n     CLICOLOR            Use ANSI color sequences to distinguish file types.\n                         See LSCOLORS below.  In addition to the file types\n                         mentioned in the -\b-F\bF option some extra attributes\n                         (setuid bit set, etc.) are also displayed.  The\n                         colorization is dependent on a terminal type with the\n                         proper termcap(5) capabilities.  The default “cons25”\n                         console has the proper capabilities, but to display\n                         the colors in an xterm(1), for example, the TERM\n                         variable must be set to “xterm-color”.  Other\n                         terminal types may require similar adjustments.\n                         Colorization is silently disabled if the output is\n                         not directed to a terminal unless the CLICOLOR_FORCE\n                         variable is defined or -\b--\b-c\bco\bol\blo\bor\br is set to “always”.\n\n     CLICOLOR_FORCE      Color sequences are normally disabled if the output\n                         is not directed to a terminal.  This can be\n                         overridden by setting this variable.  The TERM\n                         variable still needs to reference a color capable\n                         terminal however otherwise it is not possible to\n                         determine which color sequences to use.\n\n     COLORTERM           See description for CLICOLOR above.\n\n     COLUMNS             If this variable contains a string representing a\n                         decimal integer, it is used as the column position\n                         width for displaying multiple-text-column output.\n                         The l\bls\bs utility calculates how many pathname text\n                         columns to display based on the width provided.  (See\n                         -\b-C\bC and -\b-x\bx.)\n\n     LANG                The locale to use when determining the order of day\n                         and month in the long -\b-l\bl format output.  See\n                         environ(7) for more information.\n\n     LSCOLORS            The value of this variable describes what color to\n                         use for which attribute when colors are enabled with\n                         CLICOLOR or COLORTERM.  This string is a\n                         concatenation of pairs of the format _\bf_\bb, where _\bf is\n                         the foreground color and _\bb is the background color.\n\n                         The color designators are as follows:\n\n                               a\ba     black\n                               b\bb     red\n                               c\bc     green\n                               d\bd     brown\n                               e\be     blue\n                               f\bf     magenta\n                               g\bg     cyan\n                               h\bh     light grey\n                               A\bA     bold black, usually shows up as dark grey\n                               B\bB     bold red\n                               C\bC     bold green\n                               D\bD     bold brown, usually shows up as yellow\n                               E\bE     bold blue\n                               F\bF     bold magenta\n                               G\bG     bold cyan\n                               H\bH     bold light grey; looks like bright white\n                               x\bx     default foreground or background\n\n                         Note that the above are standard ANSI colors.  The\n                         actual display may differ depending on the color\n                         capabilities of the terminal in use.\n\n                         The order of the attributes are as follows:\n\n                               1.   directory\n                               2.   symbolic link\n                               3.   socket\n                               4.   pipe\n                               5.   executable\n                               6.   block special\n                               7.   character special\n                               8.   executable with setuid bit set\n                               9.   executable with setgid bit set\n                               10.  directory writable to others, with sticky\n                                    bit\n                               11.  directory writable to others, without\n                                    sticky bit\n\n                         The default is \"exfxcxdxbxegedabagacad\", i.e., blue\n                         foreground and default background for regular\n                         directories, black foreground and red background for\n                         setuid executables, etc.\n\n     LS_COLWIDTHS        If this variable is set, it is considered to be a\n                         colon-delimited list of minimum column widths.\n                         Unreasonable and insufficient widths are ignored\n                         (thus zero signifies a dynamically sized column).\n                         Not all columns have changeable widths.  The fields\n                         are, in order: inode, block count, number of links,\n                         user name, group name, flags, file size, file name.\n\n     LS_SAMESORT         If this variable is set, the -\b-t\bt option sorts the\n                         names of files with the same modification timestamp\n                         in the same sense as the time sort.  See the\n                         description of the -\b-t\bt option for more details.\n\n     TERM                The CLICOLOR and COLORTERM functionality depends on a\n                         terminal type with color capabilities.\n\n     TZ                  The timezone to use when displaying dates.  See\n                         environ(7) for more information.\n\nE\bEX\bXI\bIT\bT S\bST\bTA\bAT\bTU\bUS\bS\n     The l\bls\bs utility exits 0 on success, and &gt;0 if an error occurs.\n\nE\bEX\bXA\bAM\bMP\bPL\bLE\bES\bS\n     List the contents of the current working directory in long format:\n\n           $ ls -l\n\n     In addition to listing the contents of the current working directory in\n     long format, show inode numbers, file flags (see chflags(1)), and suffix\n     each filename with a symbol representing its file type:\n\n           $ ls -lioF\n\n     List the files in _\b/_\bv_\ba_\br_\b/_\bl_\bo_\bg, sorting the output such that the most\n     recently modified entries are printed first:\n\n           $ ls -lt /var/log\n\nC\bCO\bOM\bMP\bPA\bAT\bTI\bIB\bBI\bIL\bLI\bIT\bTY\bY\n     The group field is now automatically included in the long listing for\n     files in order to be compatible with the IEEE Std 1003.2 (“POSIX.2”)\n     specification.\n\nL\bLE\bEG\bGA\bAC\bCY\bY D\bDE\bES\bSC\bCR\bRI\bIP\bPT\bTI\bIO\bON\bN\n     In legacy mode, the -\b-f\bf option does not turn on the -\b-a\ba option and the -\b-g\bg,\n     -\b-n\bn, and -\b-o\bo options do not turn on the -\b-l\bl option.\n\n     Also, the -\b-o\bo option causes the file flags to be included in a long (-l)\n     output; there is no -\b-O\bO option.\n\n     When -\b-H\bH is specified (and not overridden by -\b-L\bL or -\b-P\bP) and a file argument\n     is a symlink that resolves to a non-directory file, the output will\n     reflect the nature of the link, rather than that of the file.  In legacy\n     operation, the output will describe the file.\n\n     For more information about legacy mode, see compat(5).\n\nS\bSE\bEE\bE A\bAL\bLS\bSO\bO\n     chflags(1), chmod(1), sort(1), xterm(1), localeconv(3), strftime(3),\n     strmode(3), compat(5), termcap(5), sticky(7), symlink(7)\n\nS\bST\bTA\bAN\bND\bDA\bAR\bRD\bDS\bS\n     With the exception of options -\b-g\bg, -\b-n\bn and -\b-o\bo, the l\bls\bs utility conforms to\n     IEEE Std 1003.1-2001 (“POSIX.1”) and IEEE Std 1003.1-2008 (“POSIX.1”).\n     The options -\b-B\bB, -\b-D\bD, -\b-G\bG, -\b-I\bI, -\b-T\bT, -\b-U\bU, -\b-W\bW, -\b-Z\bZ, -\b-b\bb, -\b-h\bh, -\b-w\bw, -\b-y\by and -\b-, are\n     non-standard extensions.\n\n     The ACL support is compatible with IEEE Std 1003.2c (“POSIX.2c”) Draft 17\n     (withdrawn).\n\nH\bHI\bIS\bST\bTO\bOR\bRY\bY\n     An l\bls\bs command appeared in Version 1 AT&T UNIX.\n\nB\bBU\bUG\bGS\bS\n     To maintain backward compatibility, the relationships between the many\n     options are quite complex.\n\n     The exception mentioned in the -\b-s\bs option description might be a feature\n     that was based on the fact that single-column output usually goes to\n     something other than a terminal.  It is debatable whether this is a\n     design bug.\n\n     IEEE Std 1003.2 (“POSIX.2”) mandates opposite sort orders for files with\n     the same timestamp when sorting with the -\b-t\bt option.\n\nmacOS 14.4                      August 31, 2020                     macOS 14.4"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#getting-help-with-man-1",
+    "href": "slides/slides-topic-03.html#getting-help-with-man-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Getting help with man",
+    "text": "Getting help with man\n\n\n Manual pages are shown in the shell pager. Here are the essentials to navigate through contents presented in the pager:\n\nd - Scroll down half a page\nu - Scroll up half a page\nj / k - Scroll down or up a line. You can also use the arrow keys for this\nq - Quit\n/pattern - Search for text provided as “pattern”\nn - When searching, find the next occurrence\nN - When searching, find the previous occurrence\nThese and other man tricks are detailed in the help pages (hit “h” when you’re in the pager for an overview).\n\n\n\n\n\n\n\n\nRTFM\n\n\nAlways check the documentation!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#help-practice",
+    "href": "slides/slides-topic-03.html#help-practice",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Help practice!",
+    "text": "Help practice!\n\n\nIn your Terminal, access the man and explore the document. I want you to share with a colleague your first impression and five commands you found interesting.\nPlease present your own (first impression + five commands) and colleague (first impression and five commands) views in the lecture quiz!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#help-cheat-tldr-cheat.sh",
+    "href": "slides/slides-topic-03.html#help-cheat-tldr-cheat.sh",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Help: cheat, tldr, cheat.sh",
+    "text": "Help: cheat, tldr, cheat.sh\nThere are various other utilities which provide more readable summaries/cheatsheets of various commands. Those include\n\ncheat\ncheat.sh\ntldr\n\n\nThe first two need to be installed first. cheat.sh sheets are accessible via:\ncurl cheat.sh/ls  \n# List files one per line:\nls -1\n\n# List all files, including hidden files:\nls -a\n\n# List all files, with trailing `/` added to directory names:\nls -F\n\n# Long format list with size displayed using human readable units (KB, MB, GB):\nls -lh"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#navigating-your-file-system-1",
+    "href": "slides/slides-topic-03.html#navigating-your-file-system-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Navigating your file system",
+    "text": "Navigating your file system\n\n\n\n\nWe’re all so used to a graphical user interface that switching to the shell can take some time to get used to.\nModern operating systems increasingly abstract away from underlying file systems (think about iOS, Android).\nFor data science operations it is key that you’re able to efficiently navigate your system to get information on files and folders.\nSome questions that will pop up:\n\nWhat is my home directory?\nIn which directory am I currently operating?\nWhere is my stuff?\nWhere do I want to put my stuff?\nHow do I navigate from here to there?"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#navigation",
+    "href": "slides/slides-topic-03.html#navigation",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Navigation",
+    "text": "Navigation\n\nKey navigation commands are:\n\npwd to print (the current) working directory.\ncd to change directory.\n\n\npwd\n\n\n\n/Users/dcorde3/Library/CloudStorage/Dropbox/academic/cursos/cursos-davi/data_science_computing/2024Summer1_dsc_emory_qtm_350/slides"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#navigation-1",
+    "href": "slides/slides-topic-03.html#navigation-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Navigation",
+    "text": "Navigation\n\nYou can use absolute paths, but it’s better to use relative paths and invoke special symbols for a user’s home folder (~), current directory (.), and parent directory (..) as needed.\n\ncd slides-topic-02-02-examples ## Move into the \"slides-topic-02-02-examples\" sub-directory of this lecture directory.\ncd ../.. ## Now go back up two directories.\npwd\n\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#navigation-2",
+    "href": "slides/slides-topic-03.html#navigation-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Navigation",
+    "text": "Navigation\n\n\n Beware of directory names that contain spaces. Say you have a directory called “My Documents”. (I’m looking at you, Windows.)\n\nWhy won’t $ cd My Documents work?\nBash syntax is super pedantic about spaces and ordering. Here it thinks that “My” and “Documents” are separate arguments.\nHow to deal with it:\n\nUse quotation marks: $ cd \"My Documents\".\nUse Tab completion to automatically “escape” the space: $ cd My\\ Documents.\nDon’t use spaces in file and folder names. Just don’t.\nI’ve developed the habit to name files and folders\n\nalways lowercase and\nusing dashes or snake_case, as in assignment-05 or assignment_05. These are useful conventions!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#listing-files-and-their-properties",
+    "href": "slides/slides-topic-03.html#listing-files-and-their-properties",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Listing files and their properties",
+    "text": "Listing files and their properties\n\n\nWe’re about to go into more depth about the ls (list) command. It shows the contents of the current (or given) directory:\nls\n\n\n\n_slides-topic-02-02-aux.ipynb figs\n_slides-topic-02-02.html      slides-topic-01.qmd\n_slides-topic-02-02.qmd       slides-topic-02.qmd\n_slides-topic-02_aux.qmd      slides-topic-03.html\n_slides-topic-02_files        slides-topic-03.ipynb\n_slides-topic-03-examples     slides-topic-03.qmd\n_slides-topic-03_files        slides-topic-04.html\n_slides-topic-04_files        slides-topic-04.qmd\ncustom.css                    survive.txt\ncustom.scss\n\n\n\n\n\n\nNow we list the contents of the slides-topic-02-02-examples/ sub-directory with the -lh option (“long format”, “human readable file size unit suffixes”; again, check out man ls for the details):\nls -lh slides-topic-02-02-examples\n\n\n\nls: slides-topic-02-02-examples: No such file or directory"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#listing-files-and-their-properties-1",
+    "href": "slides/slides-topic-03.html#listing-files-and-their-properties-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Listing files and their properties",
+    "text": "Listing files and their properties\n\n\nNow we list the contents of the slides-topic-02-02-examples/ sub-directory with the -lh option (“long format”, “human readable file size unit suffixes”; again, check out man ls for the details):\nls -lh slides-topic-02-02-examples\n\n\n\nls: slides-topic-02-02-examples: No such file or directory\n\n\n\n\nWhat does this all mean? Let’s focus on the top line.\ndrwxrwxr-x@ 3 dcorde3  206888963    96B Nov 27 09:51 ABC\n\nThe first column denotes the object type:\n\nd (directory or folder), l (link), or - (file)\n\nNext, we see the permissions associated with the object’s three possible user types: 1) owner, 2) the owner’s group, and 3) all other users.\n\nPermissions reflect r (read), w (write), or x (execute) access.\n- denotes missing permissions for a class of operations.\n\nThe number of hard links to the object.\nWe also see the identity of the object’s owner and their group.\nFinally, we see some descriptive elements about the object:\n\nSize, date and time of creation, and the object name."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#summary",
+    "href": "slides/slides-topic-03.html#summary",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\n\n\n\nThe pwd (print working directory) command shows the current working directory.\nThe ls (list) command shows the contents of the current directory or a given directory.\nThe ls -l command shows the contents of the current directory as list.\nThe cd (change directory) changes the current working directory.\nYou can run cd at any time to quickly go to your home directory.\nYou can use the cd - command to go back to the last location.\nAbsolute paths are paths which specify the exact location of a file or folder.\nRelative paths are paths which are relative to the current directory.\nThe . special folder means ‘this folder’.\nThe .. special folder means ‘the parent folder’.\nThe ~ special folder is the ‘home directory’.\nThe $PWD environment variable holds the current working directory.\nThe $HOME environment variable holds the user’s home directory.\nThe tree command can show the files and folders in a given directory. (Install first on a Mac.)\nThe file command can be used to ask the shell what it thinks a file is.\n\n\n\nFor a more detailed overview, click here."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#managing-your-files-1",
+    "href": "slides/slides-topic-03.html#managing-your-files-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Managing your files",
+    "text": "Managing your files\n\n\n\nThe obvious next step after navigating the file system is managing files.\nThere’s a lot you can do with files, including downloading, unzipping, copying, moving, renaming and deleting.\nAgain, doing this in a GUI is intuitive but usually scales badly.\nWe’ll learn how to do these operations at scale using the shell.\nBe careful when handling files in the shell though! Don’t expect friendly reminders such as “Do you really want to delete this folder of pictures from your anniversary?”"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#create-touch-and-mkdir",
+    "href": "slides/slides-topic-03.html#create-touch-and-mkdir",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Create: touch and mkdir",
+    "text": "Create: touch and mkdir\nOne of the most common shell tasks is object creation (files, directories, etc.).\nWe use mkdir to create directories. E.g., to create a new “testing” directory we do:\nmkdir testing\n\n\nWe use touch to create (empty) files. If the file(s) already exist, touch changes a file’s “Access”, “Modify” and “Change” timestamps to the current time and date. To add some files to our new directory, we do:\ntouch testing/test1.txt testing/test2.txt testing/test3.txt\n\n\n\nCheck that it worked:\nls testing\n\n\n\ntest1.txt test2.txt test3.txt"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#remove-rm-and-rmdir",
+    "href": "slides/slides-topic-03.html#remove-rm-and-rmdir",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Remove: rm and rmdir",
+    "text": "Remove: rm and rmdir\nLet’s delete the objects that we just created. Start with one of the .txt files, by using rm. - We could delete all the files at the same time, but you’ll see why I want to keep some.\nrm testing/test1.txt\n\n\nThe equivalent command for directories is rmdir.\nrmdir testing\n\n\n\nrmdir: testing: Directory not empty\n\n\n\n\nUh oh… It won’t let us delete the directory while it still has files inside of it. The solution is to use the rm command again with the “recursive” (-r or -R) and “force” (-f) options. - Excluding the -f option is safer, but will trigger a confirmation prompt for every file, which I’d rather avoid here.\nrm -rf testing ## Success"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#copy-cp",
+    "href": "slides/slides-topic-03.html#copy-cp",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Copy: cp",
+    "text": "Copy: cp\n\n\nThe syntax for copying is $ cp object path/copyname.\n\nIf you don’t provide a new name for the copied object, it will just take the old name.\nHowever, if there is already an object with the same name in the target destination, then you’ll have to use -f to force an overwrite.\n\n\n## Create new \"copies\" sub-directory\nmkdir slides-topic-02-02-examples/copies\n\n## Now copy across a file (with a new name)\ncp slides-topic-02-02-examples/reps.txt slides-topic-02-02-examples/copies/reps-copy.txt\n\n## Show that we were successful\nls slides-topic-02-02-examples/copies\n\nTerminal!\n\n\n\nYou can use cp to copy directories, although you’ll need the -r flag if you want to recursively copy over everything inside of it too:\ncp -r slides-topic-02-02-examples/meals slides-topic-02-02-examples/copies\nrm -rf slides-topic-02-02-examples/copies/meals\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#move-and-rename-mv",
+    "href": "slides/slides-topic-03.html#move-and-rename-mv",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Move (and rename): mv",
+    "text": "Move (and rename): mv\nThe syntax for moving is $ mv object path/newobjectname\n ## Move the abc.txt file and show that it worked\nmv slides-topic-02-02-examples/ABC/abc.txt examples\nls slides-topic-02-02-examples/ABC ## empty\n\n## Move it back again\nmv slides-topic-02-02-examples/abc.txt slides-topic-02-02-examples/ABC\nls slides-topic-02-02-examples/ABC ## not empty\n\nTerminal!\n\n\nNote that “moving” an object within the same directory, but with specifying newobjectname, is effectively the same as renaming it.\n ## Rename reps-copy to reps2 by \"moving\" it with a new name\nmv slides-topic-02-02-examples/copies/reps-copy.txt slides-topic-02-02-examples/copies/reps2.txt\nls slides-topic-02-02-examples/copies\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#rename-en-masse-zmv",
+    "href": "slides/slides-topic-03.html#rename-en-masse-zmv",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Rename en masse : zmv",
+    "text": "Rename en masse : zmv\nA more convenient way to do renaming in zsh is with zmv. It has to be installed and autoloaded first:\nautoload -U zmv\n\nTerminal!\n\n\nThe syntax is zmv &lt;options&gt; &lt;old-files-pattern&gt; &lt;new-files-pattern&gt;\nFor example, say we want to change the file type (i.e. extension) of a set of files in the slides-topic-02-02-examples/meals directory, we do:\ncd slides-topic-02-02-examples/meals\nzmv -n -W  \"*.csv\" \"*.txt\"\n\nTerminal!\n\n\n\nA very useful flag is -n which does not execute the command but prints the command that would be executed. Use this if you are unsure about your patterns. The -W flag ensures that the wildcard * is recycled in the second pattern."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#rename-en-masse-zmv-1",
+    "href": "slides/slides-topic-03.html#rename-en-masse-zmv-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Rename en masse : zmv",
+    "text": "Rename en masse : zmv\nzmv really shines in conjunction with regular expressions and wildcards (more on the next slide). This works especially well for dealing with a whole list of files or folders.\nAs another example, let’s change all of the file names in the slides-topic-02-02-examples/meals directory.\nzmv -n '(**/)(*).csv' '$1$2-tacos.csv'\n\nTerminal!\n\n\n\nNotice that the patterns are now bit more complicated. The first is surrounded by single quotes, (**/) which defines a group that we can refer to later. It allows us to search in both the given directory and sub-directories (which we don’t have in this case). The second, (*) is also grouped. Both are referred to in the replacement pattern with $1 and $2.\nWant to learn more about zmv? Check out this."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#wildcards",
+    "href": "slides/slides-topic-03.html#wildcards",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Wildcards",
+    "text": "Wildcards\nWildcards are special characters that can be used as a replacement for other characters. The two most important ones are:\n\nReplace any number of characters with *.\n\nConvenient when you want to copy, move, or delete a whole class of files.\n\n\n\ncp slides-topic-02-02-examples/*.sh slides-topic-02-02-examples/copies ## Copy any file with an .sh extension to \"copies\"\nrm slides-topic-02-02-examples/copies/* ## Delete everything in the \"copies\" directory\n\nTerminal!\n\n\n\n\nReplace a single character with ?\n\nConvenient when you want to discriminate between similarly named files.\n\n\n\n\nls slides-topic-02-02-examples/meals/??nday.csv\nls slides-topic-02-02-examples/meals/?onday.csv\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#find",
+    "href": "slides/slides-topic-03.html#find",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Find",
+    "text": "Find\nThe last command to mention is find.\nThis can be used to locate files and directories based on a variety of criteria; from pattern matching to object properties.\nfind examples -iname \"monday.csv\" ## will automatically do recursive, -iname makes search case-insensitive\n\nfind . -iname \"*.txt\" ## must use \".\" to indicate pwd\n\nfind . -size +2000k ## find files larger than 2000 KB\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#summary-1",
+    "href": "slides/slides-topic-03.html#summary-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\n\n\n\nThe rm (remove) command can delete a file (they are gone forever, no recycle bin!).\nThe rm command won’t delete a folder which has files in it, unless you tell it to by adding the -r (recursive) flag.\nThe cp (copy) command can copy a file.\nThe cp can also be given wildcards like * to copy many files.\nThe mv (move) command can move or rename a file.\nThe zmv command enables convenient renaming.\nThe mkdir command can create a folder - it can even create a whole tree of folders if you pass the -p (create parent directories) flag.\nThe find command lets you find files based on specified criteria.\nThe cat command (concatenated) can be used to write the contents of a file to the screen.\nWe can pass multiple files to commands like cat if we use wildcards, such as quotes/*.\nThe wget (web get) command can download a file from the web. (Install first on a Mac.)\nThe zip/unzip commands can zip/unzip a file/folder for us.\n\n\nFor a more detailed overview, click here."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#working-with-text-files-1",
+    "href": "slides/slides-topic-03.html#working-with-text-files-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Working with text files",
+    "text": "Working with text files\n\n\n\nData scientists spend a lot of time working with text, including scripts, Markdown documents, and delimited text files like CSVs.\nYou will have the opportunity to learn more on the statistical analysis of text using NLP technique over the course of your studies.\nWhile Python and R are strong environments for text wrangling and analysis, it still makes sense to spend a few slides showing off some Bash shell capabilities for working with text files.\nWe’ll only scratch the surface, but hopefully you’ll get an idea of how powerful the shell is in the text domain."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#counting-text-wc",
+    "href": "slides/slides-topic-03.html#counting-text-wc",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Counting text: wc",
+    "text": "Counting text: wc\n\nYou can use the wc command to count:\n\nThe lines of text\nThe number of words\nThe number of characters\n\n\nLet’s demonstrate with a text file containing all of Shakespeare’s Sonnets.1\nwc slides-topic-02-02-examples/sonnets.txt\n\nTerminal!\n\nThe character count is actually higher than we’d get if we count by hand, because wc counts the invisible newline character “”.\n\nProject Gutenberg."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#read-everything-cat",
+    "href": "slides/slides-topic-03.html#read-everything-cat",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Read everything: cat",
+    "text": "Read everything: cat\n\nThe simplest way to read in text is with the cat (“concatenate”) command. Note that cat will read in all of the text. You can scroll back up in your shell window, but this can still be a pain.\nAgain, let’s demonstrate using Shakespeare’s Sonnets. (This will overflow the slide.)\nWe also use the -n flag to show line numbers:\n\n\ncat -n slides-topic-02-02-examples/sonnets.txt\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#scroll-more-and-less",
+    "href": "slides/slides-topic-03.html#scroll-more-and-less",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Scroll: more and less",
+    "text": "Scroll: more and less\n\nThe more and less commands provide extra functionality over cat. For example, they allow you to move through long text one page at a time. (While they look similar, less is more than more, more or less…)\n\nmore slides-topic-02-02-examples/sonnets.txt\n\nTerminal!\n\n\n\nYou can move forward and back using the f and b keys, and quit by hitting q."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#preview-head-and-tail",
+    "href": "slides/slides-topic-03.html#preview-head-and-tail",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Preview: head and tail",
+    "text": "Preview: head and tail\n\nThe head and tail commands let you limit yourself to a preview of the text, down to a specified number of rows. (The default is 10 rows if you don’t specify a number with the -n flag.)\n\nhead -n 3 slides-topic-02-02-examples/sonnets.txt ## First 3 rows\n# head slides-topic-02-02-examples/sonnets.txt ## First 10 rows (default)\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#preview-head-and-tail-1",
+    "href": "slides/slides-topic-03.html#preview-head-and-tail-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Preview: head and tail",
+    "text": "Preview: head and tail\n\ntail works very similarly to head, but starting from the bottom. For example, we can see the very last row of a file as follows:\n\ntail -n 1 slides-topic-02-02-examples/sonnets.txt ## Last row\n\nTerminal!\n\n\nBy using the -n +N option, we can specify that we want to preview all lines starting from row N and after, as in:\n\ntail -n +3024 slides-topic-02-02-examples/sonnets.txt ## Show everything from line 3024\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#find-patterns-grep",
+    "href": "slides/slides-topic-03.html#find-patterns-grep",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Find patterns: grep",
+    "text": "Find patterns: grep\n\n\nTo find patterns in text, we can use regular expression-type matching with grep.\nFor example, say we want to find the famous opening line to Shakespeare’s Sonnet 18.\n(We’re going to include the -n (“number”) flag to get the line that it occurs on.)\ngrep -n \"Shall I compare thee\" slides-topic-02-02-examples/sonnets.txt\n\n\ngrep: slides-topic-02-02-examples/sonnets.txt: No such file or directory\n\n\n\n\n\nBy default, grep returns all matching patterns.\nCheck out what happens when we do the following:\ngrep -n \"winter\" slides-topic-02-02-examples/sonnets.txt\n\n\ngrep: slides-topic-02-02-examples/sonnets.txt: No such file or directory"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#find-patterns-grep-1",
+    "href": "slides/slides-topic-03.html#find-patterns-grep-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Find patterns: grep",
+    "text": "Find patterns: grep\n\nNote that grep can be used to identify patterns in a group of files (e.g. within a directory) too.\n\nThis is particularly useful if you are trying to identify a file that contains, say, a function name.\n\n\nHere’s a simple example: Which days will I eat pasta this week?\n\nI’m using the r (recursive) and l (just list the files; don’t print the output) flags.\n\n\n\ngrep -rl \"pasta\" slides-topic-02-02-examples/meals\n\n\ngrep: slides-topic-02-02-examples/meals: No such file or directory\n\n\nTake a look at the grep man or cheat file for other useful examples and flags (e.g. -i for ignore case)."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#manipulate-text-sed",
+    "href": "slides/slides-topic-03.html#manipulate-text-sed",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Manipulate text: sed",
+    "text": "Manipulate text: sed\nThere are two main commands for manipulating text in the shell, namely sed and awk. Both of these are very powerful and flexible. We’ll briefly look into sed for now. (Mac users, note that the MacOS sed works a bit differently; see here.)\nsed is the stream editor command. It takes input from a stream - which in many cases will simply be a file. It then performs operations on the text as it is read, and returns the output.\n\n\n\n\nExample 1. Replace one text pattern with another.\ncat slides-topic-02-02-examples/nursery.txt\nsed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt\ncat slides-topic-02-02-examples/nursery.txt\n\n\nLet’s look at the expression s/Jack/Bill/g in detail:\n\nThe s indicates that we are going to run the substitute function, which is used to replace text.\nThe / indicates the start of the pattern we are searching for - Bill in this case.\nThe second / indicates the start of the replacement we will make when the pattern is found.\nThe final / indicates the end of the replacement - we can also optionally put flags after this slash. Here, g ensures global replacement (not just replacement of the first match)."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#summary-2",
+    "href": "slides/slides-topic-03.html#summary-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\n\n\n\nhead will show the first ten lines of a file.\nhead -n 30 will show the first thirty lines of a file, using the -n flag to specify the number of lines.\ntail will show the final ten lines of a file.\ntail -n 3 uses the -n flag to specify three lines only.\ntr 'a' 'b' is the translate characters command, which turns one set of characters into another.\ncut can be used to extract parts of a line of text.\ncut -d',' -f 3 shows how the -d or delimiter flag is used to specify the delimiter to cut on and how the -f or field flag specifies which of the fields the text has been cut into is printed.\ncut -c 2-4 uses the -c or characters flag to specify that we are extracting a subset of characters in the line, in this case characters two to four.\nrev reverses text - by reversing, cutting and then re-reversing you can quickly extract text from the end of a line.\nsort sorts the incoming text alphabetically. The -r flag for sort reverses the sort order.\nThe uniq command removes duplicate lines - but only when they are next to each other, so you’ll often use it in combination with sort.\nYour pager, for example the less program can be useful when inspecting the output of your text transformation commands.\n\n\nFor a more detailed overview, click here."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#also-make-sure-to-master-regular-expressions",
+    "href": "slides/slides-topic-03.html#also-make-sure-to-master-regular-expressions",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Also, make sure to master regular expressions!",
+    "text": "Also, make sure to master regular expressions!\n\n\n\nGood starting points are:\n\nThis chapter discussing regex in the context of the shell\nRegular Expression in Python\nThis base R regex intro"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#redirects-pipes-and-loops-1",
+    "href": "slides/slides-topic-03.html#redirects-pipes-and-loops-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Redirects, pipes, and loops",
+    "text": "Redirects, pipes, and loops\n\n\n\n\nYou have learned about pipes (%&gt;% or |&gt;) in R already.\nUnderstanding the concept of pipelines in the shell, as well as how input and output work for command line programs is critical to be able to use the shell effectively.\nThink again of the Unix philosophy of “doing one thing, but doing it well” and combining multiple of these modules.\nAlso, often you’ll want to dump output in a file as part of your workflow.\nLet’s learn how all this works."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#redirect",
+    "href": "slides/slides-topic-03.html#redirect",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Redirect: >",
+    "text": "Redirect: &gt;\n\nYou can send output from the shell to a file using the redirect operator &gt;.\nFor example, let’s print a message to the shell using the echo command.\necho \"At first, I was afraid, I was petrified\"\n\n\nAt first, I was afraid, I was petrified\n\n\n\n\nIf you wanted to save this output to a file, you need simply redirect it to the filename of choice.\necho \"At first, I was afraid, I was petrified\" &gt; survive.txt\nfind survive.txt ## Show that it now exists\n\n\nsurvive.txt"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#redirect-1",
+    "href": "slides/slides-topic-03.html#redirect-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Redirect: >",
+    "text": "Redirect: &gt;\n\nIf you want to append text to an existing file, then you should use &gt;&gt;.\n\nUsing &gt; will try to overwrite the existing file contents.\n\n\necho \"'Kept thinking I could never live without you by my side\" &gt;&gt; survive.txt\ncat survive.txt\n\n\n\nAt first, I was afraid, I was petrified\n'Kept thinking I could never live without you by my side\n\n\n\nAn example use case is when adding rules to your .gitignore, e.g. $ echo \"*.csv\" &gt;&gt;  .gitignore."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#pipes",
+    "href": "slides/slides-topic-03.html#pipes",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Pipes: |",
+    "text": "Pipes: |\nThe pipe operator | is one of the coolest features in Bash.\n\nIt allows us to chain (i.e. “pipe”) together a sequence of simple operations and thereby implement a more complex operation.\n\n\n\n\nHere’s a simple example:\ncat -n slides-topic-02-02-examples/sonnets.txt 2&gt;/dev/null | head -n100 | tail -n10\n\n\nThis command sequence:\n\nIt reads the file sonnets.txt, numbering each line of the text.\nAny errors that might occur during this process are ignored (not printed to the terminal).\nIt then takes only the first 100 lines of the numbered text.\nFrom those 100 lines, it then takes only the last 10 lines.\nThe final output displayed in the terminal will be lines 91 to 100 of the sonnets.txt file, along with their corresponding line numbers.\n\n\n\ncat -n slides-topic-02-02-examples/sonnets.txt\n\ncat is used to concatenate and display files.\nThe -n option of cat numbers all output lines starting with line 1.\nslides-topic-02-02-examples/sonnets.txt is the file path to the text file being read. This file presumably contains sonnets or other text.\n\n\n\n\n2&gt;/dev/null\n\n2&gt; is used to redirect the standard error (stderr) output stream.\n/dev/null is a special file that discards all data written to it.\nThis redirection sends all error messages from cat (like file not found, no read permission, etc.) to /dev/null, effectively silencing any errors that cat might produce.\n\n| head -n100\n\nThe pipe | passes the output of the previous command (cat -n) to the next command as input.\nhead is used to output the first part of files.\nThe -n100 option tells head to print the first 100 lines of its input.\n\n| tail -n10\n\nAnother pipe | passes the output of head -n100 to the next command as input.\ntail outputs the last part of files.\nThe -n10 option tells tail to print the last 10 lines of its input."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#iteration-with-for-loops",
+    "href": "slides/slides-topic-03.html#iteration-with-for-loops",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Iteration with for loops",
+    "text": "Iteration with for loops\n\nSometimes you want to loop an operation over certain parameters. for loops in Bash/Z shell work similarly to other programming languages that you are probably familiar with.\n\nThe basic syntax is:\nfor i in LIST\ndo \n  OPERATION $i ## the $ sign indicates a variable in bash\ndone\n\nWe can also condense things into a single line by using ;.\nfor i in LIST; do OPERATION $i; done\nNote: Using ; isn’t limited to for loops. Semicolons are a standard way to denote line endings in Bash/Z shell."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#example-1-print-a-sequence-of-numbers",
+    "href": "slides/slides-topic-03.html#example-1-print-a-sequence-of-numbers",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Example 1: Print a sequence of numbers",
+    "text": "Example 1: Print a sequence of numbers\nTo help make things concrete, here’s a simple for loop in action.\nfor i in 1 2 3 4 5; do echo $i; done\n\n\n1\n2\n3\n4\n5\n\n\n\nFWIW (For What It’s Worth), we can use bash’s brace expansion ({1..n}) to save us from having to write out a long sequence of numbers.\nfor i in {1..5}; do echo $i; done"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#example-2-combine-csvs",
+    "href": "slides/slides-topic-03.html#example-2-combine-csvs",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Example 2: Combine CSVs",
+    "text": "Example 2: Combine CSVs\nHere’s a more realistic for loop use-case: Combining (i.e. concatenating) multiple CSVs.\nSay we want to combine all the “daily” files in the /meals directory into a single CSV, which I’ll call mealplan.csv. Here’s one attempt that incorporates various bash commands and tricks that we’ve learned so far. The basic idea is:\n\nCreate a new (empty) CSV\nThen, loop over the relevant input files, appending their contents to our new CSV\n\n\n## create an empty CSV\ntouch slides-topic-02-02-examples/meals/mealplan.csv\n## loop over the input files and append their contents to our new CSV\nfor i in $(ls slides-topic-02-02-examples/meals/*day.csv)\n  do \n   cat $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv\ndone\n\nTerminal!\n\n\n\n\nDid it work?"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#example-2-combine-csvs-1",
+    "href": "slides/slides-topic-03.html#example-2-combine-csvs-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Example 2: Combine CSVs",
+    "text": "Example 2: Combine CSVs\n\ncat slides-topic-02-02-examples/meals/mealplan.csv\n\nTerminal!\n\n\n\nHmmm. Sort of, but we need to get rid of the repeating header.\n\n\n\nCan you think of a way? (Hint: tail and head…)"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#example-2-combine-csvs-2",
+    "href": "slides/slides-topic-03.html#example-2-combine-csvs-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Example 2: Combine CSVs",
+    "text": "Example 2: Combine CSVs\n\nLet’s try again. First delete the old file so we can start afresh.\nrm -f slides-topic-02-02-examples/meals/mealplan.csv ## delete old file\n\nTerminal!\n\n\nHere’s our adapted gameplan:\n\nFirst, create the new file by grabbing the header (i.e. top line) from any of the input files and redirecting it. No need for touch this time.\nNext, loop over all the input files as before, but this time only append everything after the top line.\n\n\n\n## create a new CSV by redirecting the top line of any file\nhead -1 slides-topic-02-02-examples/meals/monday.csv &gt; slides-topic-02-02-examples/meals/mealplan.csv\n## loop over the input files, appending everything after the top line\nfor i in $(ls slides-topic-02-02-examples/meals/*day.csv)\n do \n   tail -n +2 $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv\ndone\n\nTerminal!"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#example-2-combine-csvs-3",
+    "href": "slides/slides-topic-03.html#example-2-combine-csvs-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Example 2: Combine CSVs",
+    "text": "Example 2: Combine CSVs\n\nIt worked!\ncat slides-topic-02-02-examples/meals/mealplan.csv\n\nTerminal!\n\n\n\nWe still have to sort the correct week order, but that’s an easy job in R or Python.\n\nThe explicit benefit of doing the concatenating in the shell is that it can be much more efficient, since all the files don’t simultaneously have to be held in memory (i.e RAM).\nThis doesn’t matter here, but can make a dramatic difference once we start working with lots of files (or even a few really big ones)."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#scripting-1",
+    "href": "slides/slides-topic-03.html#scripting-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Scripting",
+    "text": "Scripting\n\n\n\nWriting code interactively in the shell makes a lot of sense when you are exploring data, file structures, etc.\nHowever, it’s also possible (and often desirable) to write reproducible shell scripts that combine a sequence of commands.\nThese scripts are demarcated by their .sh file extension.\nLet’s look at the contents of a short shell script, hello.sh, that is included in the examples folder:\ncat slides-topic-02-02-examples/hello.sh\n What does this script do?"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#hello-world",
+    "href": "slides/slides-topic-03.html#hello-world",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hello World!",
+    "text": "Hello World!\n\n#!/bin/sh\necho \"\\nHello World!\\n\"\n\n#!/bin/sh is a shebang, indicating which program to run the command with (here: any Bash-compatible shell). However, it is typically ignored (note that it begins with the hash comment character.)\necho \"\\nHello World!\\n\" is the actual command that we want to run.\n\n\nTo run this simple script, you can just type in the file name and press enter.\nslides-topic-02-02-examples/hello.sh\n# bash slides-topic-02-02-examples/hello.sh ## Also works\n\n\nzsh:1: no such file or directory: slides-topic-02-02-examples/hello.sh"
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#things-we-didnt-cover-here",
+    "href": "slides/slides-topic-03.html#things-we-didnt-cover-here",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Things we didn’t cover here",
+    "text": "Things we didn’t cover here\nI hope that I’ve given you a sense of how the shell works and how powerful it is. My main goal has been to “demystify” the shell, so that you aren’t intimidated when we use shell commands later on.\nWe didn’t cover many things:\n\nUser roles and file permissions, environment variables, SSH, memory management (e.g. top and htop), GNU parallel, etc.\nAutomation; see here, here, and here are great places to start learning about automation on your own."
+  },
+  {
+    "objectID": "slides/slides-topic-03.html#additional-material",
+    "href": "slides/slides-topic-03.html#additional-material",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Additional material",
+    "text": "Additional material\nIf you want to dig deeper, check out\n\nThe Unix Shell (Software Carpentery)\nThe Unix Workbench (Sean Kross)\nData Science at the Command Line (Jeroen Janssens)\nEffective Shell (Dave Kerr)\nEfficient Way To Process Large Text/Log Files Using Awk With Python\nUsing AWK and R to parse 25tb (Nick Strayer)\n./jq\nawk"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#topic-overview",
+    "href": "slides/slides-topic-04.html#topic-overview",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Topic Overview",
+    "text": "Topic Overview\n\nVersion Control\n\nData Science Workflow\nReproducibility\nGit and GitHub\n\n\n\n\n\n\nthis lecture draws on materials from Simon Munzert Intro to Data Science."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#taming-chaos",
+    "href": "slides/slides-topic-04.html#taming-chaos",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Taming chaos",
+    "text": "Taming chaos\n\n\nIn the data science workflow, there are two sorts of surprises and cognitive stress:\n\nAnalytical (often good)\nInfrastructural (almost always bad)\n\n\nAnalytical surprise is when you learn something from or about the data.\nInfrastructural surprise is when you discover that:\n\n\n\nYou can’t find what you did before.\nThe analysis code breaks.\nThe report doesn’t compile.\nThe collaborator can’t run your code.\n\n\n\nGood project management lets you focus on the right kind of stress."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#keeping-future-you-happy",
+    "href": "slides/slides-topic-04.html#keeping-future-you-happy",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Keeping Future-you happy",
+    "text": "Keeping Future-you happy\n\nIt’s often tempting to set up a project assuming that you will be the only person working on it, e.g. as homework.\nThat’s almost never true.\nCoauthors and collaborators happen to the best of us.\nEven if not, there’s someone else who you always have to keep happy: Future-you.\nFuture-you is really the one you organize your projects for.\nMost importantly, they are who will enjoy the fruits of your data science labor, or have to fight back your chaos.\nSo, be kind to Future-you. Establish a good workflow. You’ll thank yourself later."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#project-setup",
+    "href": "slides/slides-topic-04.html#project-setup",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Project setup",
+    "text": "Project setup\nYou should always think in terms of projects.\nA project is a self-contained unit of data science work that can be\n\nShared\nRecreated by others\nPackaged\nDumped\n\n\nA project contains\n\nContent, e.g., raw data, processed data, scripts, functions, documents and other output\nMetadata, e.g., information about tools for running it (required libraries, compilers), version history\n\n\n\nFor R projects for example:\n\nProjects are folders/directories.\nMetadata is the RStudio project (.Rproj) files (perhaps augmented with the output of renv for dependency management) and .git."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#setup-the-folder-structure",
+    "href": "slides/slides-topic-04.html#setup-the-folder-structure",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Setup: the folder structure",
+    "text": "Setup: the folder structure\n\n\nStructuring your working directory\n\nOne folder contains everything inside it.\nDirectories keep things separate that should be separated.\nYou decide on the fundamental structure. The project decides on the details.\n\n\nFurther thoughts\n\nIdeally, your project folder can be relocated without problem.\nKeep input separate from output. Definitely separate raw from processed data!\nStructure should be capable of evolution. More data, cases, models, output formats shouldn’t be a problem.\n\n\n\n\n\n\n\n\n\n\n\n\nChris/r-bloggers.com"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#setup-the-paths",
+    "href": "slides/slides-topic-04.html#setup-the-paths",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Setup: the paths",
+    "text": "Setup: the paths\n\n\nGood paths\n\nAll internal paths are relative.\nThey are invariant to moving/sharing the project.\nExamples:\n\n\"preprocessing.py\"\n\"figures/model-1.png\"\n\"../data/survey..csv\"\n\n\n\nBad paths\n\nAbsolute paths are bad paths. Don’t feed functions with paths like \"/Users/me/data/thing.sav\".\nThose paths will not work outside your computer (or maybe not even there, some days/weeks/months ahead).\n\n\n\n\nThe working directory\n\nIf you use VS, open the folder/directory where your project is.\nIf you use RStudio, open it with clicking on the script you want to work with. This will set the location of the script as working directory (which should be your working assumption, too).\nEven better yet, have the metadata set it for you:\n\nOpen your session by opening (choosing, clicking on) myproject.Rproj\nThen you’ll get the path set for you."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#setup-the-code-structure",
+    "href": "slides/slides-topic-04.html#setup-the-code-structure",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Setup: the code structure",
+    "text": "Setup: the code structure\n\n\nNaming scripts\n\n\nFiles should have short, descriptive names that indicate their purpose.\nI recommend the use of telling verbs.\nNames should only include letters and numbers with dashes - or underscores _ to separate words.\nUse numbering to indicate the order in which files should be run:\n\n00-setup.py\n01-import-data.py\n02-preprocess-data.py\n03-describe-uptake.py\n04-analyze-uptake.py\n05-analyze-experiment.py\n\n\n\n\n\nModularizing scripts\n\nWrite short, modular scripts. Every script serves a purpose in your pipeline.\nThis makes things easier to debug.\nAt the beginning of a script you might want to document input and output."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#setup-the-code-structure-1",
+    "href": "slides/slides-topic-04.html#setup-the-code-structure-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Setup: the code structure",
+    "text": "Setup: the code structure\n\n\n\nTalk to Future-you\n\nDescribe your code, e.g. by starting with a description of what it does. If you comment/describe a lot, consider using an R Markdown (.Rmd) file instead of a simple .R script.\nPut the setup first (e.g., library() and source()).\nYou might want to outsource the loading of packages to a separate script that is imported in the first step (source(\"functions.R\")) or just declared the first script in the pipeline.\nAlways comment more than you usually do.\n\n\n\n\nStructuring your code\n\nEven with modularized code, scripts can become long. Structure helps to keep an overview.\nUse commented lines as section/subsection heads. Many IDEs have features that help with it\nRStudio, for exemple, creates a “table of contents” when you name your code chunks as follows (# followed by title and ---):\n\n\n\n# Import data --------------\n\ndat &lt;- read_csv(\"dat.csv\")"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#setup-the-rest",
+    "href": "slides/slides-topic-04.html#setup-the-rest",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Setup: the rest",
+    "text": "Setup: the rest\n\n\nMore things to consider\n\n\nThere’d be more to say on how to establish a good project workflow, including how to\n\nstore/organize raw and derived data,\ndeal with output in form of graphs and tables,\nlink everything together from start (project setup) to finish (knitting the report)\nseparate coding for the record and experimental coding.\n\nThere’s limited value in teaching you all that upfront.\nThe truth is: You’ll likely refine your own workflow over time. Hopefully, I just saved you some initial pain.\nDo check out other people’s experiences and opinions, e.g., here or here or here.\n\n\n\n\n\n\n\nManaging your project in two simple steps"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#what-is-version-control",
+    "href": "slides/slides-topic-04.html#what-is-version-control",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "What is Version Control?",
+    "text": "What is Version Control?\n\n\n\n\nVersion Control is a way to track your files\nIt is usually saved in a series of snapshots and branches, which you can move back and forth between\nVersion Control allows you to view how project has progressed over time\nIt allows you to:\n\nDistribute your file changes over time\nPrevent against data loss/damage by creating backup snapshots\nManage complex project structures (e.g. Linux)"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#why-version-control",
+    "href": "slides/slides-topic-04.html#why-version-control",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Why version control?",
+    "text": "Why version control?\n\n\n\n\nphdcomics.com"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#more-reasons-to-do-version-control",
+    "href": "slides/slides-topic-04.html#more-reasons-to-do-version-control",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "More reasons to do version control",
+    "text": "More reasons to do version control\n\n\nHave you ever…\n\n\nChanged your code, realized it was a mistake and wanted to revert back?\nLost code or had a backup that was too old?\nWanted to see the difference between different versions of your code?\nWanted to review the history of some code?\nWanted to submit a change to someone else’s code?\nWanted to share your code, or let other people work on your code?\nWanted to see how much work is being done, when, and by whom?\nWanted to experiment with but not interfering with working code?\n\n\n\n\nsi618/Stackoverflow\n\n\n\n\n\n\n\nbhimanshukalra/devrant.com"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#github-solves-this-problem",
+    "href": "slides/slides-topic-04.html#github-solves-this-problem",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git(Hub) solves this problem",
+    "text": "Git(Hub) solves this problem\n\n\n\n\n\n\n\n\nGit is a distributed version control system.\nImagine if your Dropbox (or Google Drive, or MS OneDrive for that matter) and the “Track changes” feature in MS Word had a baby.\nIn fact, it’s even better than that because Git is optimized for the things that data scientists spend a lot of time working on - code!\nThere is a learning curve, but it’s worth it.\nBeing familiar with Git is taken for granted when you interact with other data scientists.\nIt is by far not the only version control software, but certainly the most popular one.\nAccording to StackOverflow’s 2021 Developer Survey, more than 93% of respondents report to use Git - more than any other tool.\n\n\n\n\n\n\n\n\n\n\nIt’s important to realize that Git and GitHub are distinct things.\nGitHub is an online hosting platform that allows you to host your code online.\nIt relies on Git and makes some of its functionality more accessible.\nAlso, it provides many more useful features to collaborate with others. (Similar platforms include Bitbucket and GitLab.)\nJust like we don’t need Rstudio to run R code, we don’t need GitHub to use Git… But it will make our lives easier."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#git-some-background",
+    "href": "slides/slides-topic-04.html#git-some-background",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git: some background",
+    "text": "Git: some background\n\n\n\nWhere does Git come from?\n\nGit was created in 2005 by Linux creator Linus Torvalds.\nThe initial motivation was to have a non-proprietary version control system to manage Linux kernel development.\nCheck out this (quite opinionated) talk by Linus Torvalds on Git two years after its creation.\n\n\nWhat’s the meaning of Git?\n\nAnything, apparently.\nAlso, it’s pronounced [ɡɪt], not [d͡ʒɪt].\n\n\n\nHow to interact with Git?\n\nThere are many Git GUIs, giving you the option to use git without the shell (often with reduced functionality). Popular choices are the GitHub Desktop, and the Git integration into the RStudio IDE.\n\n\n\n\n\n\n\n\nLinus Torvalds"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#github-some-background",
+    "href": "slides/slides-topic-04.html#github-some-background",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "GitHub: some background",
+    "text": "GitHub: some background\n\n\n\n\nWhere does GitHub come from?\n\nGitHub.com launched in April 2008 by Tom Preston-Werner, Chris Wanstrath, P.J. Hyett and Scott Chacon.\nIn 2018, Microsoft acquired the company for more than US$7 billion.\n\n\n\nWhat’s the business model?\n\nGitHub offers various subscription plans and has expanded its services beyond hosting Git-based version control.\n\n\n\nSome interesting facts\n\nGitHub’s mascot is “Octocat”, a human-cat-octopus hybrid with five arms.\nThere are 56m+ developers on Github, with 60m+ new repositories created in 2020 alone.\nPart of GitHub’s history are controversies around issues like harassment allegations or incidences of censorship.\n\n\n\n\n\n\n\n\nScreenshot"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#github-for-scientific-research",
+    "href": "slides/slides-topic-04.html#github-for-scientific-research",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git(Hub) for scientific research",
+    "text": "Git(Hub) for scientific research\n\n\n\nFrom software development…\n\nGit and GitHub’s role in global software development is not in question.\nThere’s a high probability that your favourite app, program or package is built using Git-based tools. (RStudio is a case in point.)\n\n\n… to scientific research\n\nData science involves product building, collaboration, transparency. GH helps with all that.\nJournals have increasingly strict requirements regarding reproducibility and access. GH makes this easy (DOI integration, off-the-shelf licenses, etc.).\nMy website lives there. And this course does, too.\n\n\n\n\n\n\n\n\n“Democratic databases: science on GitHub” (Perkel, 2016, Nature)."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#first-step-register-a-github-account",
+    "href": "slides/slides-topic-04.html#first-step-register-a-github-account",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "First step: register a GitHub account",
+    "text": "First step: register a GitHub account\n\n\n\nGood news: It’s free!\nSimply go to https://github.com to sign up.\n\nSome things to consider:\n\nAs a student, you qualify for a free GitHub Pro account.\nThe Pro account comes with a couple of additional features.\nRegister for a free account first, then pursue the special offers.\nChoose your username wisely. This isn’t Instagram, so maybe avoid puns and “funny” nicknames."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#second-step-install-git",
+    "href": "slides/slides-topic-04.html#second-step-install-git",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Second step: install Git",
+    "text": "Second step: install Git\nAgain, Git is an independent piece of software. You need to have it installed on your machine to call it from the Command Line or RStudio.\n\nChances are that that’s already the case. Here’s how you can check using the command line:\n\nwhich git\n\n/usr/bin/git\n\n\n\n\nAnd here’s how you can check the version:\n\ngit --version\n\ngit version 2.39.3 (Apple Git-146)\n\n\n\n\nIf you want to install (or update) Git on your Mac/Linux machine, I recommend using Homebrew, “the missing package manager for macOS (or Linux)”:\n\nbrew install git\n\n\n\nTo install/update Git for Windows, check out happygitwithr.com."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#third-step-introduce-yourself-to-git",
+    "href": "slides/slides-topic-04.html#third-step-introduce-yourself-to-git",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Third step: introduce yourself to Git",
+    "text": "Third step: introduce yourself to Git\nThis is particularly important when you work with Git but without the GitHub overhead. The idea is to define how your commits are labelled. Others should easily identify your commits as coming from you.\n\nHave you already introduced yourself to Git? Find it out:\n\ngit config --list\n\n\n\nStill have to introduce yourself? To that end, we set our user name and email address like this:\n\ngit config --global user.name 'davimoreira'\ngit config --global user.email 'davi.moreira@example.com'\n\n\n\nThe user name can be (but does not have to be) your GitHub user name. The email address should definitely be the one associated with your GitHub account.\n\n\nCheck out these setup instructions from Software Carpentry to learn about more configuration options."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#why-bother-with-the-shell",
+    "href": "slides/slides-topic-04.html#why-bother-with-the-shell",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Why bother with the shell?",
+    "text": "Why bother with the shell?\n\n\n\nSome benefits of the shell:\n\nThe shell is powerful and flexible. It lets you do things that the RStudio Git GUI can’t (we will see it later).\nWorking in the shell is potentially more appropriate for projects that aren’t primarily based in R.\nKnowing the basic Git commands in the shell is a good thing for a data scientist."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-git-workflow",
+    "href": "slides/slides-topic-04.html#the-git-workflow",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Git Workflow",
+    "text": "The Git Workflow\n\n\n\n\nGit goes through a long chain of operations and tasks before tracking a change.\nMany of these tasks are user controlled, and are required for changes to be tracked correctly.\n\n\n\n\n\n\n\nGit Cheatsheet"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#repositories",
+    "href": "slides/slides-topic-04.html#repositories",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Repositories",
+    "text": "Repositories\n\n\n\n\nRepositories, usually called ‘repos’, store the full history and source control of a project.\nThey can either be hosted locally, or on a shared server, such as GitHub.\nMost repositories are stored on GitHub, while core contributors make copies of the repository on their machine and update the repository using the push/pull system.\nAny repository stored somewhere other than locally is called a ‘remote repository’."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#repos-vs-directories",
+    "href": "slides/slides-topic-04.html#repos-vs-directories",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Repos vs Directories",
+    "text": "Repos vs Directories\n\n\n\n\nRepositories are timelines of the entire project, including all\nDirectories, or ‘working directories’ are projects at their current state in time.\nAny local directory interacting with a repository is technically a repository itself, however, it is better to call these directories ‘local repositories’, as they are instances of a remote repository."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#workflow-diagram",
+    "href": "slides/slides-topic-04.html#workflow-diagram",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Workflow Diagram",
+    "text": "Workflow Diagram\n\n\n\n\n\nThis diagram shows a little bit about how the basic Git workflow process works\nThe staging area is the bundle of all the modifications to the project that are going to be committed.\nA ‘commit’ is similar to taking a snapshot of the current state of the project, then storing it on a timeline."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-creating-a-new-repository",
+    "href": "slides/slides-topic-04.html#hands-on-creating-a-new-repository",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Creating a New Repository",
+    "text": "Hands on! Creating a New Repository\n\n\n\n\nI will create a new folder/directory in my computer: my_project\nOpen the bash Terminal and move to the my_project directory\nI will copy the my_project directory path into a text document\nI will try to add this folder to the staging area.\n\n\n\ngit add .\n\n\n\nError!\nWe need to initialize the repository. Do not do that in your root directory!\n\n\n\ngit init"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo",
+    "href": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Adding/Removing files from the repo",
+    "text": "Hands on! Adding/Removing files from the repo\n\n\n\n\nOpen the bash Terminal and move to the my_project directory\nTo check the staging area status.\n\n\n\ngit status\n\n\n\nLet’s add the path file to the staging area. Then, check its status.\n\n\n\ngit add path.txt\ngit status"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo-1",
+    "href": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Adding/Removing files from the repo",
+    "text": "Hands on! Adding/Removing files from the repo\n\n\n\n\nLet’s create new files in the project and check staging area status:\n\n\n\ntouch file.txt\ntouch script.py\ntouch report.html\ntouch style.css\ngit status"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo-2",
+    "href": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Adding/Removing files from the repo",
+    "text": "Hands on! Adding/Removing files from the repo\n\n\n\n\nInstead of adding each file to the staging area at once. We can do add all them together:\n\n\n\ngit add .\ngit status"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo-3",
+    "href": "slides/slides-topic-04.html#hands-on-addingremoving-files-from-the-repo-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Adding/Removing files from the repo",
+    "text": "Hands on! Adding/Removing files from the repo\n\n\n\n\nIn the directory, let’s delete the .py and the .css files. Check the status:\n\n\n\nrm -f script.py\nrm -f style.css\ngit status"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-first-commit",
+    "href": "slides/slides-topic-04.html#hands-on-first-commit",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! First Commit",
+    "text": "Hands on! First Commit\n\n\n\n\n(cont.) In the directory, let’s do our “initial commit” :\n\n\n\ngit commit -m \"initial commit\""
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-first-commit-1",
+    "href": "slides/slides-topic-04.html#hands-on-first-commit-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! First Commit",
+    "text": "Hands on! First Commit\n\n\n\n\nTo check all commits in your repo:\n\n\n\ngit log\n\n\n\nMost important things here are:\n\ncommit id;\ndate/time;\nbranch;\ncommit message;"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-git-checkout",
+    "href": "slides/slides-topic-04.html#hands-on-git-checkout",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Git Checkout",
+    "text": "Hands on! Git Checkout\n\n\n\n\nFirst, let’s make new commits in our repo:\n\n\n\ntouch script.py  # new file\ntouch webpage.html. # new file\ntouch style.css  # new file\ngit add . # add files to the staging area\ngit commit -m \"adding files\" # new commit\necho \"Hello you\" &gt;&gt; file.txt   # edit .txt file\ngit add . # add files to the staging area\ngit commit -m \"edditing file.txt\". # new commit\nrm -f file.txt. # remove file\ngit commit -a -m \"delete file.txt\" # new commit\ngit log  # lets check"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-git-checkout-1",
+    "href": "slides/slides-topic-04.html#hands-on-git-checkout-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Git Checkout",
+    "text": "Hands on! Git Checkout\n\n\n\n\nWe use checkout to go back in time to a given commit. Let’s go back to the “initial commit”:\n\n\n\ngit checkout 2b543ff2b3423a6d01727a11603792783315680d\ngit log\n\n\n\nCheck your folder/directory!\nImportant: doing this does not delete our commits. We just move back in time!"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-git-checkout-2",
+    "href": "slides/slides-topic-04.html#hands-on-git-checkout-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! Git Checkout",
+    "text": "Hands on! Git Checkout\n\n\n\n\nTo “move back to the future”, the most recent commit, we just need to go back to the main branch:\n\n\n\ngit checkout main\ngit log\n\n\n\nCheck your folder/directory!\nImportant: doing this does not delete our commits. We just move back and forth in time!"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-.gitignore",
+    "href": "slides/slides-topic-04.html#hands-on-.gitignore",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! .gitignore",
+    "text": "Hands on! .gitignore\n\n\n\n\nLet’s create a new text file, notes.txt, and make some edits.\n\n\n\ntouch notes.txt   \necho \"Welcome to Data Science Computing\" &gt;&gt; notes.txt\ngit status\ngit add .\ngit status\necho \"I hope you enjoy\" &gt;&gt; notes.txt\ngit status"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-.gitignore-1",
+    "href": "slides/slides-topic-04.html#hands-on-.gitignore-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! .gitignore",
+    "text": "Hands on! .gitignore\n\n\n\n\nLet’s say we do not want to track this file (can be a folder or many files).\nTo do so, we tell Git to ignore those files or folders. We create a .gitignore file.\n\n\n\ntouch .gitignore\n\n\n\nIn the .gitignore we list everything we want Git to ignore."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-.gitignore-2",
+    "href": "slides/slides-topic-04.html#hands-on-.gitignore-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! .gitignore",
+    "text": "Hands on! .gitignore\n\n\n\n\nLet’s add them to the staging area and do a new commit.\n\n\n\ngit status\ngit add .\ngit status\ngit commit -m \"added gitignore\""
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#hands-on-.gitignore-3",
+    "href": "slides/slides-topic-04.html#hands-on-.gitignore-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Hands on! .gitignore",
+    "text": "Hands on! .gitignore\n\n\n\n\nNow, let’s edit the notes.txt file.\nCheck git status\nWe need to update the cached files list, commit these updates and…\nLet’s edit the notes.txt file one more time.\nFinally, let’s check if the notes.txt file is being tracked.\n\n\n\necho \"New line in the file\" &gt;&gt; notes.txt\ngit status\ngit rm -r --cached .\ngit add .\ngit commit -m \"fixed file tracking\"\necho \"The previous edition was not the last one\" &gt;&gt; notes.txt\ngit status"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#git-branches-1",
+    "href": "slides/slides-topic-04.html#git-branches-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git branches",
+    "text": "Git branches\n\n\n\n\n\nGit branches are a way to create separate development paths without overriding or creating copies of your project.\nBranches can be added, deleted, and merged, just like regular commits.\n\n\n\n\n\n\n\nTechnical Foundations of Informatics"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#git-branches-2",
+    "href": "slides/slides-topic-04.html#git-branches-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git branches",
+    "text": "Git branches\n\n\n\nBranches can be used to:\n\nCreate separate development paths without overriding progress\nSeparate different end goals of your project\nCreates separate branches for each stage of development (release, development, fixes, master)\nCreates separate branches for project collaboration!"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#git-branches-hands-on",
+    "href": "slides/slides-topic-04.html#git-branches-hands-on",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git branches: Hands on!",
+    "text": "Git branches: Hands on!\n\n\n\n\nLet’s create a new_project directory.\n\n\n\nmkdir new_project\ngit init\nmkdir src\nmkdir lib\ncd src/\ntouch file.txt\ntouch script.js\ncd ..\ncd lib/\ntouch lib.py\ntouch file2.txt\ncd ..\ngit status"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#git-branches-hands-on-1",
+    "href": "slides/slides-topic-04.html#git-branches-hands-on-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git branches: Hands on!",
+    "text": "Git branches: Hands on!\n\n\n\n\nLet’s do our initial commit, create a new branch dev, and switch to the new branch.\nThen, let’s go back to the main branch, create a new one bugs, and list them\n\n\n\ngit add .\ngit commit -m \"initial commit\"\ngit checkout -b dev \ngit add .\ngit commit -m \"initial commit\"\ngit checkout main\ngit branch bugs\ngit branch -a\ngit branch -d bugs # to delete"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#git-branches-hands-on-2",
+    "href": "slides/slides-topic-04.html#git-branches-hands-on-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Git branches: Hands on!",
+    "text": "Git branches: Hands on!\n\n\n\n\nLet’s work on our dev branch.\nAdd a version.txt file\nThen, let’s merge our branches.\nTo move on in our workflow, we can move back to the dev branch and do a new commit and keep working in the dev branch.\n\n\n\ngit checkout dev\necho \"new text\" &gt;&gt; file.txt\ngit add .\ngit commit -m \"new file.txt content\"\necho \"new text\" &gt;&gt; myfile.txt\ngit add .\ngit commit -m \"new myfile.txt content\"\ngit log\ntouch version.txt\necho \"1.0\" &gt;&gt; version.txt\ngit status\ngit add .\ngit commit -m \"release v1.0\"\ngit checkout main\ngit merge dev\ngit log\ngit checkout dev\ngit add .\ngit commit -m \"starting new version\"\ngit log\n\n\nCheck this material for more on Merge & Branches."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#github-creating-a-new-repository",
+    "href": "slides/slides-topic-04.html#github-creating-a-new-repository",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "GitHub: Creating a New Repository",
+    "text": "GitHub: Creating a New Repository\n\nFirst, we create a new repo on GitHub"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#github-creating-a-new-repository-1",
+    "href": "slides/slides-topic-04.html#github-creating-a-new-repository-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "GitHub: Creating a New Repository",
+    "text": "GitHub: Creating a New Repository\n\nWe copy the remote repo address."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#github-creating-a-new-repository-2",
+    "href": "slides/slides-topic-04.html#github-creating-a-new-repository-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "GitHub: Creating a New Repository",
+    "text": "GitHub: Creating a New Repository\n\n\n\n\nWe connect our local Git repo with the remote GitHub repo\n\n\n\n\ncd Desktop/qtm_350_24S_02\ngit init\ngit remote add origin https://github.com/davi-moreira/qtm_350_24S_02.git\ngit remote -v"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\n\n\n\n\nThe Git/GitHub push and pull system is central to collaborating on coding projects. It allows multiple developers to work on the same project without conflicts.\nThe Push Operation: Sends your local commits to the remote repository.\n\ngit push origin main - pushes commits from your local main branch to the remote main branch.\n\nThe Pull Operation: Fetches the latest changes from the remote repository and merges them into your local repository.\n\ngit pull origin main - pulls changes from the remote main branch and merges them into your local main branch.\n\nBest Practices:\n\nPull often to keep your local repository up-to-date.\nPush regularly to share your contributions with the team."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system-1",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\n\nStarting with the Pull request\nLet’s create a README.md file in the remote repo and commit:"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system-2",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\n\nLet’s create a README.md file in the remote repo and commit:"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system-3",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system-3",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\n\nLet’s create a LICENSE and .gitignore files in the remote repo and commit:"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system-4",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system-4",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\n\n\n\n\nNow we can make a Pull request\n\n\n\ngit pull origin main\ngit status\ngit log"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system-5",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system-5",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\n\n\n\n\nNow let’s see the Push request.\nLet’s delete the LICENSE.md file locally and commit.\nNow we can make a Push request. Conditioned on your settings, it will requires your user name and password.\nLet’s check the remote repo on GitHub.\n\n\n\nrm -rf LICENSE\nls\ngit status\ngit add .\ngit commit -m \"remove LICENSE file\"\ngit log\ngit push -u origin main"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system-6",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system-6",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\n\n\n\n\nNow let’s create a branch to correct the mistake in the README.md file.\n\n\n\n\ngit pull\ngit checkout -b err01\n# open the file and edit\ngit status\ngit add .\ngit commit -m \"fixed mistake in readme file\"\ngit checkout main\ngit merge err01\ngit log\ngit push\n# let's check the remote repo\ngit push origin err01\n# let's check the remote repo and check the commits\n# git push origin --delete err01 # to delete the branch in the remote repo"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#the-push-and-pull-system-7",
+    "href": "slides/slides-topic-04.html#the-push-and-pull-system-7",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "The Push and Pull System",
+    "text": "The Push and Pull System\nCan anybody push to my repository?\n\nNo, all repositories are read-only for anonymous users. By default only the owner of the repository has write access. If you can push to your own repo, it’s because you are using one of the supported authentification methods (HTTPS, SSH, …).\n\n\nIf you want to grant someone else privileges to push to your repo, you would need to configure that access in the project settings.\n\n\nTo contribute to projects in which you don’t have push access, you push to your own copy of the repo, then ask for a pull-request.\n\nsource: https://stackoverflow.com/questions/17442930/can-anybody-push-to-my-project-on-github"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#rstudio-github-git-1",
+    "href": "slides/slides-topic-04.html#rstudio-github-git-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "RStudio + GitHub + Git",
+    "text": "RStudio + GitHub + Git\n\n\n\n\n\nHappy Git and GitHub for the useR, Heaven King video"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#rstudio-github-git-2",
+    "href": "slides/slides-topic-04.html#rstudio-github-git-2",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "RStudio + GitHub + Git",
+    "text": "RStudio + GitHub + Git\n\nCreate a remote repo\nCreate an RStudio Project and connect with the remote repo\nCommit locally\nPush and Pull\nCreate a new branch\nMerge\nPush and Pull\nHave Fun!"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#collaborating-workflows",
+    "href": "slides/slides-topic-04.html#collaborating-workflows",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Collaborating Workflows",
+    "text": "Collaborating Workflows\n\n\n\n\nThere is no one size fits all Git workflow.\nIt is important to develop a Git workflow that is a productivity enhancement for the team.\nA workflow should also complement business culture."
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#centralized-workflow",
+    "href": "slides/slides-topic-04.html#centralized-workflow",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Centralized Workflow",
+    "text": "Centralized Workflow\n\n\n\n\nUses a central repository to serve as the single point-of-entry for all changes to the project. The default development branch it the main branch and all changes are committed into this branch. This workflow doesn’t require any other branches besides main.\nAlso check:\n-Inviting collaborators to a personal repository\n\n\n\n\n\n\n\nCentralized workflow"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#feature-branch-workflow",
+    "href": "slides/slides-topic-04.html#feature-branch-workflow",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Feature Branch Workflow",
+    "text": "Feature Branch Workflow\n\n\n\n\nAll feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.\nAlso check:\n\nInviting collaborators to a personal repository\nResolving a merge conflict using the command line\nA Successful Git Branching Model -Learn Git Branching\n\n\n\n\n\n\n\n\nFeature Branch Workflow"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#forking-workflow",
+    "href": "slides/slides-topic-04.html#forking-workflow",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Forking Workflow",
+    "text": "Forking Workflow\n\n\n\n\nInstead of using a single server-side repository to act as the “central” codebase, it gives every developer a server-side repository. This means that each contributor has not one, but two Git repositories: a private local one and a public server-side one.\nAlso check:\n\nCollaborating with pull requests\nMerging a pull request\nChecking out pull requests locally\n\n\n\n\n\n\n\n\nForking Workflow"
+  },
+  {
+    "objectID": "slides/slides-topic-04.html#summary-1",
+    "href": "slides/slides-topic-04.html#summary-1",
+    "title": " QTM 350: Data Science Computing ",
+    "section": "Summary",
+    "text": "Summary\n\nProject Management is a central practice in Data Science Projects\nKeep Future-you Happy!\nThe Folder Structure must be respected.\nGuidelines for naming scripts, modularizing code, and structuring your code effectively for future readability and usability.\nVersion Control helps to track changes in files and coordinate work among multiple people.\nGit and GitHub are the current main tools for Version Control and Data Science project collaboration\nThere is no unique Collaborating Workflow, but one of them can fit your team!"
   }
 ]
