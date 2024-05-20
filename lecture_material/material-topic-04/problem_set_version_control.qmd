@@ -1,0 +1,71 @@
+---
+title: "Problem Set: Collaboration and Version Control with Git and GitHub"
+execute: 
+  error: true
+format:
+  html:
+    code-tools: true
+editor_options: 
+  chunk_output_type: console
+---
+
+**Objective:**
+
+To familiarize students with the basics of version control using Git and GitHub, this problem set requires students to collaborate on a project, manage different versions of files through branches, commit changes, resolve conflicts, and merge their work into the main branch. The final product will be a cohesive document (README file) detailing their *utopian* data science project.
+
+For example, my *utopian* data science project, `Rhetoric`, aims to daily collect and store all world politicians' messages and speeches to forecast policy outcomes and regime transitions.
+
+**Problem Set Instructions:**
+
+1.  **Setting Up:**
+    -   Form groups of up to three members.
+    -   Each group will create a new public repository on GitHub with the following name: `2024Summer1_qtm350_ps01`.
+    -   Each group will give a creative title to the *utopian* data science project.
+    -   Initialize the repository with a README file describing the project's goal.
+2.  **Branching Out:**
+    -   Each member will create their own branch from the main branch.
+    -   Assign different sections of the README file to each member for parallel development.
+3.  **Collaborative Work:**
+    -   Each member should clone the repository to their local machine.
+    -   Members will checkout to their respective branches to start working on their assigned sections.
+4.  **Committing and Pushing:**
+    -   After completing the work on their section, each member will commit the changes with a meaningful commit message.
+    -   Push the commits to the corresponding remote branch on GitHub.
+5.  **Pulling and Updating:**
+    -   Before merging, each member should pull the latest changes from the main branch into their own to handle any new updates.
+    -   Resolve any merge conflicts that might arise and commit the resolution.
+6.  **Code Review and Merging:**
+    -   Once all members have pushed their updates, perform a code/text review. You can use GitHub's pull request feature.
+    -   After reviewing, merge each feature branch into the main branch.
+    -   Ensure that all members’ contributions are reflected in the main branch.
+7.  **Finalizing the README:**
+    -   Collaboratively edit the README file in the main branch to include:
+        -   Project title, description, objectives, and members's names.
+        -   Contributions by each member.
+        -   Challenges faced and how they were overcome.
+        -   Any references or resources used.
+8.  **Submission:**
+    -   Submit the link of the the GitHub repository thorough GradeScope. [Do not forget to assign the group members!](https://help.gradescope.com/article/m5qz2xsnjy-student-add-group-members)
+    -   Ensure the main branch contains the final README file and any other project files.
+    -   The history should clearly show each member's contributions and commits.
+
+**Assessment Criteria:**
+
+-   **Collaboration:** Participation from all members is evident from the commit history.
+-   **Documentation:** The README file should be well-organized, informative, and reflective of the work done.
+-   **Commit Quality:** Commit messages are clear, concise, and descriptive of the changes made.
+
+**Hints!**
+
+-   Commit frequently with clear messages that accurately describe each change.
+
+-   Regularly communicate with your team to avoid redundant work or conflicts.
+
+-   Use GitHub issues or project boards to manage and track tasks.
+
+-   Review each other’s code thoroughly before merging into the main branch.
+
+-   Check the additional material in the topic webpage and slides. Also:
+
+    -   [Resolving a merge conflict using the command line](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line)
+    -   [Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
