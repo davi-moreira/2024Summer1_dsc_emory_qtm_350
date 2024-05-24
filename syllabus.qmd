@@ -63,7 +63,9 @@ By the end of this course, students will be able to:
 -   [**Elements of Data Science**](https://allendowney.github.io/ElementsOfDataScience/README.html): a digital textbook by Allen Downey written in the form of Jupyter notebooks. It provides an introduction to data science in Python for students with limited programming experience.
 -   [**Think Python**](https://greenteapress.com/thinkpython/html/index.html): An introduction to programming using Python.
 -   [**Applied Computing**](https://runestone.academy/runestone/books/published/ac1/index.html): Applied Computing is an [online textbook](https://runestone.academy/). It provides an introduction to spreadsheets and SQL. To view the book, students need to [register](https://runestone.academy/runestone/default/user/register) using the course name.
+<!---
 -   [**SQL & NoSQL Databases**](https://link.springer.com/book/10.1007/978-3-658-24549-8?source=shoppingads&locale=en-us&srsltid=AfmBOooFhPgF4FU06eeYUCeF2tELId4l3LBx1Fv8Ntb-xeUCTVUN3cUfu7o): Models, Languages, Consistency Options, and Architectures for Big Data Management: Explores relational (SQL) and non-relational (NoSQL) databases. Covers database management, modeling, languages, consistency, architecture, and more.
+--->
 -   [**Pro Git Book**](https://git-scm.com/book/en/v2): A comprehensive resource for learning Git, covering everything from the basics to advanced topics by Scott Chacon and Ben Straub.
 <!----   [**Overview of Cloud Computing**](https://dc.arcabc.ca/islandora/object/dc%3A54375): An introductory textbook on cloud computing by Michael Wufka and Massimo Canonico.--->
 

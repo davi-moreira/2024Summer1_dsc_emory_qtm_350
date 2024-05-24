@@ -31,8 +31,8 @@ editor: visual
 | Week 02 | [Topic 03](./topics-pages/page-topic-03.qmd) | Command Line                   | May 30  |
 | Week 03 | [Topic 04](./topics-pages/page-topic-04.qmd) | Version Control                | June 4  |
 | Week 03 | [Topic 04](./topics-pages/page-topic-04.qmd) | Version Control                | June 6  |
-| Week 04 | [Topic 05 - TBP](./topics-pages/page-topic-02.qmd) | Python essentials              | June 11 |
-| Week 04 | [Topic 05 - TBP](./topics-pages/page-topic-02.qmd) | Python essentials              | June 13 |
+| Week 04 | [Topic 05](./topics-pages/page-topic-05.qmd) | Python essentials              | June 11 |
+| Week 04 | [Topic 05](./topics-pages/page-topic-05.qmd) | Python essentials              | June 13 |
 | Week 05 | [Topic 06 - TBP](./topics-pages/page-topic-02.qmd) | Algorithms and Data Structures | June 18 |
 | Week 05 | [Topic 06 - TBP](./topics-pages/page-topic-02.qmd) | Algorithms and Data Structures | June 20 |
 | Week 06 | [Topic 06 - TBP](./topics-pages/page-topic-02.qmd) | Algorithms and Data Structures | June 25 |
