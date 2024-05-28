@@ -22,7 +22,7 @@ format:
 ---
 
 ## Topic Overview
-
+<!---
 ::: columns
 ::: {.column width="34%"}
 -   Computational Literacy
@@ -53,6 +53,16 @@ format:
     -   Git and GitHub
 :::
 :::
+--->
+-   **Command Line**
+
+    -   **Shell basics**
+    -   **Help!**
+    -   **Navigating your system**
+    -   **Managing your files**
+    -   **Working with text files**
+    -   **Redirects, pipes, and loops**
+    -   **Scripting**
 
 <br>
 
@@ -522,10 +532,15 @@ $ sort -u `myfile.txt`
 :::
 
 ## Getting help with man
+To see manual section 1 commands, use: 
+
+```{bash}
+man -k . | grep '(1)'
+```
 
 <br>
 
-The `man` command ("manual pages") is your friend if you need help.
+The `man` command ("manual pages") is your friend if you need help with an specific function.
 
 ```{bash}
 man ls
@@ -536,6 +551,8 @@ man ls
 ```{python}
 !man ls
 ```
+
+
 
 ## Getting help with man
 
@@ -666,7 +683,7 @@ You can use absolute paths, but it's better to use relative paths and invoke spe
 <br>
 
 ```{bash nav2}
-cd slides-topic-02-02-examples ## Move into the "slides-topic-02-02-examples" sub-directory of this lecture directory.
+cd examples ## Move into the "examples" sub-directory of this lecture directory.
 cd ../.. ## Now go back up two directories.
 pwd
 ```
@@ -724,16 +741,16 @@ ls
 
 ::: {.column width="60%" align="center"}
 ::: fragment
-Now we list the contents of the `slides-topic-02-02-examples/` sub-directory with the `-lh` option ("long format", "human readable file size unit suffixes"; again, check out `man ls` for the details):
+Now we list the contents of the `examples/` sub-directory with the `-lh` option ("long format", "human readable file size unit suffixes"; again, check out `man ls` for the details):
 
 ```{bash}
-ls -lh slides-topic-02-02-examples
+ls -lh examples
 ```
 
 <br>
 
 ```{python}
-!ls -lh slides-topic-02-02-examples
+!ls -lh examples
 ```
 :::
 :::
@@ -743,16 +760,16 @@ ls -lh slides-topic-02-02-examples
 
 ::: columns
 ::: {.column style="width: 50%; font-size: 80%;"}
-Now we list the contents of the `slides-topic-02-02-examples/` sub-directory with the `-lh` option ("long format", "human readable file size unit suffixes"; again, check out `man ls` for the details):
+Now we list the contents of the `examples/` sub-directory with the `-lh` option ("long format", "human readable file size unit suffixes"; again, check out `man ls` for the details):
 
 ```{bash}
-ls -lh slides-topic-02-02-examples
+ls -lh examples
 ```
 
 <br>
 
 ```{python}
-!ls -lh slides-topic-02-02-examples
+!ls -lh examples
 ```
 :::
 
@@ -931,13 +948,13 @@ The syntax for copying is `$ cp object path/copyname`.
 ::: fragment
 ```{bash cp}
 ## Create new "copies" sub-directory
-mkdir slides-topic-02-02-examples/copies
+mkdir examples/copies
 
 ## Now copy across a file (with a new name)
-cp slides-topic-02-02-examples/reps.txt slides-topic-02-02-examples/copies/reps-copy.txt
+cp examples/reps.txt examples/copies/reps-copy.txt
 
 ## Show that we were successful
-ls slides-topic-02-02-examples/copies
+ls examples/copies
 ```
 
 <center>Terminal!</center>
@@ -947,11 +964,11 @@ ls slides-topic-02-02-examples/copies
 You can use `cp` to copy directories, although you'll need the `-r` flag if you want to recursively copy over everything inside of it too:
 
 ```{bash}
-cp -r slides-topic-02-02-examples/meals slides-topic-02-02-examples/copies
+cp -r examples/meals examples/copies
 ```
 
 ```{bash}
-rm -rf slides-topic-02-02-examples/copies/meals
+rm -rf examples/copies/meals
 ```
 
 <center>Terminal!</center>
@@ -965,16 +982,16 @@ The syntax for moving is `$ mv object path/newobjectname`
 
 ```{bash mv1}
  ## Move the abc.txt file and show that it worked
-mv slides-topic-02-02-examples/ABC/abc.txt examples
-ls slides-topic-02-02-examples/ABC ## empty
+mv examples/ABC/abc.txt examples
+ls examples/ABC ## empty
 ```
 
 <br>
 
 ```{bash mv2}
 ## Move it back again
-mv slides-topic-02-02-examples/abc.txt slides-topic-02-02-examples/ABC
-ls slides-topic-02-02-examples/ABC ## not empty
+mv examples/abc.txt examples/ABC
+ls examples/ABC ## not empty
 ```
 
 <center>Terminal!</center>
@@ -985,8 +1002,8 @@ Note that "moving" an object within the same directory, but with specifying `new
 
 ```{bash mv3}
  ## Rename reps-copy to reps2 by "moving" it with a new name
-mv slides-topic-02-02-examples/copies/reps-copy.txt slides-topic-02-02-examples/copies/reps2.txt
-ls slides-topic-02-02-examples/copies
+mv examples/copies/reps-copy.txt examples/copies/reps2.txt
+ls examples/copies
 ```
 
 <center>Terminal!</center>
@@ -1005,10 +1022,10 @@ autoload -U zmv
 
 The syntax is `zmv <options> <old-files-pattern> <new-files-pattern>`
 
-For example, say we want to change the file type (i.e. extension) of a set of files in the `slides-topic-02-02-examples/meals` directory, we do:
+For example, say we want to change the file type (i.e. extension) of a set of files in the `examples/meals` directory, we do:
 
 ```{bash}
-cd slides-topic-02-02-examples/meals
+cd examples/meals
 zmv -n -W  "*.csv" "*.txt"
 ```
 
@@ -1036,7 +1053,7 @@ A very useful flag is `-n` which does not execute the command but prints the com
 
 `zmv` really shines in conjunction with regular expressions and wildcards (more on the next slide). This works especially well for dealing with a whole list of files or folders.
 
-As another example, let's change *all* of the file names in the `slides-topic-02-02-examples/meals` directory.
+As another example, let's change *all* of the file names in the `examples/meals` directory.
 
 ```{bash}
 zmv -n '(**/)(*).csv' '$1$2-tacos.csv'
@@ -1072,8 +1089,8 @@ Want to learn more about `zmv`? Check out [this](https://filipe.kiss.ink/zmv-zsh
 . . .
 
 ```{bash asterisk}
-cp slides-topic-02-02-examples/*.sh slides-topic-02-02-examples/copies ## Copy any file with an .sh extension to "copies"
-rm slides-topic-02-02-examples/copies/* ## Delete everything in the "copies" directory
+cp examples/*.sh examples/copies ## Copy any file with an .sh extension to "copies"
+rm examples/copies/* ## Delete everything in the "copies" directory
 ```
 
 <center>Terminal!</center>
@@ -1087,8 +1104,8 @@ rm slides-topic-02-02-examples/copies/* ## Delete everything in the "copies" dir
 . . .
 
 ```{bash qmark}
-ls slides-topic-02-02-examples/meals/??nday.csv
-ls slides-topic-02-02-examples/meals/?onday.csv
+ls examples/meals/??nday.csv
+ls examples/meals/?onday.csv
 ```
 
 <center>Terminal!</center>
@@ -1129,10 +1146,12 @@ find . -size +2000k ## find files larger than 2000 KB
 -   The `zmv` command enables convenient renaming.
 -   The `mkdir` command can create a folder - it can even create a whole tree of folders if you pass the `-p` (create parent directories) flag.
 -   The `find` command lets you find files based on specified criteria.
+<!---
 -   The `cat` command (concatenated) can be used to write the contents of a file to the screen.
--   We can pass multiple files to commands like `cat` if we use wildcards, such as `quotes/*`.
 -   The `wget` (web get) command can download a file from the web. (Install first on a Mac.)
 -   The `zip`/`unzip` commands can zip/unzip a file/folder for us.
+--->
+-   We can pass multiple files to commands like `cat` if we use wildcards, such as `quotes/*`.
 
 ::: fragment
 For a more detailed overview, click [here](https://effective-shell.com/part-1-transitioning-to-the-shell/managing-your-files/).
@@ -1175,7 +1194,7 @@ You can use the `wc` command to count:
 Let's demonstrate with a text file containing all of Shakespeare's Sonnets.<sup>1</sup>
 
 ```{bash wc}
-wc slides-topic-02-02-examples/sonnets.txt
+wc examples/sonnets.txt
 ```
 
 <center>Terminal!</center>
@@ -1201,7 +1220,7 @@ We also use the `-n` flag to show line numbers:
 . . .
 
 ```{bash cat}
-cat -n slides-topic-02-02-examples/sonnets.txt
+cat -n examples/sonnets.txt
 ```
 
 <center>Terminal!</center>
@@ -1214,7 +1233,7 @@ The `more` and `less` commands provide extra functionality over `cat`. For examp
 
 ```{bash more}
 
-more slides-topic-02-02-examples/sonnets.txt
+more examples/sonnets.txt
 
 ```
 
@@ -1233,8 +1252,8 @@ The `head` and `tail` commands let you limit yourself to a preview of the text, 
 <br>
 
 ```{bash head}
-head -n 3 slides-topic-02-02-examples/sonnets.txt ## First 3 rows
-# head slides-topic-02-02-examples/sonnets.txt ## First 10 rows (default)
+head -n 3 examples/sonnets.txt ## First 3 rows
+# head examples/sonnets.txt ## First 10 rows (default)
 ```
 
 <center>Terminal!</center>
@@ -1248,7 +1267,7 @@ head -n 3 slides-topic-02-02-examples/sonnets.txt ## First 3 rows
 <br>
 
 ```{bash tail1}
-tail -n 1 slides-topic-02-02-examples/sonnets.txt ## Last row
+tail -n 1 examples/sonnets.txt ## Last row
 ```
 
 <center>Terminal!</center>
@@ -1260,7 +1279,7 @@ By using the `-n +N` option, we can specify that we want to preview all lines st
 <br>
 
 ```{bash tail2}
-tail -n +3024 slides-topic-02-02-examples/sonnets.txt ## Show everything from line 3024
+tail -n +3024 examples/sonnets.txt ## Show everything from line 3024
 ```
 
 <center>Terminal!</center>
@@ -1276,11 +1295,11 @@ For example, say we want to find the famous opening line to Shakespeare's [Sonne
 (We're going to include the `-n` ("number") flag to get the line that it occurs on.)
 
 ```{bash grep1}
-grep -n "Shall I compare thee" slides-topic-02-02-examples/sonnets.txt
+grep -n "Shall I compare thee" examples/sonnets.txt
 ```
 
 ```{python}
-!grep -n "Shall I compare thee" slides-topic-02-02-examples/sonnets.txt
+!grep -n "Shall I compare thee" examples/sonnets.txt
 ```
 :::
 
@@ -1293,11 +1312,11 @@ By default, `grep` returns all matching patterns.
 Check out what happens when we do the following:
 
 ```{bash}
-grep -n "winter" slides-topic-02-02-examples/sonnets.txt
+grep -n "winter" examples/sonnets.txt
 ```
 
 ```{python}
-!grep -n "winter" slides-topic-02-02-examples/sonnets.txt
+!grep -n "winter" examples/sonnets.txt
 ```
 :::
 :::
@@ -1319,11 +1338,11 @@ Here's a simple example: Which days will I eat pasta this week?
 . . .
 
 ```{bash grep2}
-grep -rl "pasta" slides-topic-02-02-examples/meals
+grep -rl "pasta" examples/meals
 ```
 
 ```{python}
-!grep -rl "pasta" slides-topic-02-02-examples/meals
+!grep -rl "pasta" examples/meals
 ```
 
 Take a look at the `grep` man or cheat file for other useful examples and flags (e.g. `-i` for ignore case).
@@ -1343,24 +1362,24 @@ There are two main commands for manipulating text in the shell, namely `sed` and
 **Example 1.** Replace one text pattern with another.
 
 ```{bash nursery}
-cat slides-topic-02-02-examples/nursery.txt
+cat examples/nursery.txt
 ```
 
 ```{bash sed1a}
-sed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt
-cat slides-topic-02-02-examples/nursery.txt
+sed 's/Jack/Bill/g' examples/nursery.txt
+cat examples/nursery.txt
 ```
 
 ````{=html}
 <!---`
 ``{bash}
 ## Change it back for when we want to re-knit the file.
-sed 's/Bill/Jack/g' slides-topic-02-02-examples/nursery.txt
+sed 's/Bill/Jack/g' examples/nursery.txt
 ```
 
 ```{python}
 ## Change it back for when we want to re-knit the file.
-!sed 's/Bill/Jack/g' slides-topic-02-02-examples/nursery.txt
+!sed 's/Bill/Jack/g' examples/nursery.txt
 ```
 --->
 ````
@@ -1393,14 +1412,14 @@ The command below uses, among other things:
 ```
 ````{=html}
 <!---```{bash sed2}
-sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
+sed 's/\s/\n/g' examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
 
 ```
 
 <br>
 
 <!---```{python}
-!sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
+!sed 's/\s/\n/g' examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
 ```--->
 ````
 
@@ -1540,11 +1559,11 @@ The pipe operator `|` is one of the coolest features in Bash.
 **Here's a simple example:**
 
 ```{bash pipe1}
-cat -n slides-topic-02-02-examples/sonnets.txt 2>/dev/null | head -n100 | tail -n10
+cat -n examples/sonnets.txt 2>/dev/null | head -n100 | tail -n10
 ```
 
 ```{python}
-!cat -n slides-topic-02-02-examples/sonnets.txt  2>/dev/null | head -n100 | tail -n10
+!cat -n examples/sonnets.txt  2>/dev/null | head -n100 | tail -n10
 ```
 :::
 
@@ -1557,10 +1576,10 @@ cat -n slides-topic-02-02-examples/sonnets.txt 2>/dev/null | head -n100 | tail -
     -   From those 100 lines, it then takes only the last 10 lines.
     -   The final output displayed in the terminal will be lines 91 to 100 of the `sonnets.txt` file, along with their corresponding line numbers.
 
-1.  `cat -n slides-topic-02-02-examples/sonnets.txt`
+1.  `cat -n examples/sonnets.txt`
     -   `cat` is used to concatenate and display files.
     -   The `-n` option of `cat` numbers all output lines starting with line 1.
-    -   `slides-topic-02-02-examples/sonnets.txt` is the file path to the text file being read. This file presumably contains sonnets or other text.
+    -   `examples/sonnets.txt` is the file path to the text file being read. This file presumably contains sonnets or other text.
 :::
 
 ::: {.column style="width: 30%; font-size: 50%;"}
@@ -1640,11 +1659,11 @@ Say we want to combine all the "daily" files in the `/meals` directory into a si
 
 ```{bash}
 ## create an empty CSV
-touch slides-topic-02-02-examples/meals/mealplan.csv
+touch examples/meals/mealplan.csv
 ## loop over the input files and append their contents to our new CSV
-for i in $(ls slides-topic-02-02-examples/meals/*day.csv)
+for i in $(ls examples/meals/*day.csv)
   do 
-   cat $i >> slides-topic-02-02-examples/meals/mealplan.csv
+   cat $i >> examples/meals/mealplan.csv
 done
 ```
 
@@ -1659,7 +1678,7 @@ done
 <br>
 
 ```{bash for2b}
-cat slides-topic-02-02-examples/meals/mealplan.csv
+cat examples/meals/mealplan.csv
 ```
 
 <center>Terminal!</center>
@@ -1683,7 +1702,7 @@ Can you think of a way? (*Hint:* `tail` and `head`...)
 Let's try again. First delete the old file so we can start afresh.
 
 ```{bash for2c}
-rm -f slides-topic-02-02-examples/meals/mealplan.csv ## delete old file
+rm -f examples/meals/mealplan.csv ## delete old file
 ```
 
 <center>Terminal!</center>
@@ -1700,11 +1719,11 @@ Here's our adapted gameplan:
 
 ```{bash}
 ## create a new CSV by redirecting the top line of any file
-head -1 slides-topic-02-02-examples/meals/monday.csv > slides-topic-02-02-examples/meals/mealplan.csv
+head -1 examples/meals/monday.csv > examples/meals/mealplan.csv
 ## loop over the input files, appending everything after the top line
-for i in $(ls slides-topic-02-02-examples/meals/*day.csv)
+for i in $(ls examples/meals/*day.csv)
  do 
-   tail -n +2 $i >> slides-topic-02-02-examples/meals/mealplan.csv
+   tail -n +2 $i >> examples/meals/mealplan.csv
 done
 ```
 
@@ -1717,7 +1736,7 @@ done
 It worked!
 
 ```{bash for2e}
-cat slides-topic-02-02-examples/meals/mealplan.csv
+cat examples/meals/mealplan.csv
 ```
 
 <center>Terminal!</center>
@@ -1749,7 +1768,7 @@ These scripts are demarcated by their `.sh` file extension.
 Let's look at the contents of a short shell script, `hello.sh`, that is included in the examples folder:
 
 ```{bash hello}
-cat slides-topic-02-02-examples/hello.sh
+cat examples/hello.sh
 ```
 
 <br> What does this script do?
@@ -1778,13 +1797,13 @@ echo "\nHello World!\n"
 To run this simple script, you can just type in the file name and press enter.
 
 ```{bash hello_run}
-slides-topic-02-02-examples/hello.sh
-# bash slides-topic-02-02-examples/hello.sh ## Also works
+examples/hello.sh
+# bash examples/hello.sh ## Also works
 ```
 
 ```{python}
-!slides-topic-02-02-examples/hello.sh
-# bash slides-topic-02-02-examples/hello.sh ## Also works
+!examples/hello.sh
+# bash examples/hello.sh ## Also works
 ```
 
 <!-- ############################################ -->

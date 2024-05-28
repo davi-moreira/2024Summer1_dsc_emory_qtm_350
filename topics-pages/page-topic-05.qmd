@@ -1,6 +1,6 @@
 ---
 title: "Topic 05"
-subtitle: "Python essentials"
+subtitle: "Python Essentials"
 description: ""
 author: "Davi Moreira"
 date-modified: "last-modified"
@@ -129,8 +129,7 @@ tbl-colwidths: [10,50,40]
 
 # Problem Set
 
--   **GradeScope Questions** about [Array programming with NumPy paper](https://www.nature.com/articles/s41586-020-2649-2){target="_blank"} (Check the Course Canvas page)
--   **Advanced Data Wrangling In-Class Activity** (link and notebook above).
+-   In group (up to 3 members) you must submit **GradeScope Questions** about [Array programming with NumPy paper](https://www.nature.com/articles/s41586-020-2649-2){target="_blank"} (Check the Course Canvas page) and the **Advanced Data Wrangling In-Class Activity** (link and notebook above).
 
 # Recommended Readings
 

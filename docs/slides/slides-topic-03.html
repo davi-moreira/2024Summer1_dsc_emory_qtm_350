@@ -409,18 +409,38 @@ Professor: Davi Moreira
 </section>
 <section id="topic-overview" class="slide level2 center">
 <h2>Topic Overview</h2>
-<div class="columns">
-<div class="column" style="width:34%;">
-<ul>
-<li class="fragment"><p>Computational Literacy</p>
-<ul>
-<li class="fragment">Binary and Hexadecimal numbers</li>
-<li class="fragment">Characters, ASCII, Unicode</li>
-<li class="fragment">High vrs low level programming languages</li>
-<li class="fragment">Compiled <em>vs</em> interpreted languages</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:33%;">
+<!---
+::: columns
+::: {.column width="34%"}
+-   Computational Literacy
+
+    -   Binary and Hexadecimal numbers
+    -   Characters, ASCII, Unicode
+    -   High vrs low level programming languages
+    -   Compiled *vs* interpreted languages
+:::
+
+::: {.column width="33%"}
+-   **Command Line**
+
+    -   **Shell basics**
+    -   **Help!**
+    -   **Navigating your system**
+    -   **Managing your files**
+    -   **Working with text files**
+    -   **Redirects, pipes, and loops**
+    -   **Scripting**
+:::
+
+::: {.column width="33%"}
+-   Version Control
+
+    -   Data Science Workflow
+    -   Reproducibility
+    -   Git and GitHub
+:::
+:::
+--->
 <ul>
 <li class="fragment"><p><strong>Command Line</strong></p>
 <ul>
@@ -433,17 +453,6 @@ Professor: Davi Moreira
 <li class="fragment"><strong>Scripting</strong></li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:33%;">
-<ul>
-<li class="fragment"><p>Version Control</p>
-<ul>
-<li class="fragment">Data Science Workflow</li>
-<li class="fragment">Reproducibility</li>
-<li class="fragment">Git and GitHub</li>
-</ul></li>
-</ul>
-</div>
-</div>
 <p><br></p>
 
 <aside><div>
@@ -674,7 +683,7 @@ Professor: Davi Moreira
 <p>Your system default shell is loaded. To find out what that is, type:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>echo $SHELL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="8db586ae" class="cell" data-execution_count="1">
+<div id="23cb1f28" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>/bin/zsh</code></pre>
 </div>
@@ -838,11 +847,13 @@ command option(s) <strong>argument(s)</strong>
 </section>
 <section id="getting-help-with-man" class="slide level2 center">
 <h2>Getting help with man</h2>
+<p>To see manual section 1 commands, use:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>man -k . | grep '(1)'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<p>The <code>man</code> command (“manual pages”) is your friend if you need help.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>man ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The <code>man</code> command (“manual pages”) is your friend if you need help with an specific function.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>man ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="ce89fad7" class="cell" data-execution_count="2">
+<div id="2887cb0f" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>LS(1)                       General Commands Manual                      LS(1)
 
@@ -1414,7 +1425,7 @@ RTFM
 </ul>
 <div class="fragment">
 <p>The first two need to be installed first. <code>cheat.sh</code> sheets are accessible via:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a></a>curl cheat.sh/ls  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>curl cheat.sh/ls  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <pre><code># List files one per line:
 ls -1
 
@@ -1469,9 +1480,9 @@ ls -lh</code></pre>
 <li class="fragment"><p><code>cd</code> to change directory.</p></li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource {bash nav1} number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a></a>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource {bash nav1} number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="786a835f" class="cell" data-execution_count="3">
+<div id="f74719a5" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>/Users/dcorde3/Library/CloudStorage/Dropbox/academic/cursos/cursos-davi/data_science_computing/2024Summer1_dsc_emory_qtm_350/slides</code></pre>
 </div>
@@ -1483,9 +1494,9 @@ ls -lh</code></pre>
 <p><br></p>
 <p>You can use absolute paths, but it’s better to use relative paths and invoke special symbols for a user’s home folder (<code>~</code>), current directory (<code>.</code>), and parent directory (<code>..</code>) as needed.</p>
 <p><br></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource {bash nav2} number-lines code-with-copy"><code class="sourceCode"><span id="cb21-1"><a></a>cd slides-topic-02-02-examples ## Move into the "slides-topic-02-02-examples" sub-directory of this lecture directory.</span>
-<span id="cb21-2"><a></a>cd ../.. ## Now go back up two directories.</span>
-<span id="cb21-3"><a></a>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource {bash nav2} number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>cd examples ## Move into the "examples" sub-directory of this lecture directory.</span>
+<span id="cb22-2"><a></a>cd ../.. ## Now go back up two directories.</span>
+<span id="cb22-3"><a></a>pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <center>
 Terminal!
@@ -1527,32 +1538,31 @@ Terminal!
 <div class="columns">
 <div class="column" data-align="center" style="width:30%;">
 <p>We’re about to go into more depth about the <code>ls</code> (list) command. It shows the contents of the current (or given) directory:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb22-1"><a></a>ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb23-1"><a></a>ls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="3d3838bb" class="cell" data-execution_count="4">
+<div id="f190ed8e" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
-<pre><code>_slides-topic-02-02-aux.ipynb figs
-_slides-topic-02-02.html      slides-topic-01.qmd
-_slides-topic-02-02.qmd       slides-topic-02.qmd
-_slides-topic-02_aux.qmd      slides-topic-03.html
+<pre><code>_slides-topic-02-02-aux.ipynb custom.scss
+_slides-topic-02-02.html      figs
+_slides-topic-02-02.qmd       slides-topic-01.qmd
+_slides-topic-02_aux.qmd      slides-topic-02.qmd
 _slides-topic-02_files        slides-topic-03.ipynb
 _slides-topic-03-examples     slides-topic-03.qmd
-_slides-topic-03_files        slides-topic-04.html
-_slides-topic-04_files        slides-topic-04.qmd
-custom.css                    survive.txt
-custom.scss</code></pre>
+_slides-topic-03_files        slides-topic-04.qmd
+_slides-topic-04_files        survive.txt
+custom.css</code></pre>
 </div>
 </div>
 </div><div class="column" data-align="center" style="width:10%;">
 
 </div><div class="column" data-align="center" style="width:60%;">
 <div class="fragment">
-<p>Now we list the contents of the <code>slides-topic-02-02-examples/</code> sub-directory with the <code>-lh</code> option (“long format”, “human readable file size unit suffixes”; again, check out <code>man ls</code> for the details):</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb24-1"><a></a>ls -lh slides-topic-02-02-examples</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now we list the contents of the <code>examples/</code> sub-directory with the <code>-lh</code> option (“long format”, “human readable file size unit suffixes”; again, check out <code>man ls</code> for the details):</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb25-1"><a></a>ls -lh examples</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="12ec848a" class="cell" data-execution_count="5">
+<div id="e0aed88a" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
-<pre><code>ls: slides-topic-02-02-examples: No such file or directory</code></pre>
+<pre><code>ls: examples: No such file or directory</code></pre>
 </div>
 </div>
 </div>
@@ -1563,18 +1573,18 @@ custom.scss</code></pre>
 <h2>Listing files and their properties</h2>
 <div class="columns">
 <div class="column" style="width: 50%; font-size: 80%;">
-<p>Now we list the contents of the <code>slides-topic-02-02-examples/</code> sub-directory with the <code>-lh</code> option (“long format”, “human readable file size unit suffixes”; again, check out <code>man ls</code> for the details):</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb26-1"><a></a>ls -lh slides-topic-02-02-examples</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Now we list the contents of the <code>examples/</code> sub-directory with the <code>-lh</code> option (“long format”, “human readable file size unit suffixes”; again, check out <code>man ls</code> for the details):</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb27-1"><a></a>ls -lh examples</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="049e3ac7" class="cell" data-execution_count="6">
+<div id="a3bff7d3" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
-<pre><code>ls: slides-topic-02-02-examples: No such file or directory</code></pre>
+<pre><code>ls: examples: No such file or directory</code></pre>
 </div>
 </div>
 </div><div class="column" style="width: 50%; font-size: 80%;">
 <div class="fragment">
 <p>What does this all mean? Let’s focus on the top line.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a></a><span class="ex">drwxrwxr-x@</span> 3 dcorde3  206888963    96B Nov 27 09:51 ABC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a></a><span class="ex">drwxrwxr-x@</span> 3 dcorde3  206888963    96B Nov 27 09:51 ABC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li class="fragment"><p>The first column denotes the object type:</p>
 <ul>
@@ -1654,18 +1664,18 @@ For a more detailed overview, click <a href="https://effective-shell.com/part-1-
 <h2>Create: touch and mkdir</h2>
 <p>One of the most common shell tasks is object creation (files, directories, etc.).</p>
 <p>We use <code>mkdir</code> to create directories. E.g., to create a new “testing” directory we do:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource {bash mkdir} number-lines code-with-copy"><code class="sourceCode"><span id="cb29-1"><a></a>mkdir testing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource {bash mkdir} number-lines code-with-copy"><code class="sourceCode"><span id="cb30-1"><a></a>mkdir testing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <div class="fragment">
 <p>We use <code>touch</code> to create (empty) files. If the file(s) already exist, <code>touch</code> changes a file’s “Access”, “Modify” and “Change” timestamps to the current time and date. To add some files to our new directory, we do:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource {bash touch} number-lines code-with-copy"><code class="sourceCode"><span id="cb30-1"><a></a>touch testing/test1.txt testing/test2.txt testing/test3.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource {bash touch} number-lines code-with-copy"><code class="sourceCode"><span id="cb31-1"><a></a>touch testing/test1.txt testing/test2.txt testing/test3.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 </div>
 <div class="fragment">
 <p>Check that it worked:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb31-1"><a></a>ls testing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb32-1"><a></a>ls testing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="398a8523" class="cell" data-execution_count="9">
+<div id="59469506" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>test1.txt test2.txt test3.txt</code></pre>
 </div>
@@ -1675,13 +1685,13 @@ For a more detailed overview, click <a href="https://effective-shell.com/part-1-
 <section id="remove-rm-and-rmdir" class="slide level2 center">
 <h2>Remove: rm and rmdir</h2>
 <p>Let’s delete the objects that we just created. Start with one of the .txt files, by using <code>rm</code>. - We could delete all the files at the same time, but you’ll see why I want to keep some.</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource {bash rm1} number-lines code-with-copy"><code class="sourceCode"><span id="cb33-1"><a></a>rm testing/test1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource {bash rm1} number-lines code-with-copy"><code class="sourceCode"><span id="cb34-1"><a></a>rm testing/test1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 <div class="fragment">
 <p>The equivalent command for directories is <code>rmdir</code>.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode numberSource {bash rmdir} number-lines code-with-copy"><code class="sourceCode"><span id="cb34-1"><a></a>rmdir testing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode numberSource {bash rmdir} number-lines code-with-copy"><code class="sourceCode"><span id="cb35-1"><a></a>rmdir testing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="211428be" class="cell" data-execution_count="11">
+<div id="eddf3bd7" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>rmdir: testing: Directory not empty</code></pre>
 </div>
@@ -1689,7 +1699,7 @@ For a more detailed overview, click <a href="https://effective-shell.com/part-1-
 </div>
 <div class="fragment">
 <p>Uh oh… It won’t let us delete the directory while it still has files inside of it. The solution is to use the <code>rm</code> command again with the “recursive” (<code>-r</code> or <code>-R</code>) and “force” (<code>-f</code>) options. - Excluding the <code>-f</code> option is safer, but will trigger a confirmation prompt for every file, which I’d rather avoid here.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode numberSource {bash rm2} number-lines code-with-copy"><code class="sourceCode"><span id="cb36-1"><a></a>rm -rf testing ## Success</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource {bash rm2} number-lines code-with-copy"><code class="sourceCode"><span id="cb37-1"><a></a>rm -rf testing ## Success</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
 </div>
 </section>
@@ -1703,22 +1713,22 @@ For a more detailed overview, click <a href="https://effective-shell.com/part-1-
 <li class="fragment"><p>However, if there is already an object with the same name in the target destination, then you’ll have to use <code>-f</code> to force an overwrite.</p></li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb37"><pre class="sourceCode numberSource {bash cp} number-lines code-with-copy"><code class="sourceCode"><span id="cb37-1"><a></a>## Create new "copies" sub-directory</span>
-<span id="cb37-2"><a></a>mkdir slides-topic-02-02-examples/copies</span>
-<span id="cb37-3"><a></a></span>
-<span id="cb37-4"><a></a>## Now copy across a file (with a new name)</span>
-<span id="cb37-5"><a></a>cp slides-topic-02-02-examples/reps.txt slides-topic-02-02-examples/copies/reps-copy.txt</span>
-<span id="cb37-6"><a></a></span>
-<span id="cb37-7"><a></a>## Show that we were successful</span>
-<span id="cb37-8"><a></a>ls slides-topic-02-02-examples/copies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource {bash cp} number-lines code-with-copy"><code class="sourceCode"><span id="cb38-1"><a></a>## Create new "copies" sub-directory</span>
+<span id="cb38-2"><a></a>mkdir examples/copies</span>
+<span id="cb38-3"><a></a></span>
+<span id="cb38-4"><a></a>## Now copy across a file (with a new name)</span>
+<span id="cb38-5"><a></a>cp examples/reps.txt examples/copies/reps-copy.txt</span>
+<span id="cb38-6"><a></a></span>
+<span id="cb38-7"><a></a>## Show that we were successful</span>
+<span id="cb38-8"><a></a>ls examples/copies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
 </div>
 <div class="fragment">
 <p>You can use <code>cp</code> to copy directories, although you’ll need the <code>-r</code> flag if you want to recursively copy over everything inside of it too:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb38-1"><a></a>cp -r slides-topic-02-02-examples/meals slides-topic-02-02-examples/copies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb39-1"><a></a>rm -rf slides-topic-02-02-examples/copies/meals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb39-1"><a></a>cp -r examples/meals examples/copies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb40-1"><a></a>rm -rf examples/copies/meals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1729,21 +1739,21 @@ Terminal!
 <section id="move-and-rename-mv" class="slide level2 center">
 <h2>Move (and rename): mv</h2>
 <p>The syntax for moving is <code>$ mv object path/newobjectname</code></p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode numberSource {bash mv1} number-lines code-with-copy"><code class="sourceCode"><span id="cb40-1"><a></a> ## Move the abc.txt file and show that it worked</span>
-<span id="cb40-2"><a></a>mv slides-topic-02-02-examples/ABC/abc.txt examples</span>
-<span id="cb40-3"><a></a>ls slides-topic-02-02-examples/ABC ## empty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode numberSource {bash mv1} number-lines code-with-copy"><code class="sourceCode"><span id="cb41-1"><a></a> ## Move the abc.txt file and show that it worked</span>
+<span id="cb41-2"><a></a>mv examples/ABC/abc.txt examples</span>
+<span id="cb41-3"><a></a>ls examples/ABC ## empty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode numberSource {bash mv2} number-lines code-with-copy"><code class="sourceCode"><span id="cb41-1"><a></a>## Move it back again</span>
-<span id="cb41-2"><a></a>mv slides-topic-02-02-examples/abc.txt slides-topic-02-02-examples/ABC</span>
-<span id="cb41-3"><a></a>ls slides-topic-02-02-examples/ABC ## not empty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode numberSource {bash mv2} number-lines code-with-copy"><code class="sourceCode"><span id="cb42-1"><a></a>## Move it back again</span>
+<span id="cb42-2"><a></a>mv examples/abc.txt examples/ABC</span>
+<span id="cb42-3"><a></a>ls examples/ABC ## not empty</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
 <div class="fragment">
 <p>Note that “moving” an object within the same directory, but with specifying <code>newobjectname</code>, is effectively the same as renaming it.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode numberSource {bash mv3} number-lines code-with-copy"><code class="sourceCode"><span id="cb42-1"><a></a> ## Rename reps-copy to reps2 by "moving" it with a new name</span>
-<span id="cb42-2"><a></a>mv slides-topic-02-02-examples/copies/reps-copy.txt slides-topic-02-02-examples/copies/reps2.txt</span>
-<span id="cb42-3"><a></a>ls slides-topic-02-02-examples/copies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode numberSource {bash mv3} number-lines code-with-copy"><code class="sourceCode"><span id="cb43-1"><a></a> ## Rename reps-copy to reps2 by "moving" it with a new name</span>
+<span id="cb43-2"><a></a>mv examples/copies/reps-copy.txt examples/copies/reps2.txt</span>
+<span id="cb43-3"><a></a>ls examples/copies</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1752,15 +1762,15 @@ Terminal!
 <section id="rename-en-masse-zmv" class="slide level2 center">
 <h2>Rename <em>en masse</em> : zmv</h2>
 <p>A more convenient way to do renaming in <code>zsh</code> is with <code>zmv</code>. It has to be installed and autoloaded first:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb43-1"><a></a>autoload -U zmv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb44-1"><a></a>autoload -U zmv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
 <div class="fragment">
 <p>The syntax is <code>zmv &lt;options&gt; &lt;old-files-pattern&gt; &lt;new-files-pattern&gt;</code></p>
-<p>For example, say we want to change the file type (i.e.&nbsp;extension) of a set of files in the <code>slides-topic-02-02-examples/meals</code> directory, we do:</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb44-1"><a></a>cd slides-topic-02-02-examples/meals</span>
-<span id="cb44-2"><a></a>zmv -n -W  "*.csv" "*.txt"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For example, say we want to change the file type (i.e.&nbsp;extension) of a set of files in the <code>examples/meals</code> directory, we do:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb45-1"><a></a>cd examples/meals</span>
+<span id="cb45-2"><a></a>zmv -n -W  "*.csv" "*.txt"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1782,8 +1792,8 @@ mv -- wednesday.csv wednesday.txt
 <section id="rename-en-masse-zmv-1" class="slide level2 center">
 <h2>Rename <em>en masse</em> : zmv</h2>
 <p><code>zmv</code> really shines in conjunction with regular expressions and wildcards (more on the next slide). This works especially well for dealing with a whole list of files or folders.</p>
-<p>As another example, let’s change <em>all</em> of the file names in the <code>slides-topic-02-02-examples/meals</code> directory.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb45-1"><a></a>zmv -n '(**/)(*).csv' '$1$2-tacos.csv'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As another example, let’s change <em>all</em> of the file names in the <code>examples/meals</code> directory.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb46-1"><a></a>zmv -n '(**/)(*).csv' '$1$2-tacos.csv'</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1811,8 +1821,8 @@ mv -- wednesday.csv wednesday-tacos.csv
 </ul></li>
 </ol>
 <div class="fragment">
-<div class="sourceCode" id="cb46"><pre class="sourceCode numberSource {bash asterisk} number-lines code-with-copy"><code class="sourceCode"><span id="cb46-1"><a></a>cp slides-topic-02-02-examples/*.sh slides-topic-02-02-examples/copies ## Copy any file with an .sh extension to "copies"</span>
-<span id="cb46-2"><a></a>rm slides-topic-02-02-examples/copies/* ## Delete everything in the "copies" directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource {bash asterisk} number-lines code-with-copy"><code class="sourceCode"><span id="cb47-1"><a></a>cp examples/*.sh examples/copies ## Copy any file with an .sh extension to "copies"</span>
+<span id="cb47-2"><a></a>rm examples/copies/* ## Delete everything in the "copies" directory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1826,8 +1836,8 @@ Terminal!
 </ol>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb47"><pre class="sourceCode numberSource {bash qmark} number-lines code-with-copy"><code class="sourceCode"><span id="cb47-1"><a></a>ls slides-topic-02-02-examples/meals/??nday.csv</span>
-<span id="cb47-2"><a></a>ls slides-topic-02-02-examples/meals/?onday.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource {bash qmark} number-lines code-with-copy"><code class="sourceCode"><span id="cb48-1"><a></a>ls examples/meals/??nday.csv</span>
+<span id="cb48-2"><a></a>ls examples/meals/?onday.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1837,11 +1847,11 @@ Terminal!
 <h2>Find</h2>
 <p>The last command to mention is <code>find</code>.</p>
 <p>This can be used to locate files and directories based on a variety of criteria; from pattern matching to object properties.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource {bash find1} number-lines code-with-copy"><code class="sourceCode"><span id="cb48-1"><a></a>find examples -iname "monday.csv" ## will automatically do recursive, -iname makes search case-insensitive</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode numberSource {bash find1} number-lines code-with-copy"><code class="sourceCode"><span id="cb49-1"><a></a>find examples -iname "monday.csv" ## will automatically do recursive, -iname makes search case-insensitive</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode numberSource {bash find2} number-lines code-with-copy"><code class="sourceCode"><span id="cb49-1"><a></a>find . -iname "*.txt" ## must use "." to indicate pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode numberSource {bash find2} number-lines code-with-copy"><code class="sourceCode"><span id="cb50-1"><a></a>find . -iname "*.txt" ## must use "." to indicate pwd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode numberSource {bash find3} number-lines code-with-copy"><code class="sourceCode"><span id="cb50-1"><a></a>find . -size +2000k ## find files larger than 2000 KB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode numberSource {bash find3} number-lines code-with-copy"><code class="sourceCode"><span id="cb51-1"><a></a>find . -size +2000k ## find files larger than 2000 KB</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1858,11 +1868,12 @@ Terminal!
 <li class="fragment">The <code>mv</code> (move) command can move or rename a file.</li>
 <li class="fragment">The <code>zmv</code> command enables convenient renaming.</li>
 <li class="fragment">The <code>mkdir</code> command can create a folder - it can even create a whole tree of folders if you pass the <code>-p</code> (create parent directories) flag.</li>
-<li class="fragment">The <code>find</code> command lets you find files based on specified criteria.</li>
-<li class="fragment">The <code>cat</code> command (concatenated) can be used to write the contents of a file to the screen.</li>
+<li class="fragment">The <code>find</code> command lets you find files based on specified criteria. <!---
+-   The `cat` command (concatenated) can be used to write the contents of a file to the screen.
+-   The `wget` (web get) command can download a file from the web. (Install first on a Mac.)
+-   The `zip`/`unzip` commands can zip/unzip a file/folder for us.
+---></li>
 <li class="fragment">We can pass multiple files to commands like <code>cat</code> if we use wildcards, such as <code>quotes/*</code>.</li>
-<li class="fragment">The <code>wget</code> (web get) command can download a file from the web. (Install first on a Mac.)</li>
-<li class="fragment">The <code>zip</code>/<code>unzip</code> commands can zip/unzip a file/folder for us.</li>
 </ul>
 <div class="fragment">
 <p>For a more detailed overview, click <a href="https://effective-shell.com/part-1-transitioning-to-the-shell/managing-your-files/">here</a>.</p>
@@ -1905,7 +1916,7 @@ Terminal!
 </ol>
 <div class="fragment">
 <p>Let’s demonstrate with a text file containing all of Shakespeare’s Sonnets.<sup>1</sup></p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode numberSource {bash wc} number-lines code-with-copy"><code class="sourceCode"><span id="cb51-1"><a></a>wc slides-topic-02-02-examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode numberSource {bash wc} number-lines code-with-copy"><code class="sourceCode"><span id="cb52-1"><a></a>wc examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1928,7 +1939,7 @@ Terminal!
 <p>We also use the <code>-n</code> flag to show line numbers:</p>
 <p><br></p>
 <div class="fragment">
-<div class="sourceCode" id="cb52"><pre class="sourceCode numberSource {bash cat} number-lines code-with-copy"><code class="sourceCode"><span id="cb52-1"><a></a>cat -n slides-topic-02-02-examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode numberSource {bash cat} number-lines code-with-copy"><code class="sourceCode"><span id="cb53-1"><a></a>cat -n examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1938,8 +1949,8 @@ Terminal!
 <h2>Scroll: more and less</h2>
 <p><br></p>
 <p>The <code>more</code> and <code>less</code> commands provide extra functionality over <code>cat</code>. For example, they allow you to move through long text one page at a time. (While they look similar, <code>less</code> is more than <code>more</code>, <a href="https://unix.stackexchange.com/questions/604/isnt-less-just-more">more or less</a>…)</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode numberSource {bash more} number-lines code-with-copy"><code class="sourceCode"><span id="cb53-1"><a></a></span>
-<span id="cb53-2"><a></a>more slides-topic-02-02-examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource {bash more} number-lines code-with-copy"><code class="sourceCode"><span id="cb54-1"><a></a></span>
+<span id="cb54-2"><a></a>more examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1953,8 +1964,8 @@ Terminal!
 <p><br></p>
 <p>The <code>head</code> and <code>tail</code> commands let you limit yourself to a preview of the text, down to a specified number of rows. (The default is 10 rows if you don’t specify a number with the <code>-n</code> flag.)</p>
 <p><br></p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource {bash head} number-lines code-with-copy"><code class="sourceCode"><span id="cb54-1"><a></a>head -n 3 slides-topic-02-02-examples/sonnets.txt ## First 3 rows</span>
-<span id="cb54-2"><a></a># head slides-topic-02-02-examples/sonnets.txt ## First 10 rows (default)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode numberSource {bash head} number-lines code-with-copy"><code class="sourceCode"><span id="cb55-1"><a></a>head -n 3 examples/sonnets.txt ## First 3 rows</span>
+<span id="cb55-2"><a></a># head examples/sonnets.txt ## First 10 rows (default)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1964,14 +1975,14 @@ Terminal!
 <p><br></p>
 <p><code>tail</code> works very similarly to <code>head</code>, but starting from the bottom. For example, we can see the very last row of a file as follows:</p>
 <p><br></p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode numberSource {bash tail1} number-lines code-with-copy"><code class="sourceCode"><span id="cb55-1"><a></a>tail -n 1 slides-topic-02-02-examples/sonnets.txt ## Last row</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode numberSource {bash tail1} number-lines code-with-copy"><code class="sourceCode"><span id="cb56-1"><a></a>tail -n 1 examples/sonnets.txt ## Last row</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
 <div class="fragment">
 <p>By using the <code>-n +N</code> option, we can specify that we want to preview all lines starting from row N <em>and after</em>, as in:</p>
 <p><br></p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode numberSource {bash tail2} number-lines code-with-copy"><code class="sourceCode"><span id="cb56-1"><a></a>tail -n +3024 slides-topic-02-02-examples/sonnets.txt ## Show everything from line 3024</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode numberSource {bash tail2} number-lines code-with-copy"><code class="sourceCode"><span id="cb57-1"><a></a>tail -n +3024 examples/sonnets.txt ## Show everything from line 3024</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -1984,10 +1995,10 @@ Terminal!
 <p>To find patterns in text, we can use regular expression-type matching with <code>grep</code>.</p>
 <p>For example, say we want to find the famous opening line to Shakespeare’s <a href="https://en.wikipedia.org/wiki/Sonnet_18">Sonnet 18</a>.</p>
 <p>(We’re going to include the <code>-n</code> (“number”) flag to get the line that it occurs on.)</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode numberSource {bash grep1} number-lines code-with-copy"><code class="sourceCode"><span id="cb57-1"><a></a>grep -n "Shall I compare thee" slides-topic-02-02-examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="7c86eb29" class="cell" data-execution_count="13">
+<div class="sourceCode" id="cb58"><pre class="sourceCode numberSource {bash grep1} number-lines code-with-copy"><code class="sourceCode"><span id="cb58-1"><a></a>grep -n "Shall I compare thee" examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7c625189" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
-<pre><code>grep: slides-topic-02-02-examples/sonnets.txt: No such file or directory</code></pre>
+<pre><code>grep: examples/sonnets.txt: No such file or directory</code></pre>
 </div>
 </div>
 </div><div class="column" style="width: 5%; font-size: 70%;">
@@ -1995,10 +2006,10 @@ Terminal!
 </div><div class="column" style="width: 45%; font-size: 70%;">
 <p>By default, <code>grep</code> returns all matching patterns.</p>
 <p>Check out what happens when we do the following:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb59-1"><a></a>grep -n "winter" slides-topic-02-02-examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="11321354" class="cell" data-execution_count="14">
+<div class="sourceCode" id="cb60"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb60-1"><a></a>grep -n "winter" examples/sonnets.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="169caca7" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
-<pre><code>grep: slides-topic-02-02-examples/sonnets.txt: No such file or directory</code></pre>
+<pre><code>grep: examples/sonnets.txt: No such file or directory</code></pre>
 </div>
 </div>
 </div>
@@ -2018,10 +2029,10 @@ Terminal!
 </ul>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb61"><pre class="sourceCode numberSource {bash grep2} number-lines code-with-copy"><code class="sourceCode"><span id="cb61-1"><a></a>grep -rl "pasta" slides-topic-02-02-examples/meals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="a56d2b03" class="cell" data-execution_count="15">
+<div class="sourceCode" id="cb62"><pre class="sourceCode numberSource {bash grep2} number-lines code-with-copy"><code class="sourceCode"><span id="cb62-1"><a></a>grep -rl "pasta" examples/meals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="05aaf9e0" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-stdout">
-<pre><code>grep: slides-topic-02-02-examples/meals: No such file or directory</code></pre>
+<pre><code>grep: examples/meals: No such file or directory</code></pre>
 </div>
 </div>
 <p>Take a look at the <code>grep</code> man or cheat file for other useful examples and flags (e.g.&nbsp;<code>-i</code> for ignore case).</p>
@@ -2036,20 +2047,20 @@ Terminal!
 <div class="column" style="width: 50%; font-size: 70%;">
 <p><br></p>
 <p><strong>Example 1.</strong> Replace one text pattern with another.</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode numberSource {bash nursery} number-lines code-with-copy"><code class="sourceCode"><span id="cb63-1"><a></a>cat slides-topic-02-02-examples/nursery.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb64"><pre class="sourceCode numberSource {bash sed1a} number-lines code-with-copy"><code class="sourceCode"><span id="cb64-1"><a></a>sed 's/Jack/Bill/g' slides-topic-02-02-examples/nursery.txt</span>
-<span id="cb64-2"><a></a>cat slides-topic-02-02-examples/nursery.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode numberSource {bash nursery} number-lines code-with-copy"><code class="sourceCode"><span id="cb64-1"><a></a>cat examples/nursery.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode numberSource {bash sed1a} number-lines code-with-copy"><code class="sourceCode"><span id="cb65-1"><a></a>sed 's/Jack/Bill/g' examples/nursery.txt</span>
+<span id="cb65-2"><a></a>cat examples/nursery.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!---`
 ``{bash}
 ## Change it back for when we want to re-knit the file.
-sed 's/Bill/Jack/g' slides-topic-02-02-examples/nursery.txt
+sed 's/Bill/Jack/g' examples/nursery.txt
 ```
 
-::: {#bcca9d99 .cell execution_count=16}
+::: {#f70c6cab .cell execution_count=16}
 
 ::: {.cell-output .cell-output-stdout}
 ```
-sed: slides-topic-02-02-examples/nursery.txt: No such file or directory
+sed: examples/nursery.txt: No such file or directory
 ```
 :::
 :::
@@ -2080,14 +2091,14 @@ The command below uses, among other things:
 - `|`, the pipe operator (more on that later)
 --->
 <!---```{bash sed2}
-sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
+sed 's/\s/\n/g' examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
 
 ```
 
 <br>
 
 <!---```{python}
-!sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
+!sed 's/\s/\n/g' examples/sonnets.txt | sort | uniq -c | sort -nr | head -10
 ```--->
 </div>
 </section>
@@ -2167,8 +2178,8 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 <p><br></p>
 <p>You can send output from the shell to a file using the redirect operator <code>&gt;</code>.</p>
 <p>For example, let’s print a message to the shell using the <code>echo</code> command.</p>
-<div class="sourceCode" id="cb65"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb65-1"><a></a>echo "At first, I was afraid, I was petrified"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="04b00cac" class="cell" data-execution_count="17">
+<div class="sourceCode" id="cb66"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb66-1"><a></a>echo "At first, I was afraid, I was petrified"</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="13e41af0" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
 <pre><code>At first, I was afraid, I was petrified</code></pre>
 </div>
@@ -2176,9 +2187,9 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 <p><br></p>
 <div class="fragment">
 <p>If you wanted to save this output to a file, you need simply redirect it to the filename of choice.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb67-1"><a></a>echo "At first, I was afraid, I was petrified" &gt; survive.txt</span>
-<span id="cb67-2"><a></a>find survive.txt ## Show that it now exists</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="137174f5" class="cell" data-execution_count="18">
+<div class="sourceCode" id="cb68"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb68-1"><a></a>echo "At first, I was afraid, I was petrified" &gt; survive.txt</span>
+<span id="cb68-2"><a></a>find survive.txt ## Show that it now exists</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0307304e" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-stdout">
 <pre><code>survive.txt</code></pre>
 </div>
@@ -2193,10 +2204,10 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 <li class="fragment">Using <code>&gt;</code> will try to overwrite the existing file contents.</li>
 </ul>
 <div class="fragment">
-<div class="sourceCode" id="cb69"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb69-1"><a></a>echo "'Kept thinking I could never live without you by my side" &gt;&gt; survive.txt</span>
-<span id="cb69-2"><a></a>cat survive.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb70-1"><a></a>echo "'Kept thinking I could never live without you by my side" &gt;&gt; survive.txt</span>
+<span id="cb70-2"><a></a>cat survive.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br></p>
-<div id="59b0b821" class="cell" data-execution_count="19">
+<div id="babbfb00" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-stdout">
 <pre><code>At first, I was afraid, I was petrified
 'Kept thinking I could never live without you by my side</code></pre>
@@ -2216,7 +2227,7 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 <div class="columns">
 <div class="column" style="width: 40%; font-size: 70%;">
 <p><strong>Here’s a simple example:</strong></p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode numberSource {bash pipe1} number-lines code-with-copy"><code class="sourceCode"><span id="cb71-1"><a></a>cat -n slides-topic-02-02-examples/sonnets.txt 2&gt;/dev/null | head -n100 | tail -n10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb72"><pre class="sourceCode numberSource {bash pipe1} number-lines code-with-copy"><code class="sourceCode"><span id="cb72-1"><a></a>cat -n examples/sonnets.txt 2&gt;/dev/null | head -n100 | tail -n10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width: 30%; font-size: 50%;">
 <ul>
 <li class="fragment"><p>This command sequence:</p>
@@ -2229,11 +2240,11 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 </ul></li>
 </ul>
 <ol type="1">
-<li class="fragment"><code>cat -n slides-topic-02-02-examples/sonnets.txt</code>
+<li class="fragment"><code>cat -n examples/sonnets.txt</code>
 <ul>
 <li class="fragment"><code>cat</code> is used to concatenate and display files.</li>
 <li class="fragment">The <code>-n</code> option of <code>cat</code> numbers all output lines starting with line 1.</li>
-<li class="fragment"><code>slides-topic-02-02-examples/sonnets.txt</code> is the file path to the text file being read. This file presumably contains sonnets or other text.</li>
+<li class="fragment"><code>examples/sonnets.txt</code> is the file path to the text file being read. This file presumably contains sonnets or other text.</li>
 </ul></li>
 </ol>
 </div><div class="column" style="width: 30%; font-size: 50%;">
@@ -2267,21 +2278,21 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 <p>Sometimes you want to loop an operation over certain parameters. <em>for</em> loops in Bash/Z shell work similarly to other programming languages that you are probably familiar with.</p>
 <p><br></p>
 <p><strong>The basic syntax is:</strong></p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb72-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> LIST</span>
-<span id="cb72-2"><a></a><span class="cf">do</span> </span>
-<span id="cb72-3"><a></a>  <span class="ex">OPERATION</span> <span class="va">$i</span> <span class="co">## the $ sign indicates a variable in bash</span></span>
-<span id="cb72-4"><a></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> LIST</span>
+<span id="cb73-2"><a></a><span class="cf">do</span> </span>
+<span id="cb73-3"><a></a>  <span class="ex">OPERATION</span> <span class="va">$i</span> <span class="co">## the $ sign indicates a variable in bash</span></span>
+<span id="cb73-4"><a></a><span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="fragment">
 <p>We can also condense things into a single line by using <code>;</code>.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb73-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> LIST<span class="kw">;</span> <span class="cf">do</span> <span class="ex">OPERATION</span> <span class="va">$i</span><span class="kw">;</span> <span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb74-1"><a></a><span class="cf">for</span> i <span class="kw">in</span> LIST<span class="kw">;</span> <span class="cf">do</span> <span class="ex">OPERATION</span> <span class="va">$i</span><span class="kw">;</span> <span class="cf">done</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Note: Using <code>;</code> isn’t limited to <em>for loops</em>. Semicolons are a standard way to denote line endings in Bash/Z shell.</p>
 </div>
 </section>
 <section id="example-1-print-a-sequence-of-numbers" class="slide level2 center">
 <h2>Example 1: Print a sequence of numbers</h2>
 <p>To help make things concrete, here’s a simple <em>for</em> loop in action.</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode numberSource {bash for1a} number-lines code-with-copy"><code class="sourceCode"><span id="cb74-1"><a></a>for i in 1 2 3 4 5; do echo $i; done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="050fac67" class="cell" data-execution_count="21">
+<div class="sourceCode" id="cb75"><pre class="sourceCode numberSource {bash for1a} number-lines code-with-copy"><code class="sourceCode"><span id="cb75-1"><a></a>for i in 1 2 3 4 5; do echo $i; done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="d38cf7fc" class="cell" data-execution_count="21">
 <div class="cell-output cell-output-stdout">
 <pre><code>1
 2
@@ -2292,7 +2303,7 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 </div>
 <div class="fragment">
 <p>FWIW (For What It’s Worth), we can use bash’s brace expansion (<code>{1..n}</code>) to save us from having to write out a long sequence of numbers.</p>
-<div class="sourceCode" id="cb76"><pre class="sourceCode numberSource {bash for1b} number-lines code-with-copy"><code class="sourceCode"><span id="cb76-1"><a></a>for i in {1..5}; do echo $i; done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode numberSource {bash for1b} number-lines code-with-copy"><code class="sourceCode"><span id="cb77-1"><a></a>for i in {1..5}; do echo $i; done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="example-2-combine-csvs" class="slide level2 center">
@@ -2304,13 +2315,13 @@ sed 's/\s/\n/g' slides-topic-02-02-examples/sonnets.txt | sort | uniq -c | sort 
 <li class="fragment"><p>Then, loop over the relevant input files, appending their contents to our new CSV</p></li>
 </ol>
 <div class="fragment">
-<div class="sourceCode" id="cb77"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb77-1"><a></a>## create an empty CSV</span>
-<span id="cb77-2"><a></a>touch slides-topic-02-02-examples/meals/mealplan.csv</span>
-<span id="cb77-3"><a></a>## loop over the input files and append their contents to our new CSV</span>
-<span id="cb77-4"><a></a>for i in $(ls slides-topic-02-02-examples/meals/*day.csv)</span>
-<span id="cb77-5"><a></a>  do </span>
-<span id="cb77-6"><a></a>   cat $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv</span>
-<span id="cb77-7"><a></a>done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb78-1"><a></a>## create an empty CSV</span>
+<span id="cb78-2"><a></a>touch examples/meals/mealplan.csv</span>
+<span id="cb78-3"><a></a>## loop over the input files and append their contents to our new CSV</span>
+<span id="cb78-4"><a></a>for i in $(ls examples/meals/*day.csv)</span>
+<span id="cb78-5"><a></a>  do </span>
+<span id="cb78-6"><a></a>   cat $i &gt;&gt; examples/meals/mealplan.csv</span>
+<span id="cb78-7"><a></a>done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -2324,7 +2335,7 @@ Did it work?
 <section id="example-2-combine-csvs-1" class="slide level2 center">
 <h2>Example 2: Combine CSVs</h2>
 <p><br></p>
-<div class="sourceCode" id="cb78"><pre class="sourceCode numberSource {bash for2b} number-lines code-with-copy"><code class="sourceCode"><span id="cb78-1"><a></a>cat slides-topic-02-02-examples/meals/mealplan.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode numberSource {bash for2b} number-lines code-with-copy"><code class="sourceCode"><span id="cb79-1"><a></a>cat examples/meals/mealplan.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -2341,7 +2352,7 @@ Terminal!
 <h2>Example 2: Combine CSVs</h2>
 <p><br></p>
 <p>Let’s try again. First delete the old file so we can start afresh.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode numberSource {bash for2c} number-lines code-with-copy"><code class="sourceCode"><span id="cb79-1"><a></a>rm -f slides-topic-02-02-examples/meals/mealplan.csv ## delete old file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode numberSource {bash for2c} number-lines code-with-copy"><code class="sourceCode"><span id="cb80-1"><a></a>rm -f examples/meals/mealplan.csv ## delete old file</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -2353,13 +2364,13 @@ Terminal!
 </ul>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb80"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb80-1"><a></a>## create a new CSV by redirecting the top line of any file</span>
-<span id="cb80-2"><a></a>head -1 slides-topic-02-02-examples/meals/monday.csv &gt; slides-topic-02-02-examples/meals/mealplan.csv</span>
-<span id="cb80-3"><a></a>## loop over the input files, appending everything after the top line</span>
-<span id="cb80-4"><a></a>for i in $(ls slides-topic-02-02-examples/meals/*day.csv)</span>
-<span id="cb80-5"><a></a> do </span>
-<span id="cb80-6"><a></a>   tail -n +2 $i &gt;&gt; slides-topic-02-02-examples/meals/mealplan.csv</span>
-<span id="cb80-7"><a></a>done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb81-1"><a></a>## create a new CSV by redirecting the top line of any file</span>
+<span id="cb81-2"><a></a>head -1 examples/meals/monday.csv &gt; examples/meals/mealplan.csv</span>
+<span id="cb81-3"><a></a>## loop over the input files, appending everything after the top line</span>
+<span id="cb81-4"><a></a>for i in $(ls examples/meals/*day.csv)</span>
+<span id="cb81-5"><a></a> do </span>
+<span id="cb81-6"><a></a>   tail -n +2 $i &gt;&gt; examples/meals/mealplan.csv</span>
+<span id="cb81-7"><a></a>done</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -2369,7 +2380,7 @@ Terminal!
 <h2>Example 2: Combine CSVs</h2>
 <p><br></p>
 <p>It worked!</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode numberSource {bash for2e} number-lines code-with-copy"><code class="sourceCode"><span id="cb81-1"><a></a>cat slides-topic-02-02-examples/meals/mealplan.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode numberSource {bash for2e} number-lines code-with-copy"><code class="sourceCode"><span id="cb82-1"><a></a>cat examples/meals/mealplan.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <center>
 Terminal!
 </center>
@@ -2396,7 +2407,7 @@ Terminal!
 <p>However, it’s also possible (and often desirable) to <strong>write reproducible shell scripts</strong> that combine a sequence of commands.</p>
 <p>These scripts are demarcated by their <code>.sh</code> file extension.</p>
 <p>Let’s look at the contents of a short shell script, <code>hello.sh</code>, that is included in the examples folder:</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode numberSource {bash hello} number-lines code-with-copy"><code class="sourceCode"><span id="cb82-1"><a></a>cat slides-topic-02-02-examples/hello.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode numberSource {bash hello} number-lines code-with-copy"><code class="sourceCode"><span id="cb83-1"><a></a>cat examples/hello.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br> What does this script do?</p>
 </div><div class="column" data-align="center" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
@@ -2410,19 +2421,19 @@ Terminal!
 <section id="hello-world" class="slide level2 center">
 <h2>Hello World!</h2>
 <p><br></p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb83-1"><a></a><span class="co">#!/bin/sh</span></span>
-<span id="cb83-2"><a></a><span class="bu">echo</span> <span class="st">"\nHello World!\n"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb84-1"><a></a><span class="co">#!/bin/sh</span></span>
+<span id="cb84-2"><a></a><span class="bu">echo</span> <span class="st">"\nHello World!\n"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li class="fragment"><p><code>#!/bin/sh</code> is a <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">shebang</a>, indicating which program to run the command with (here: any Bash-compatible shell). However, it is typically ignored (note that it begins with the hash comment character.)</p></li>
 <li class="fragment"><p><code>echo "\nHello World!\n"</code> is the actual command that we want to run.</p></li>
 </ul>
 <div class="fragment">
 <p>To run this simple script, you can just type in the file name and press enter.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode numberSource {bash hello_run} number-lines code-with-copy"><code class="sourceCode"><span id="cb84-1"><a></a>slides-topic-02-02-examples/hello.sh</span>
-<span id="cb84-2"><a></a># bash slides-topic-02-02-examples/hello.sh ## Also works</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="c3ccd62a" class="cell" data-execution_count="22">
+<div class="sourceCode" id="cb85"><pre class="sourceCode numberSource {bash hello_run} number-lines code-with-copy"><code class="sourceCode"><span id="cb85-1"><a></a>examples/hello.sh</span>
+<span id="cb85-2"><a></a># bash examples/hello.sh ## Also works</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7e6afa99" class="cell" data-execution_count="22">
 <div class="cell-output cell-output-stdout">
-<pre><code>zsh:1: no such file or directory: slides-topic-02-02-examples/hello.sh</code></pre>
+<pre><code>zsh:1: no such file or directory: examples/hello.sh</code></pre>
 </div>
 </div>
 <!-- ############################################ -->
