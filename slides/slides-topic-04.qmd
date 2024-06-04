@@ -469,7 +469,7 @@ dat <- read_csv("dat.csv")
 
 -   Data science involves product building, collaboration, transparency. GH helps with all that.
 -   Journals have increasingly strict requirements regarding reproducibility and access. GH makes this easy (DOI integration, off-the-shelf licenses, etc.).
--   My [website](https://davi-moreira.github.io/) lives there. And this [course](https://github.com/davi-moreira/2024S_dsc_emory_qtm_350) does, too.
+-   My [website](https://davi-moreira.github.io/) lives there. And this [course](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350) does, too.
 :::
 :::
 :::

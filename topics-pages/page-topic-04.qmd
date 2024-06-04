@@ -75,6 +75,18 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 
 # Additional Resources
 
+-   [What is Git? Our beginner's guide to version control](https://github.blog/2024-05-27-what-is-git-our-beginners-guide-to-version-control/) and [video](https://www.youtube.com/watch?v=r8jQ9hVA2qs){target="_blank"}
+
+-   [About GitHub and Git](https://docs.github.com/en/get-started/start-your-journey/about-github-and-git){target="_blank"}
+
+-   [The Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf){target="_blank"}
+
+-   [GitHub Skills](https://skills.github.com/){target="_blank"}
+
+-   [Introduction to GitHub](https://github.com/skills/introduction-to-github){target="_blank"}
+
+-   [GitHub Foundations Certificate](https://learn.microsoft.com/en-us/collections/o1njfe825p602p){target="_blank"}
+
 -   [Pro Git](https://git-scm.com/book/en/v2){target="_blank"} - Chacon & Straub
 
 <!---
