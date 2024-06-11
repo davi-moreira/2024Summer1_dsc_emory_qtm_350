@@ -39,8 +39,8 @@ website:
             text: "Topic 4: Version Control"
           - href: topics-pages/page-topic-05.qmd
             text: "Topic 5: Python Essentials"
-          #- href: topics-pages/page-topic-04.qmd
-          #  text: "Topic 4: Algorithms and Data Structures"
+          - href: topics-pages/page-topic-06.qmd
+            text: "Topic 6: Algorithms and Data Structures"
           ## - href: topics-pages/page-topic-05.qmd
           ##   text: "Topic 5: Data Structures"
           ## - href: topics-pages/page-topic-06.qmd

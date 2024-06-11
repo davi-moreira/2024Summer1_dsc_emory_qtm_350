@@ -65,7 +65,7 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 
 -   Basics of Command Line (slides material):[`.zip`](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/examples.zip){target="_blank"}
 
--   In-Class Activity - Exploring the Command Line: [html](/lecture_material/material-topic-02/command_line_activity.html){target="_blank"}
+-   Practice Activity - Exploring the Command Line: [html](/lecture_material/material-topic-02/command_line_activity.html){target="_blank"}
 
 --->
 
