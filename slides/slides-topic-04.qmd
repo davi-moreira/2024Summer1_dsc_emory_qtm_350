@@ -1517,9 +1517,8 @@ Can anybody push to my repository?
 3.  Commit locally
 4.  Push and Pull
 5.  Create a new branch
-6.  Merge
-7.  Push and Pull
-8.  **Have Fun!**
+6.  Push and Pull
+7.  **Have Fun!**
 
 # Collaboration with Git and GitHub
 

@@ -63,6 +63,9 @@ tbl-colwidths: [10,50,40]
 
 -   Unit Tests & Classes: [html](/lecture_material/material-topic-05/03-py-tests-classes.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_03-py-tests-classes.ipynb){target="_blank"}
 
+    -   Practice Activity - Unit Tests & Classes: [html](/lecture_material/material-topic-05/03-py-tests-classes-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_03-py-tests-classes-practice.ipynb){target="_blank"}
+
+
 <!---
 
     -   Practice Activity - Unit Tests & Classes - Solutions: [html](/lecture_material/material-topic-05/03-py-tests-classes-practice-solutions.html){target="_blank"}
