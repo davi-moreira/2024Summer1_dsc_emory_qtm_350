@@ -49,28 +49,19 @@ tbl-colwidths: [10,50,40]
 
     -   Practice Activity - Python Basics: [html](/lecture_material/material-topic-05/01-py-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_01-py-basics-practice.ipynb){target="_blank"}
 
-<!---
     -   Practice Activity - Python Basics- Solution: [html](/lecture_material/material-topic-05/01-py-basics-practice-solutions.html){target="_blank"}
---->
 
 -   Loops & Functions: [html](/lecture_material/material-topic-05/02-py-loops-functions.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_02-py-loops-functions.ipynb){target="_blank"}
 
     -   Practice Activity - Loops & Functions: [html](/lecture_material/material-topic-05/02-py-loops-functions-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_02-py-loops-functions-practice.ipynb){target="_blank"}
 
-<!---
     -   Practice Activity - Loops & Functions - Solutions: [html](/lecture_material/material-topic-05/02-py-loops-functions-practice-solutions.html){target="_blank"}
---->
 
 -   Unit Tests & Classes: [html](/lecture_material/material-topic-05/03-py-tests-classes.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_03-py-tests-classes.ipynb){target="_blank"}
 
     -   Practice Activity - Unit Tests & Classes: [html](/lecture_material/material-topic-05/03-py-tests-classes-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_03-py-tests-classes-practice.ipynb){target="_blank"}
 
-
-<!---
-
     -   Practice Activity - Unit Tests & Classes - Solutions: [html](/lecture_material/material-topic-05/03-py-tests-classes-practice-solutions.html){target="_blank"}
-
---->
 
 
 -   Style Guides, Scripts, Imports: [html](/lecture_material/material-topic-05/04-py-style-scripts-imports.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_04-py-style-scripts-imports.ipynb){target="_blank"}
@@ -93,18 +84,15 @@ tbl-colwidths: [10,50,40]
 
     -   Practice Activity - Numpy: [html](/lecture_material/material-topic-05/06-py-numpy-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_06-py-numpy-practice.ipynb){target="_blank"}
 
-<!---
-
     -   Practice Activity - Numpy - Solutions: [html](/lecture_material/material-topic-05/06-py-numpy-practice-solutions.html){target="_blank"}
-
---->
 
 
 -   Pandas: [html](/lecture_material/material-topic-05/07-py-pandas.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_07-py-pandas.ipynb){target="_blank"}
 
+<!---
+
     -   Practice Activity - Pandas: [html](/lecture_material/material-topic-05/07-py-pandas-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_07-py-pandas-practice.ipynb){target="_blank"}
 
-<!---
 
     -   Practice Activity - Pandas - Solutions: [html](/lecture_material/material-topic-05/07-py-pandas-practice-solutions.html){target="_blank"}
 
@@ -114,21 +102,15 @@ tbl-colwidths: [10,50,40]
 
     -   Practice Activity - Data Wrangling: [html](/lecture_material/material-topic-05/08-py-wrangling-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_08-py-wrangling-basics-practice.ipynb){target="_blank"}
 
-<!---
-
     -   Practice Activity - Data Wrangling - Solutions: [html](/lecture_material/material-topic-05/08-py-wrangling-basics-practice-solutions.html){target="_blank"}
 
---->
 
 -   Advanced Data Wrangling: [html](/lecture_material/material-topic-05/09-py-wrangling-advanced.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_09-py-wrangling-advanced.ipynb){target="_blank"}
 
     -   Practice Activity - Advanced Data Wrangling: [html](/lecture_material/material-topic-05/09-py-wrangling-advanced-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_09-py-wrangling-advanced-practice.ipynb){target="_blank"}
 
-<!---
-
     -   Practice Activity - Advanced Data Wrangling - Solutions: [html](/lecture_material/material-topic-05/09-py-wrangling-advanced-practice-solutions.html){target="_blank"}
 
---->
 
 # Problem Set
 
