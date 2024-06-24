@@ -42,20 +42,15 @@ tbl-colwidths: [10,50,40]
 
     -   Practice Activity - Time Complexity, Big O, Space Complexity - Practice: [html](/lecture_material/material-topic-06/01-py-complexity-big-O-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/_01-py-complexity-big-O-practice.ipynb){target="_blank"}
 
-<!---
     -   Practice Activity - Time Complexity, Big O, Space Complexity - Solutions: [html](/lecture_material/material-topic-06/01-py-complexity-big-O-practice-solutions.html){target="_blank"}
 
---->
 
 -   Searching, sorting, hash tables: [html](/lecture_material/material-topic-06/02-py-searching-sorting-hash.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/_02-py-searching-sorting-hash.ipynb){target="_blank"}
 
     -   Practice Activity - Searching, sorting, hash tables - Practice: [html](/lecture_material/material-topic-06/02-py-searching-sorting-hash-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/_02-py-searching-sorting-hash-practice.ipynb){target="_blank"}
 
-<!---
-
     -   Practice Activity - Searching, sorting, hash tables - Practice - Solutions: [html](/lecture_material/material-topic-06/02-py-searching-sorting-hash-practice-solutions.html){target="_blank"}
 
---->
 
 -   Recursive Algorithms: [html](/lecture_material/material-topic-06/03-py-recursive-algorithms.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/_03-py-recursive-algorithms.ipynb){target="_blank"}
 
@@ -94,7 +89,7 @@ tbl-colwidths: [10,50,40]
 
 # Problem Set
 
--   In group (up to 3 members) you must submit the **Recursive Data Structures Practice Activity** (link and notebook above).
+-   In group (up to 3 members) you must submit the **Recursive Algorithms and Recursive Structures Practice Activities** (links and notebooks above).
 
 
 <!---
