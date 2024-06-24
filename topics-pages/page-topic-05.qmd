@@ -102,10 +102,8 @@ tbl-colwidths: [10,50,40]
 
     -   Practice Activity - Data Wrangling: [html](/lecture_material/material-topic-05/08-py-wrangling-basics-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_08-py-wrangling-basics-practice.ipynb){target="_blank"}
 
-<!---
-
     -   Practice Activity - Data Wrangling - Solutions: [html](/lecture_material/material-topic-05/08-py-wrangling-basics-practice-solutions.html){target="_blank"}
---->
+
 
 -   Advanced Data Wrangling: [html](/lecture_material/material-topic-05/09-py-wrangling-advanced.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-05/_09-py-wrangling-advanced.ipynb){target="_blank"}
 
