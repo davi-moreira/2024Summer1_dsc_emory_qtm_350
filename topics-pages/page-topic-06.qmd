@@ -56,26 +56,18 @@ tbl-colwidths: [10,50,40]
 
     -   Practice Activity - Recursive Algorithms - Practice: [html](/lecture_material/material-topic-06/03-py-recursive-algorithms-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/_03-py-recursive-algorithms-practice.ipynb){target="_blank"}
 
-<!---
-    -   Image Folder: [img.zip](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/img.zip){target="_blank"}
---->
-
-
-<!---
-
     -   Practice Activity - Recursive Algorithms - Practice - Solutions: [html](/lecture_material/material-topic-06/03-py-recursive-algorithms-practice-solutions.html){target="_blank"}
 
+<!---
+    -   Image Folder: [img.zip](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/img.zip){target="_blank"}
 --->
 
 -   Recursive Data Structures: [html](/lecture_material/material-topic-06/04-py-recursive-data-structures.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/_04-py-recursive-data-structures.ipynb){target="_blank"}
 
     -   Practice Activity - Recursive Data Structures - Practice: [html](/lecture_material/material-topic-06/04-py-recursive-data-structures-practice.html){target="_blank"}, [notebook](https://github.com/davi-moreira/2024Summer1_dsc_emory_qtm_350/blob/main/docs/lecture_material/material-topic-06/_04-py-recursive-data-structures-practice.ipynb){target="_blank"}
 
-<!---
-
     -   Practice Activity - Recursive Data Structures - Practice - Solutions: [html](/lecture_material/material-topic-06/04-py-recursive-data-structures-practice-solutions.html){target="_blank"}
 
---->
 
 <!---
 
