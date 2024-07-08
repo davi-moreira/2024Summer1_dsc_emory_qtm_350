@@ -39,6 +39,7 @@ tbl-colwidths: [10,50,40]
 
 -   [Version Control](/slides/slides-topic-04.html){target="_blank"}
 
+```{=html}
 <!---
 
 -   [Computational Literacy](/slides/slides-topic-02-01.html){target="_blank"}
@@ -46,21 +47,20 @@ tbl-colwidths: [10,50,40]
 -   [Command Line](/slides/slides-topic-02-02-aux.html){target="_blank"}
 
 --->
-
+```
+```{=html}
 <!---
 
 # Lecture Material
 
 
 -   Basics of Command Line (very short piece): [html](/lecture_material/material-topic-02/basics_of_cmd.html){target="_blank"}, [notebook](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/_basics_of_cmd.ipynb){target="_blank"} <!--- to generate the link: https://minhaskamal.github.io/DownGit/#/home --->
-
-
-
+```
 ```{=html}
 <!---<a href="
 https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material-topic-02/_basics_of_cmd.ipynb" download> notebook </a>--->
 ```
-
+```{=html}
 <!---
 
 -   Basics of Command Line (slides material):[`.zip`](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/davi-moreira/2024S_dsc_emory_qtm_350/blob/main/lecture_material/material-topic-02/examples.zip){target="_blank"}
@@ -68,7 +68,7 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 -   Practice Activity - Exploring the Command Line: [html](/lecture_material/material-topic-02/command_line_activity.html){target="_blank"}
 
 --->
-
+```
 # Problem Set
 
 -   [Problem Set - Collaboration and Version Control with Git and GitHub](/lecture_material/material-topic-04/problem_set_version_control.html){target="_blank"}
@@ -89,6 +89,7 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 
 -   [Pro Git](https://git-scm.com/book/en/v2){target="_blank"} - Chacon & Straub
 
+```{=html}
 <!---
     -   [Ch. 1: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control){target="_blank"}; Read 1.1 - 1.3
 
@@ -105,6 +106,5 @@ https://davi-moreira.github.io/2024S_dsc_emory_qtm_350/lecture_material/material
 -   [Ch. 13 Detect Git from RStudio -Happy Git with R](https://happygitwithr.com/rstudio-see-git.html){target="_blank"} - Bryan, Jenny & Jim Hester
 
 --->
-
+```
 -   [Visualizing Git](https://git-school.github.io/visualizing-git/){target="_blank"}
-

@@ -19,10 +19,10 @@ This course equips students with computing skills and knowledge for data science
 
 By the end of this course, students will be able to:
 
-1.	Demonstrate proficiency in data science project collaboration and version control.
-2.	Utilize advanced data storage, manipulation, and querying. 
-3.	High-level understanding of data structures, and algorithms.
-4.	Critically navigate the emergent trends in data science computing.
+1.  Demonstrate proficiency in data science project collaboration and version control.
+2.  Utilize advanced data storage, manipulation, and querying.
+3.  High-level understanding of data structures, and algorithms.
+4.  Critically navigate the emergent trends in data science computing.
 
 ## Objectives
 
@@ -35,4 +35,3 @@ By the end of this course, students will be able to:
 **Course Website:** This class website will be used throughout the course and should be checked on a regular basis for lecture materials and required readings.
 
 **Canvas:** The course Canvas site <http://canvas.emory.edu> should be checked on a regular basis for announcements and course material..
-
